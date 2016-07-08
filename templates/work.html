@@ -1,0 +1,31 @@
+<div class="work-wrapper container">
+  <div class="col-md-8 col-md-offset-2 header-img">
+    <img src="/img/living-room.png" />
+  </div>
+  <div class="intro-text">
+    <h1>Welcome to my internet home, {{user.name}}!</h1>
+    <p>Well, my virtual house, of course. I'm a product designer and front end developer in San Francisco. I like learning about people and creating experiences that make their lives better. I spend a lot of time <a href="https://www.medium.com/@reneepadgham"
+        target="blank">writing</a>, <a href="http://hacker.fund/" target="blank">mentoring at hackathons</a>,
+      <a href="https://www.instagram.com/reneepadgham" target="blank">exploring</a>, and building communities. You can get straight to business below, or explore around to learn more about me and my design style.</p>
+  </div>
+
+  <div class="row" ng-controller="workCtrl">
+    <div class="proj-brief-wrapper col-md-4" ng-repeat="work in works">
+      <div class="proj-brief">
+        <div class="proj-brief-img">
+          <img ng-src="{{work.img}}" />
+        </div>
+        <div class="proj-brief-hover">
+          <div class="hover-content">
+            <h3>{{work.title}}</h3>
+            <h4>{{work.role}}</h4>
+            <p>
+              {{work.tagline}}
+            </p>
+            <a href="#/work/{{work.id}}" ><button class="view-proj">{{work.type}}</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="work" ng-controller="workCtrl">
+
+  <section id="brief" class="row">
+    <div class="detail-brief-wrapper">
+      <div class="detail-brief">
+        <div class="detail-brief-img col-md-4 col-md-offset-4">
+          <img ng-src="{{work.briefImg}}" />
+        </div>
+        <div class="detail-brief-text col-md-8 col-md-offset-2">
+          <h3>{{work.title}}</h3>
+          <h4>{{work.role}}</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-nav row">
+    <ul>
+      <li ng-if="work.problem">
+        <a href="#/work/{{work.id}}#problem">
+          <img src="img/problem.png" />
+          <h4>Problem</h4></a>
+      </li>
+      <li ng-if="work.constraints">
+        <a href="#/work/{{work.id}}#constraints">
+          <img src="img/constraints.png" />
+          <h4>Constraints</h4></a>
+      </li>
+      <li ng-if="work.research">
+        <a href="#/work/{{work.id}}#research">
+          <img src="img/research.png" />
+          <h4>Research</h4></a>
+      </li>
+      <li ng-if="work.sketch">
+        <a href="#/work/{{work.id}}#sketch">
+          <img src="img/sketch.png" />
+          <h4>Sketch</h4></a>
+      </li>
+      <li ng-if="work.design">
+        <a href="#/work/{{work.id}}#design">
+          <img src="img/design.png" />
+          <h4>Design</h4></a>
+      </li>
+      <li ng-if="work.retrospective">
+        <a href="#/work/{{work.id}}#lessons">
+          <img src="img/retrospective.png" />
+          <h4>Lessons</h4></a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-body container">
+    <div id="problem" ng-if="work.problem" class="col-md-9 col-md-offset-1">
+      <h2>Problem</h2> {{work.problem}}
+    </div>
+    <div id="constraints" ng-if="work.constraints" class="col-md-9 col-md-offset-1">
+      <h2>Constraints</h2> {{work.constraints}}
+    </div>
+    <div id="research" ng-if="work.research" class="col-md-9 col-md-offset-1">
+      <h2>Research/h2>
+      {{work.research}}
+    </div>
+    <div id="sketch" ng-if="work.sketch" class="col-md-9 col-md-offset-1">
+<h2>Sketch</h2> {{work.sketch}}
+    </div>
+    <div id="design" ng-if="work.design" class="col-md-9 col-md-offset-1">
+      <h2>Design</h2> {{work.design}}
+    </div>
+    <div id="lessons" ng-if="work.retrospective" class="col-md-9 col-md-offset-1">
+      <h2>Lessons</h2> {{work.retrospective}}
+    </div>
+  </section>
+
+
+  <section class="work-nav">
+    <div class="container">
+      <div class="row">
+        <a ui-sref="workDetail({workId:prevWork})" class="col-md-6">&#8592; {{prevWork}}</a>
+        <a ui-sref="workDetail({workId:nextWork})" class="col-md-6">{{nextWork}} &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+</div>
