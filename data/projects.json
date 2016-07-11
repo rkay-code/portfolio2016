@@ -3,27 +3,27 @@
     "title": "Gigster",
     "img": "img/gigster-logo.png",
     "role": "Design | Development",
-    "tagline": "Fuga harum odit dolores architecto voluptas maxime.Non est natus. Eos incidunt vitae iste et velit qui.Non est natus. Sit autem est fugit.",
+    "tagline": "On demand software development.",
     "type": "Case Study"
   }, {
     "id": "riskmaster",
     "title": "Riskmaster",
     "img": "img/riskmaster-logo.png",
     "role": "Design | Development",
-    "tagline": "Fuga harum odit dolores architecto voluptas maxime.Non est natus. Eos incidunt vitae iste et velit qui.Non est natus. Sit autem est fugit.",
+    "tagline": "A visual portfolio management tool.",
     "type": "Case Study"
   }, {
     "id": "coinmotion",
     "title": "Coinmotion",
     "img": "img/coinmotion-logo.png",
     "role": "Design | Development",
-    "tagline": "Fuga harum odit dolores architecto voluptas maxime.Non est natus. Eos incidunt vitae iste et velit qui.Non est natus. Sit autem est fugit.",
+    "tagline": "Bitcoin - Easy, fast, the way it should be.",
     "type": "Overview"
   }, {
     "id": "gamesmith",
     "title": "Gamesmith",
     "img": "img/gamesmith-logo.png",
     "role": "Design",
-    "tagline": "Fuga harum odit dolores architecto voluptas maxime.Non est natus. Eos incidunt vitae iste et velit qui.Non est natus. Sit autem est fugit.",
+    "tagline": "The network for video game professionals.",
     "type": "Overview"
   }]

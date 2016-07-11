@@ -1,0 +1,77 @@
+.header-img {
+  img {
+    max-width: 100%;
+  }
+}
+.intro-text {
+  width: 80%;
+  margin: 50px auto 0;
+  text-align: center;
+  p {
+    font-size: 16px;
+  }
+}
+.proj-brief-wrapper {
+  text-align: center;
+  margin: 100px auto;
+  .proj-brief {
+    width: 300px;
+    height: 300px;
+    background-image: url("/img/frame3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    .proj-brief-img {
+      display: inline-block;
+      margin-top: 45%;
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .proj-brief-hover {
+    display: none;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: lighter;
+    margin: 0;
+  }
+  h4 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+}
+.proj-brief:hover .proj-brief-hover {
+  display: block;
+  vertical-align: top;
+  background: #E84855;
+  color: #fff;
+  width: 300px;
+  height: 300px;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  .hover-content {
+    width: 75%;
+    margin: 15% auto;
+    height: 70%;
+    p {
+      font-size: 12px;
+    }
+  }
+}
+.view-proj {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 20px;
+  margin-top: 20px;
+}

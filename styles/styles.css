@@ -16,50 +16,142 @@
   to {
     transform: scale(1.5); } }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "proxima-nova", sans-serif; }
+@keyframes scale {
+  0% {
+    transform: scale(0.7);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
 
-body {
-  margin: 0;
-  padding: 0; }
+@keyframes pop {
+  0% {
+    transform: rotate(-90deg); }
+  95% {
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(0deg); } }
 
-b,
-a {
-  color: #E84855; }
+.address {
+  width: 25%;
+  margin: auto;
+  text-align: left; }
 
-a,
-button {
-  cursor: pointer; }
+.contact-icons {
+  margin-top: 50px;
+  text-align: center; }
+  .contact-icons ul {
+    list-style: none;
+    padding: 0; }
+    .contact-icons ul li {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #FF9B71;
+      border-radius: 50%;
+      margin: 0 6px; }
+      .contact-icons ul li a {
+        font-size: 14px;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff; }
+        .contact-icons ul li a i {
+          margin-top: 8px; }
 
-.wf-loading body {
-  display: none; }
+.box {
+  position: relative;
+  background-color: #7FD8BE;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  -webkit-border-radius: 10% / 100%;
+  -moz-border-radius: 10% / 100%;
+  border-radius: 10% / 100%;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-bottomright: 0;
+  -moz-background-clip: padding;
+  border-bottom-right-radius: 0;
+  background-clip: padding-box;
+  margin-top: 100px; }
+  .box:after {
+    position: absolute;
+    content: " ";
+    height: 90px;
+    width: 40px;
+    background-color: #38b993;
+    right: 5px;
+    top: 5px;
+    -webkit-border-radius: 50% / 100%;
+    -moz-border-radius: 50% / 100%;
+    border-radius: 50% / 100%;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius-bottomright: 0;
+    -moz-background-clip: padding;
+    border-bottom-right-radius: 0;
+    background-clip: padding-box; }
 
-.wf-active body {
-  display: inline; }
+.rod {
+  height: 80px;
+  width: 5px;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  display: inline-block;
+  background-color: #E7E5E5;
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -o-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-animation: pop 3s linear;
+  -moz-animation: pop 3s linear;
+  -o-animation: pop 3s linear;
+  animation: pop 3s linear;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .rod:after {
+    position: absolute;
+    content: " ";
+    right: 100%;
+    top: 2%;
+    width: 20px;
+    height: 16px;
+    background: #FF9B71; }
+  .rod:before {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    content: " ";
+    width: 15px;
+    height: 15px;
+    background: #E7E5E5;
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); }
 
-.view {
-  width: 80%;
-  margin: auto; }
-
-.navbar-default {
-  background-color: #fff; }
-
-.navbar {
-  margin-bottom: 0; }
-  .navbar .hidden {
-    display: none; }
+.design-process {
+  text-align: center;
+  margin: 0 auto 100px;
+  font-size: 16px; }
+  .design-process img {
+    display: block;
+    text-align: center;
+    margin: 100px auto 25px;
+    height: 100px; }
+  .design-process img:first-child {
+    margin: 75px auto 25px; }
 
 .landing-wrapper {
   margin: 15% auto 5%;
@@ -136,28 +228,83 @@ button {
   text-decoration: none;
   color: #fff; }
 
-.work-wrapper {
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -ms-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
-  -ms-animation-duration: 6s;
-  -o-animation-duration: 6s;
-  animation-duration: 6s;
+div.animatedDoor {
+  -webkit-transform: scale(0.05, 1) skew(0deg, -5deg);
+  -moz-transform: scale(0.05, 1) skew(0deg, -5deg);
+  -o-transform: scale(0.05, 1) skew(0deg, -5deg);
+  transform: scale(0.05, 1) skew(0deg, -5deg);
+  transform-origin: left;
+  transition: all 750ms ease-in-out;
+  transition-delay: 1s; }
+
+.scale {
+  -webkit-animation-name: zoomIn;
+  -moz-animation-name: zoomIn;
+  -ms-animation-name: zoomIn;
+  -o-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 750ms;
+  -moz-animation-duration: 750ms;
+  -ms-animation-duration: 750ms;
+  -o-animation-duration: 750ms;
+  animation-duration: 750ms;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  margin-top: 50px; }
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -ms-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms; }
 
-.header-img {
-  margin-bottom: 75px; }
-  .header-img img {
-    max-width: 100%; }
+.fadeDoor {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 750ms;
+  -moz-animation-duration: 750ms;
+  -ms-animation-duration: 750ms;
+  -o-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1250ms;
+  -moz-animation-delay: 1250ms;
+  -ms-animation-delay: 1250ms;
+  -o-animation-delay: 1250ms;
+  animation-delay: 1250ms;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
+
+.fade {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.header-img img {
+  max-width: 100%; }
 
 .intro-text {
   width: 80%;
@@ -229,7 +376,8 @@ button {
   display: none; }
 
 .detail-brief-wrapper {
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
   .detail-brief-wrapper .detail-brief .detail-brief-img {
     margin-top: 40px;
     margin-bottom: 40px; }
@@ -243,7 +391,6 @@ button {
       margin: 0; }
     .detail-brief-wrapper .detail-brief .detail-brief-text h4 {
       font-weight: lighter;
-      text-transform: uppercase;
       letter-spacing: 1px;
       margin: 10px 0; }
 
@@ -277,12 +424,24 @@ button {
         .detail-nav ul li a:hover h4 {
           opacity: 1; }
 
-.detail-body div {
-  height: 100vh; }
-  .detail-body div h2 {
-    color: #FF9B71;
-    font-weight: 400;
-    margin-bottom: 35px; }
+.detail-body {
+  margin: 75px auto; }
+  .detail-body div {
+    padding: 75px 0 20px 25px; }
+    .detail-body div h2 {
+      color: #3F7CAC;
+      font-weight: 400;
+      margin-bottom: 30px; }
+    .detail-body div img {
+      width: 100%;
+      box-shadow: 0px 0px 10px #D4D4D4;
+      margin-bottom: 50px; }
+    .detail-body div p {
+      font-size: 16px; }
+    .detail-body div b {
+      color: #000; }
+  .detail-body div:first-child {
+    padding-top: 0; }
 
 .work-nav {
   background-color: #7FD8BE;
@@ -296,99 +455,68 @@ button {
   .work-nav a:last-child {
     text-align: right; }
 
-.contact-icons {
-  text-align: center;
-  margin: auto;
-  display: inherit; }
-  .contact-icons a {
-    margin: 10px;
-    font-size: 24px; }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "proxima-nova", sans-serif; }
 
-div.animatedDoor {
-  -webkit-transform-style: preserve-3d;
-  -webkit-perspective: 225px;
-  -webkit-transform-origin: 0 -50%;
-  -webkit-transition: all 1s;
-  -moz-transform-style: preserve-3d;
-  -moz-perspective: 225px;
-  -moz-transform-origin: 0 -50%;
-  -moz-transition: all 1s;
-  -o-transform-style: preserve-3d;
-  -o-perspective: 225px;
-  -o-transform-origin: 0 -50%;
-  -o-transition: all 1s;
-  transform-style: preserve-3d;
-  perspective: 225px;
-  transform-origin: 0 -50%;
-  transition: all 1s;
-  width: 150px;
-  transition-delay: 1.5s;
-  margin-top: 30%; }
+body {
+  margin: 0;
+  padding: 0; }
 
-div.animatedDoor {
-  -webkit-transform: scale(0.05, 1) skew(0deg, 20deg);
-  /*use scale to change how wide it opens*/
-  -moz-transform: scale(0.05, 1) skew(0deg, 20deg);
-  -o-transform: scale(0.05, 1) skew(0deg, 20deg);
-  transform: scale(0.15, 1) skew(0deg, -10deg); }
+b,
+a {
+  color: #E84855; }
 
-.scale {
-  -webkit-animation-name: zoomIn;
-  -moz-animation-name: zoomIn;
-  -ms-animation-name: zoomIn;
-  -o-animation-name: zoomIn;
-  animation-name: zoomIn;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  -ms-animation-delay: 1.5s;
-  -o-animation-delay: 1.5s;
-  animation-delay: 1.5s; }
+a,
+button {
+  cursor: pointer; }
 
-.fadeDoor {
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -ms-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -ms-animation-duration: 1.5s;
-  -o-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  -ms-animation-delay: 2.5s;
-  -o-animation-delay: 2.5s;
-  animation-delay: 2.5s; }
+.wf-loading body {
+  display: none; }
 
-.fade {
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -ms-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+.wf-active body {
+  display: inline; }
+
+.view {
+  width: 80%;
+  margin: auto; }
+
+.navbar-default {
+  background-color: #fff; }
+
+.navbar {
+  margin-bottom: 0; }
+  .navbar .hidden {
+    display: none; }
+
+.wrapper {
+  margin-top: 50px;
+  -webkit-animation-name: scale;
+  -moz-animation-name: scale;
+  -ms-animation-name: scale;
+  -o-animation-name: scale;
+  animation-name: scale;
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
+
+.header-img {
+  text-align: center; }
