@@ -59,7 +59,6 @@ button {
     background: #fff;
 }
 .wrapper {
-  margin-top: 50px;
   @include prefix(animation-name, scale, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
@@ -67,4 +66,14 @@ button {
 }
 .header-img {
   text-align: center;
+  img {
+    max-width: 100%;
+  }
+}
+.intro-text {
+  margin: 50px auto 0;
+  text-align: center;
+  p {
+    font-size: 18px;
+  }
 }

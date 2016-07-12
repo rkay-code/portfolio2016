@@ -82,6 +82,7 @@
       text-align: center;
       display: block;
       margin-bottom: 50px;
+      max-width: 100%;
     }
     p {
       font-size: 16px;
@@ -113,4 +114,26 @@
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+}
+
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .detail-body div {
+        padding: 10px 0;
+    }
+    .detail-nav {
+      display: none;
+    }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .detail-body div {
+        padding: 10px 0;
+    }
 }

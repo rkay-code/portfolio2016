@@ -42,6 +42,9 @@
   100% {
     transform: rotate(0deg); } }
 
+.contact-wrapper {
+  margin-top: 100px; }
+
 .address {
   width: 25%;
   margin: auto;
@@ -284,7 +287,8 @@
   -moz-animation-delay: 500ms;
   -ms-animation-delay: 500ms;
   -o-animation-delay: 500ms;
-  animation-delay: 500ms; }
+  animation-delay: 500ms;
+  transform-origin: top; }
 
 .fade {
   -webkit-animation-name: fadeOut;
@@ -318,18 +322,10 @@
   .profile-wrap .bio {
     margin-top: 25px;
     text-align: center; }
-
-.header-img img {
-  max-width: 100%; }
-
-.work-wrapper {
-  padding-top: 100px; }
-
-.intro-text {
-  margin: 50px auto 0;
-  text-align: center; }
-  .intro-text p {
-    font-size: 18px; }
+    .profile-wrap .bio img {
+      display: block;
+      margin: 50px auto 25px;
+      height: 150px; }
 
 .proj-wrapper {
   margin-top: 75px;
@@ -439,7 +435,8 @@
       box-shadow: 0 0 10px #D4D4D4;
       text-align: center;
       display: block;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      max-width: 100%; }
     .detail-body div p {
       font-size: 16px; }
     .detail-body div b {
@@ -475,6 +472,16 @@
   .work-nav a:last-child {
     text-align: right;
     float: right; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .detail-body div {
+    padding: 10px 0; }
+  .detail-nav {
+    display: none; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .detail-body div {
+    padding: 10px 0; } }
 
 body,
 h1,
@@ -524,7 +531,6 @@ button {
   background: #fff; }
 
 .wrapper {
-  margin-top: 50px;
   -webkit-animation-name: scale;
   -moz-animation-name: scale;
   -ms-animation-name: scale;
@@ -544,3 +550,11 @@ button {
 
 .header-img {
   text-align: center; }
+  .header-img img {
+    max-width: 100%; }
+
+.intro-text {
+  margin: 50px auto 0;
+  text-align: center; }
+  .intro-text p {
+    font-size: 18px; }

@@ -2,6 +2,7 @@
 <html ng-app="portfolioApp" ng-controller="mainCtrl">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <script src="https://use.typekit.net/rvm6uzx.js"></script>
   <script>
     try {
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top" id="nav" ng-hide="isActive('/')">
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav" ng-show="!isActive('/')">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
