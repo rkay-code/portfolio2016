@@ -6,9 +6,11 @@
     </div>
   <div class="intro-text row">
     <h1>This is my desk.</h1>
-    <p>There are many like it, {{user.name | capitalize}}, but this one is mine. It’s pretty minimal, but it gets the job done - just like my work.
+    <p>There are many like it<span ng-if="user.name">, {{user.name | capitalize}}</span>, but this one is mine. It’s pretty minimal, but it gets the job done - just like my work.
 </p>
   </div>
+  </div>
+  <div class="col-md-10 col-md-offset-1">
   <div class="design-process">
     <img src="img/hat.png" />
     When I come to my desk for a new project, I start by putting on my empathy hat. To me, this is one of the most valuable parts of my design process. I like to envision a day in the life of my user and feel their pain points. I create personas that allow

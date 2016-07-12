@@ -1,28 +1,28 @@
   [{
     "id": "gigster",
     "title": "Gigster",
-    "img": "img/gigster-logo.png",
+    "img": "img/gigster-frame.png",
     "role": "Design | Development",
     "tagline": "On demand software development.",
     "type": "Case Study"
   }, {
     "id": "riskmaster",
     "title": "Riskmaster",
-    "img": "img/riskmaster-logo.png",
+    "img": "img/riskmaster-frame.png",
     "role": "Design | Development",
     "tagline": "A visual portfolio management tool.",
     "type": "Case Study"
   }, {
     "id": "coinmotion",
     "title": "Coinmotion",
-    "img": "img/coinmotion-logo.png",
+    "img": "img/coinmotion-frame.png",
     "role": "Design | Development",
     "tagline": "Bitcoin - Easy, fast, the way it should be.",
     "type": "Overview"
   }, {
     "id": "gamesmith",
     "title": "Gamesmith",
-    "img": "img/gamesmith-logo.png",
+    "img": "img/gamesmith-frame.png",
     "role": "Design",
     "tagline": "The network for video game professionals.",
     "type": "Overview"

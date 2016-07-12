@@ -5,7 +5,23 @@
     </div>
   </div>
   <div class="intro-text row">
-    <h1>This is my room.</h1>
-    <p>There are many like it, {{user.name | capitalize}}, but this one is mine.</p>
+    <h1>Now we're really getting personal<span ng-if="user.name">, {{user.name | capitalize}}</span>...</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 profile-wrap">
+      <div class="polaroid">
+        <img src="img/me.png" class="profile-pic"/>
+        <p>
+          <i>That's me!</i>
+        </p>
+      </div>
+      <div class="bio">
+        <p>
+          By now, you’ve probably noticed that everything around here is pretty minimal. That’s more than an aesthetic - I’ve spent the past year and a half traveling 16 countries (which doesn’t leave much room for possessions). Outside of being jet-lagged, my hobbies include teaching design and computer science to high schoolers through <a href="http://hacker.fund/" target="_blank">Hacker Fund</a>, taking <a href="https://www.instagram.com/reneepadgham" target="_blank">pictures</a> of all the places I go, reading, and <a href="https://www.medium.com/@reneepadgham" target="_blank">writing on Medium</a>. I organize dancing and women in tech communities (message me if you want to join!). If I’m lost, you can probably find me at the closest tea place or taqueria. I prefer high fives to handshakes, but hugs trump both. <br><br>
+  I’m excited to be planting roots in San Francisco.<br><br>
+  Please say hello - I’d love to know which taqueria makes the <b>best</b> mission style burrito, your favorite book, or your thoughts on my site!
+        </p>
+      </div>
+    </div>
   </div>
 </div>
