@@ -25,9 +25,8 @@ body {
   margin: 0;
   padding: 0;
 }
-b,
 a {
-  color: #E84855;
+  color: #FF9B71;
 }
 a,
 button {
@@ -56,11 +55,19 @@ button {
     display: none;
   }
 }
+.navbar-default .navbar-toggle {
+  border: none;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: #fff;
+}
 .wrapper {
   margin-top: 50px;
   @include prefix(animation-name, scale, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  transform-origin: 50vw 50vh;
 }
 .header-img {
   text-align: center;

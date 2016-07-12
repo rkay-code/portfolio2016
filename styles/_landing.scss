@@ -51,27 +51,19 @@
   color: #fff;
 }
 
-div.animatedDoor {
-  -webkit-transform: scale(0.05,1) skew(0deg,-5deg);
-  -moz-transform: scale(0.05,1) skew(0deg,-5deg);
-  -o-transform: scale(0.05,1) skew(0deg,-5deg);
-  transform: scale(0.05, 1) skew(0deg, -5deg);
-  transform-origin: left;
-  transition: all 750ms ease-in-out;
-  transition-delay: 1s;
+.animatedDoor {
+  transform-origin: 0 50%;
+  @include prefix(animation-name, open, webkit moz ms o);
+  @include prefix(animation-duration, 1s, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-delay, 1s, webkit moz ms o);
+  @include prefix(animation-timing-function, ease-in-out, webkit moz ms o);
 }
 .scale {
   @include prefix(animation-name, zoomIn, webkit moz ms o);
   @include prefix(animation-duration, 750ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   @include prefix(animation-delay, 500ms, webkit moz ms o);
-}
-.fadeDoor {
-  @include prefix(animation-name, fadeOut, webkit moz ms o);
-  @include prefix(animation-duration, 750ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  @include prefix(animation-delay, 1250ms, webkit moz ms o);
-  @include prefix(animation-timing-function, ease-in-out, webkit moz ms o);
 }
 .fade {
   @include prefix(animation-name, fadeOut, webkit moz ms o);

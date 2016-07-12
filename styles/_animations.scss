@@ -37,16 +37,28 @@
     opacity: 0;
   }
   100% {
-    transform: scale(1.0);
+    transform: scale(0.9);
     opacity: 1;
   }
 }
-
+@keyframes open {
+  0% {
+    transform: scale(1) skew(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.05, 1) skew(0, -20deg);
+    opacity: 0;
+  }
+}
 @keyframes pop {
   0% {
     transform: rotate(-90deg);
   }
-  95% {
+  65% {
     transform: rotate(-90deg);
   }
   100% {

@@ -21,13 +21,23 @@
     transform: scale(0.7);
     opacity: 0; }
   100% {
-    transform: scale(1);
+    transform: scale(0.9);
     opacity: 1; } }
+
+@keyframes open {
+  0% {
+    transform: scale(1) skew(0);
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(0.05, 1) skew(0, -20deg);
+    opacity: 0; } }
 
 @keyframes pop {
   0% {
     transform: rotate(-90deg); }
-  95% {
+  65% {
     transform: rotate(-90deg); }
   100% {
     transform: rotate(0deg); } }
@@ -111,10 +121,10 @@
   -o-transform-origin: bottom center;
   -ms-transform-origin: bottom center;
   transform-origin: bottom center;
-  -webkit-animation: pop 3s linear;
-  -moz-animation: pop 3s linear;
-  -o-animation: pop 3s linear;
-  animation: pop 3s linear;
+  -webkit-animation: pop 2s linear;
+  -moz-animation: pop 2s linear;
+  -o-animation: pop 2s linear;
+  animation: pop 2s linear;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -226,14 +236,33 @@
   text-decoration: none;
   color: #fff; }
 
-div.animatedDoor {
-  -webkit-transform: scale(0.05, 1) skew(0deg, -5deg);
-  -moz-transform: scale(0.05, 1) skew(0deg, -5deg);
-  -o-transform: scale(0.05, 1) skew(0deg, -5deg);
-  transform: scale(0.05, 1) skew(0deg, -5deg);
-  transform-origin: left;
-  transition: all 750ms ease-in-out;
-  transition-delay: 1s; }
+.animatedDoor {
+  transform-origin: 0 50%;
+  -webkit-animation-name: open;
+  -moz-animation-name: open;
+  -ms-animation-name: open;
+  -o-animation-name: open;
+  animation-name: open;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
 
 .scale {
   -webkit-animation-name: zoomIn;
@@ -256,33 +285,6 @@ div.animatedDoor {
   -ms-animation-delay: 500ms;
   -o-animation-delay: 500ms;
   animation-delay: 500ms; }
-
-.fadeDoor {
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -ms-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 750ms;
-  -moz-animation-duration: 750ms;
-  -ms-animation-duration: 750ms;
-  -o-animation-duration: 750ms;
-  animation-duration: 750ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 1250ms;
-  -moz-animation-delay: 1250ms;
-  -ms-animation-delay: 1250ms;
-  -o-animation-delay: 1250ms;
-  animation-delay: 1250ms;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -ms-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out; }
 
 .fade {
   -webkit-animation-name: fadeOut;
@@ -316,6 +318,9 @@ div.animatedDoor {
 
 .header-img img {
   max-width: 100%; }
+
+.work-wrapper {
+  padding-top: 100px; }
 
 .intro-text {
   margin: 50px auto 0;
@@ -419,7 +424,7 @@ div.animatedDoor {
           opacity: 1; }
 
 .detail-body {
-  margin: 75px auto; }
+  margin: 75px auto 0; }
   .detail-body div {
     padding: 75px 0 20px 25px; }
     .detail-body div h2 {
@@ -427,8 +432,11 @@ div.animatedDoor {
       font-weight: 400;
       margin-bottom: 30px; }
     .detail-body div img {
-      width: 100%;
-      box-shadow: 0px 0px 10px #D4D4D4;
+      height: 500px;
+      box-shadow: 0 0 10px #D4D4D4;
+      text-align: center;
+      margin: auto;
+      display: block;
       margin-bottom: 50px; }
     .detail-body div p {
       font-size: 16px; }
@@ -442,12 +450,14 @@ div.animatedDoor {
   padding: 20px 0 15px; }
   .work-nav a {
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    letter-spacing: 1px; }
   .work-nav a:hover {
     text-decoration: none;
     cursor: pointer; }
   .work-nav a:last-child {
-    text-align: right; }
+    text-align: right;
+    float: right; }
 
 body,
 h1,
@@ -468,9 +478,8 @@ body {
   margin: 0;
   padding: 0; }
 
-b,
 a {
-  color: #E84855; }
+  color: #FF9B71; }
 
 a,
 button {
@@ -494,6 +503,12 @@ button {
   .navbar .hidden {
     display: none; }
 
+.navbar-default .navbar-toggle {
+  border: none; }
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background: #fff; }
+
 .wrapper {
   margin-top: 50px;
   -webkit-animation-name: scale;
@@ -510,7 +525,8 @@ button {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  transform-origin: 50vw 50vh; }
 
 .header-img {
   text-align: center; }

@@ -16,7 +16,7 @@
 </head>
 
 <body ng-controller="mainCtrl">
-  <nav class="navbar navbar-default" id="nav" ng-show="!isActive('/')">
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav" ng-show="!isActive('/')">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -30,10 +30,10 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a ui-sref="work">Home</a></li>
-          <li><a ui-sref="desk">Desk</a></li>
-          <li><a ui-sref="room">Room</a></li>
-          <li><a ui-sref="contact">Mailbox</a></li>
+          <li><a ui-sref="work" data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
+          <li><a ui-sref="desk" data-toggle="collapse" data-target=".navbar-collapse">Desk</a></li>
+          <li><a ui-sref="room" data-toggle="collapse" data-target=".navbar-collapse">Room</a></li>
+          <li><a ui-sref="contact" data-toggle="collapse" data-target=".navbar-collapse">Mailbox</a></li>
         </ul>
       </div>
     </div>
