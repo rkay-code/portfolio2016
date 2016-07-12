@@ -312,9 +312,12 @@
   .profile-wrap .polaroid {
     margin-top: 50px; }
     .profile-wrap .polaroid img {
-      width: 300px; }
+      width: 300px;
+      box-shadow: 0 0 5px #aaa;
+      border-radius: 5px; }
   .profile-wrap .bio {
-    margin-top: 25px; }
+    margin-top: 25px;
+    text-align: center; }
 
 .header-img img {
   max-width: 100%; }
@@ -326,7 +329,7 @@
   margin: 50px auto 0;
   text-align: center; }
   .intro-text p {
-    font-size: 16px; }
+    font-size: 18px; }
 
 .proj-wrapper {
   margin-top: 75px;
@@ -432,10 +435,9 @@
       font-weight: 400;
       margin-bottom: 30px; }
     .detail-body div img {
-      height: 500px;
+      padding: 0;
       box-shadow: 0 0 10px #D4D4D4;
       text-align: center;
-      margin: auto;
       display: block;
       margin-bottom: 50px; }
     .detail-body div p {
@@ -447,7 +449,22 @@
 
 .work-nav {
   background-color: #7FD8BE;
-  padding: 20px 0 15px; }
+  padding: 20px 0 15px;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
   .work-nav a {
     text-transform: uppercase;
     color: #fff;
@@ -478,6 +495,9 @@ body {
   margin: 0;
   padding: 0; }
 
+p {
+  font-size: 16px; }
+
 a {
   color: #FF9B71; }
 
@@ -491,17 +511,11 @@ button {
 .wf-active body {
   display: inline; }
 
-.view {
-  width: 80%;
-  margin: auto; }
-
 .navbar-default {
   background-color: #fff; }
 
 .navbar {
   margin-bottom: 0; }
-  .navbar .hidden {
-    display: none; }
 
 .navbar-default .navbar-toggle {
   border: none; }
@@ -526,7 +540,7 @@ button {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  transform-origin: 50vw 50vh; }
+  transform-origin: center; }
 
 .header-img {
   text-align: center; }

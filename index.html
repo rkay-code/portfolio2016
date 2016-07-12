@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="portfolioApp">
+<html ng-app="portfolioApp" ng-controller="mainCtrl">
 
 <head>
   <script src="https://use.typekit.net/rvm6uzx.js"></script>
@@ -15,8 +15,8 @@
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 </head>
 
-<body ng-controller="mainCtrl">
-  <nav class="navbar navbar-default navbar-fixed-top" id="nav" ng-show="!isActive('/')">
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav" ng-hide="isActive('/')">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -30,10 +30,10 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a ui-sref="work" data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
-          <li><a ui-sref="desk" data-toggle="collapse" data-target=".navbar-collapse">Desk</a></li>
-          <li><a ui-sref="room" data-toggle="collapse" data-target=".navbar-collapse">Room</a></li>
-          <li><a ui-sref="contact" data-toggle="collapse" data-target=".navbar-collapse">Mailbox</a></li>
+          <li><a ui-sref="work" data-toggle="collapse">Home</a></li>
+          <li><a ui-sref="desk" data-toggle="collapse">Desk</a></li>
+          <li><a ui-sref="room" data-toggle="collapse">Room</a></li>
+          <li><a ui-sref="contact" data-toggle="collapse">Mailbox</a></li>
         </ul>
       </div>
     </div>

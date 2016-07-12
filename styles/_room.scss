@@ -1,20 +1,19 @@
 .room-wrapper {
   text-align: center;
 }
-
-
 .profile-wrap {
   margin-top: 25px;
   margin-bottom: 100px;
-
   .polaroid {
-  margin-top: 50px;
-  img {
+    margin-top: 50px;
+    img {
       width: 300px;
+      box-shadow: 0 0 5px #aaa;
+      border-radius: 5px;
+    }
   }
-  }
-
   .bio {
     margin-top: 25px;
+    text-align: center;
   }
 }

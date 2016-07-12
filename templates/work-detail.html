@@ -53,12 +53,12 @@
     <div id="problem" ng-if="work.problem" class="col-md-9 col-md-offset-1">
       <h2>Problem</h2>
       <p ng-bind-html="work.problem"></p><br />
-      <p ng-bind-html="work.problemCaption1" ng-if="work.problemCaption1"></p>
-      <img ng-src="{{work.problemImg1}}" ng-if="work.problemImg1"/>
-      <p ng-bind-html="work.problemCaption2" ng-if="work.problemCaption2"></p>
-      <img ng-src="{{work.problemImg2}}" ng-if="work.problemImg2"/>
-      <p ng-bind-html="work.problemCaption3" ng-if="work.problemCaption3"></p>
-      <img ng-src="{{work.problemImg3}}" ng-if="work.problemImg3"/>
+      <p ng-bind-html="work.problemCaption1" ng-if="work.problemCaption1" class="col-md-8 col-md-offset-2"></p>
+      <img ng-src="{{work.problemImg1}}" ng-if="work.problemImg1" class="col-md-8 col-md-offset-2"/>
+      <p ng-bind-html="work.problemCaption2" ng-if="work.problemCaption2" class="col-md-8 col-md-offset-2"></p>
+      <img ng-src="{{work.problemImg2}}" ng-if="work.problemImg2" class="col-md-8 col-md-offset-2"/>
+      <p ng-bind-html="work.problemCaption3" ng-if="work.problemCaption3" class="col-md-8 col-md-offset-2"></p>
+      <img ng-src="{{work.problemImg3}}" ng-if="work.problemImg3" class="col-md-8 col-md-offset-2"/>
 
     </div>
     <div id="constraints" ng-if="work.constraints" class="col-md-9 col-md-offset-1">
@@ -78,11 +78,11 @@
     </div>
     <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
       <h2>Design</h2>
-      <img ng-src="{{work.designImg1}}" ng-if="work.designImg1"/>
-      <img ng-src="{{work.designImg2}}" ng-if="work.designImg2"/>
-      <img ng-src="{{work.designImg3}}" ng-if="work.designImg3"/>
-      <img ng-src="{{work.designImg4}}" ng-if="work.designImg4"/>
-      <p ng-bind-html="work.design">
+      <img ng-src="{{work.designImg1}}" ng-if="work.designImg1" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="{{work.designImg2}}" ng-if="work.designImg2" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="{{work.designImg3}}" ng-if="work.designImg3" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="{{work.designImg4}}" ng-if="work.designImg4" class="col-md-8 col-md-offset-2"/>
+      <p ng-bind-html="work.design" class="col-md-12">
       </p>
     </div>
     <div id="lessons" ng-if="work.retrospective" class="col-md-9 col-md-offset-1">

@@ -25,6 +25,9 @@ body {
   margin: 0;
   padding: 0;
 }
+p {
+  font-size: 16px;
+}
 a {
   color: #FF9B71;
 }
@@ -42,18 +45,11 @@ button {
     display: inline;
   }
 }
-.view {
-  width: 80%;
-  margin: auto;
-}
 .navbar-default {
   background-color: #fff;
 }
 .navbar {
-  margin-bottom: 0;
-  .hidden {
-    display: none;
-  }
+  margin-bottom: 0
 }
 .navbar-default .navbar-toggle {
   border: none;
@@ -67,7 +63,7 @@ button {
   @include prefix(animation-name, scale, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  transform-origin: 50vw 50vh;
+  transform-origin: center;
 }
 .header-img {
   text-align: center;

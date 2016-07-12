@@ -77,10 +77,9 @@
       margin-bottom: 30px;
     }
     img {
-      height: 500px;
+      padding: 0;
       box-shadow: 0 0 10px #D4D4D4;
       text-align: center;
-      margin: auto;
       display: block;
       margin-bottom: 50px;
     }
@@ -111,4 +110,7 @@
     text-align: right;
     float: right;
   }
+  @include prefix(animation-name, fadeIn, webkit moz ms o);
+  @include prefix(animation-duration, 1000ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
 }
