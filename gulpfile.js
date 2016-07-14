@@ -46,9 +46,9 @@ gulp.task('cssmin', function () {
 });
 
 gulp.task('htmlmin', function() {
-  return gulp.src('*.html')
+  return gulp.src('templates/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/templates'))
 });
 
 gulp.task('jsmin', function() {
@@ -63,7 +63,7 @@ gulp.task('imagemin', () => {
 			progressive: true,
 			use: [pngquant()]
 		}))
-		.pipe(gulp.dest('dist/images'));
+		.pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('build', ['cssmin', 'htmlmin', 'jsmin', 'imagemin']);

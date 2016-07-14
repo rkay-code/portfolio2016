@@ -1,3 +1,6 @@
+.work.wrapper {
+  transform-origin: 50% 20%;
+}
 .active {
   display: block;
 }
@@ -56,6 +59,7 @@
         font-weight: 300;
         font-size: 14px;
         margin-top: 15px;
+        letter-spacing: .5px;
       }
       a:hover {
         text-decoration: none;
@@ -70,9 +74,9 @@
 .detail-body {
   margin: 75px auto 0;
   div {
-    padding: 75px 0 20px 25px;
+    padding: 40px 0 0 0;
     h2 {
-      color: #3F7CAC;
+      color: #48639C;
       font-weight: 400;
       margin-bottom: 30px;
     }
@@ -81,23 +85,30 @@
       box-shadow: 0 0 10px #D4D4D4;
       text-align: center;
       display: block;
+      margin-top: 50px;
       margin-bottom: 50px;
       max-width: 100%;
     }
     p {
       font-size: 16px;
-    }
-    b {
-      color: #000;
+      padding-left: 0;
+      margin-top: -20px;
     }
   }
   div:first-child {
     padding-top: 0;
   }
+  div:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 .work-nav {
-  background-color: #7FD8BE;
+  background-color: #6ED8B8;
   padding: 20px 0 15px;
+  @include prefix(animation-name, fadeIn, webkit moz ms o);
+  @include prefix(animation-duration, 2s, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   a {
     text-transform: uppercase;
     color: #fff;
@@ -106,34 +117,24 @@
   a:hover {
     text-decoration: none;
     cursor: pointer;
+    color: #fff;
+    font-weight: 300;
   }
   a:last-child {
     text-align: right;
     float: right;
   }
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 1000ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
 }
-
-
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .detail-body div {
-        padding: 10px 0;
-    }
-    .detail-nav {
-      display: none;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .detail-body div {
+    padding: 10px 0;
+  }
+  .detail-nav {
+    display: none;
+  }
 }
-
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .detail-body div {
-        padding: 10px 0;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .detail-body div {
+    padding: 10px 0;
+  }
 }

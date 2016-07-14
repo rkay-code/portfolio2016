@@ -1,4 +1,4 @@
-<div class="work-wrapper wrapper container">
+<div class="work-wrapper wrapper container" ng-cloak>
   <div class="row">
     <div class="col-md-8 col-md-offset-2 header-img">
         <img src="/img/living-room.png" />
@@ -14,16 +14,15 @@
   <div class="row" ng-controller="workCtrl">
 
     <div class="proj-brief-wrapper" ng-repeat="work in works">
-      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 proj-wrapper">
-        <div class="col-sm-6 col-sm-offset-1">
+      <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 proj-wrapper">
+        <div class="col-sm-7">
+          <a href="#/work/{{work.id}}">
           <img ng-src="{{work.img}}" />
+        </a>
         </div>
         <div class="col-sm-5 brief-details">
             <h3>{{work.title}}</h3>
-            <h4>{{work.role}}</h4>
-            <p>
-              {{work.tagline}}
-            </p>
+            <h4>{{work.tagline}}</h4>
             <a href="#/work/{{work.id}}">
               <button class="view-proj">{{work.type}}</button>
             </a>
@@ -33,10 +32,10 @@
   </div>
   <div class="row coming-soon">
     <h3>Coming Soon...</h3>
-    <div class="col-md-3 col-md-offset-3">
+    <div class="col-md-5 col-md-offset-1">
       <img src="/img/greylock-frame.png" />
     </div>
-    <div class="col-md-3">
+    <div class="col-md-5">
       <img src="/img/fidelity-frame.png" />
     </div>
   </div>

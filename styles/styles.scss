@@ -1,3 +1,23 @@
+@font-face {
+  font-family: ProximaNova;
+  src: url('fonts/ProximaNova-Regular.otf');
+}
+@font-face {
+  font-family: ProximaNova;
+  font-weight: lighter;
+  src: url('fonts/ProximaNova-Light.otf');
+}
+@font-face {
+  font-family: ProximaNova;
+  font-weight: medium;
+  src: url('fonts/ProximaNova-Semibold.otf');
+}
+@font-face {
+  font-family: ProximaNova;
+  font-weight: bold;
+  src: url('fonts/ProximaNova-Bold.otf');
+}
+
 @import 'animations';
 @import 'contact';
 @import 'desk';
@@ -5,7 +25,6 @@
 @import 'room';
 @import 'work';
 @import 'work-detail';
-
 body,
 h1,
 h2,
@@ -20,6 +39,11 @@ h6,
 .h5,
 .h6 {
   font-family: "proxima-nova", sans-serif;
+  font-weight: lighter;
+  color: #293132;
+}
+h4, .h4 {
+  color: #717C89;
 }
 body {
   margin: 0;
@@ -27,9 +51,19 @@ body {
 }
 p {
   font-size: 16px;
+  color: #717C89;
 }
 a {
-  color: #FF9B71;
+  color: #E84855;
+}
+a:hover {
+  color: #E84855;
+  text-decoration: none;
+  font-weight: 500;
+}
+b {
+  color: #293132;
+  font-weight: 500;
 }
 a,
 button {
@@ -45,18 +79,28 @@ button {
     display: inline;
   }
 }
+[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 .navbar-default {
   background-color: #fff;
+  .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:visited {
+    color: #293132;
+  }
+  a:hover {
+    font-weight: 300;
+  }
 }
 .navbar {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 .navbar-default .navbar-toggle {
   border: none;
 }
 
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background: #fff;
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background: #fff;
 }
 .wrapper {
   @include prefix(animation-name, scale, webkit moz ms o);
