@@ -51,10 +51,19 @@
   color: #fff;
 }
 
+.landing-welcome {
+  opacity: 0;
+}
+.show {
+  @include prefix(animation-name, fadeIn, webkit moz ms o);
+  @include prefix(animation-duration, 750ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-delay, 950ms, webkit moz ms o);
+}
 .animatedDoor {
   transform-origin: 0 50%;
   @include prefix(animation-name, open, webkit moz ms o);
-  @include prefix(animation-duration, 1s, webkit moz ms o);
+  @include prefix(animation-duration, 1500ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   @include prefix(animation-delay, 1s, webkit moz ms o);
   @include prefix(animation-timing-function, ease-in-out, webkit moz ms o);
@@ -70,4 +79,10 @@
   @include prefix(animation-name, fadeOut, webkit moz ms o);
   @include prefix(animation-duration, 1s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+}
+.fadeOut {
+  @include prefix(animation-name, fadeOut, webkit moz ms o);
+  @include prefix(animation-duration, 1s, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-delay, 2000ms, webkit moz ms o);
 }

@@ -4,6 +4,7 @@
     "img": "img/gigster-frame.png",
     "role": "Design | Development",
     "tagline": "On demand software development.",
+    "responsibility": "I led design, prototyping, and front-end implementation of the user-facing dashboard and project page.",
     "type": "Case Study"
   }, {
     "id": "riskmaster",
@@ -11,6 +12,7 @@
     "img": "img/riskmaster-frame.png",
     "role": "Design | Development",
     "tagline": "A visual portfolio management tool.",
+    "responsibility": "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
     "type": "Case Study"
   }, {
     "id": "coinmotion",
@@ -18,6 +20,7 @@
     "img": "img/coinmotion-frame.png",
     "role": "Design | Development",
     "tagline": "Bitcoin - Easy, fast, the way it should be.",
+    "responsibility": "I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.",
     "type": "Overview"
   }, {
     "id": "gamesmith",
@@ -25,5 +28,6 @@
     "img": "img/gamesmith-frame.png",
     "role": "Design",
     "tagline": "The network for video game professionals.",
+    "responsibility": "I led product design on a social network for the video game industry.",
     "type": "Overview"
   }]

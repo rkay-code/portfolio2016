@@ -8,7 +8,7 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider, $provide) {
 
     .state('home', {
     url: '/',
-    templateUrl: '/templates/welcome.html',
+    templateUrl: '/templates/landing.html',
   })
 
   .state('work', {
@@ -64,7 +64,9 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
   function animateDoor() {
     $('.door').addClass('animatedDoor');
     $('.landing-input').addClass('fade');
+    $('.landing-welcome').addClass('show');
     $('.door-wrapper').addClass('scale');
+    $('.landing-wrapper').addClass('fadeOut');
   };
 
   $scope.btnClicked = function($timeout) {
@@ -74,7 +76,7 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
   $scope.delayTransition = function() {
     $timeout(function() {
       $location.path("/work");
-    }, 2250);
+    }, 3000);
   };
 });
 

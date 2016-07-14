@@ -7,7 +7,7 @@
   img:hover {
     transform: rotate(5deg);
     transform-origin: center top;
-    transition: all 100ms ease-in;
+    transition: all 200ms ease-in-out;
   }
   h3 {
     font-size: 32px;
@@ -19,13 +19,14 @@
     margin: 10px 0;
     font-size: 16px;
     font-weight: 300;
+    line-height: 20px;
   }
   .brief-details {
     margin-top: 19%;
   }
 }
 .view-proj {
-  background: #7FD8BE;
+  background: $teal;
   border: none;
   color: #fff;
   padding: 12px 25px 10px;
@@ -45,7 +46,12 @@
   img:hover {
     transform: rotate(5deg);
     transform-origin: center top;
-    transition: all 100ms ease-in;
+    transition: all 200ms ease-in-out;
+  }
+  .second img:hover {
+    transform: rotate(-5deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out;
   }
   h3 {
     font-size: 32px;

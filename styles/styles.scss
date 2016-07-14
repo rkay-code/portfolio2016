@@ -9,14 +9,20 @@
 }
 @font-face {
   font-family: ProximaNova;
-  font-weight: medium;
+  font-weight: bold;
   src: url('fonts/ProximaNova-Semibold.otf');
 }
 @font-face {
   font-family: ProximaNova;
-  font-weight: bold;
+  font-weight: bolder;
   src: url('fonts/ProximaNova-Bold.otf');
 }
+
+$red: rgba(239, 111, 108, 1);
+$orange: rgba(247, 178, 103, 1);
+$teal: rgba(110, 216, 184, 1);
+$blue: rgba(34, 116, 165, 1);
+$brown: rgba(91, 75, 73, 1);
 
 @import 'animations';
 @import 'contact';
@@ -54,10 +60,10 @@ p {
   color: #717C89;
 }
 a {
-  color: #E84855;
+  color: $red;
 }
 a:hover {
-  color: #E84855;
+  color: $red;
   text-decoration: none;
   font-weight: 500;
 }
@@ -84,12 +90,12 @@ button {
 }
 .navbar-default {
   background-color: #fff;
-  .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:visited {
-    color: #293132;
-  }
   a:hover {
     font-weight: 300;
   }
+}
+.navbar-brand img {
+      height: 100%;
 }
 .navbar {
   margin-bottom: 0;

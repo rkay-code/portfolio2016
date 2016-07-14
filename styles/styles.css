@@ -9,12 +9,12 @@
 
 @font-face {
   font-family: ProximaNova;
-  font-weight: medium;
+  font-weight: bold;
   src: url("fonts/ProximaNova-Semibold.otf"); }
 
 @font-face {
   font-family: ProximaNova;
-  font-weight: bold;
+  font-weight: bolder;
   src: url("fonts/ProximaNova-Bold.otf"); }
 
 @keyframes fadeIn {
@@ -45,13 +45,9 @@
 
 @keyframes open {
   0% {
-    transform: scale(1) skew(0);
-    opacity: 1; }
-  50% {
-    opacity: 1; }
+    transform: scale(1) skew(0); }
   100% {
-    transform: scale(0.05, 1) skew(0, -20deg);
-    opacity: 0; } }
+    transform: scale(0.05, 1) skew(0, -20deg); } }
 
 @keyframes pop {
   0% {
@@ -258,6 +254,31 @@
   text-decoration: none;
   color: #fff; }
 
+.landing-welcome {
+  opacity: 0; }
+
+.show {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 750ms;
+  -moz-animation-duration: 750ms;
+  -ms-animation-duration: 750ms;
+  -o-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 950ms;
+  -moz-animation-delay: 950ms;
+  -ms-animation-delay: 950ms;
+  -o-animation-delay: 950ms;
+  animation-delay: 950ms; }
+
 .animatedDoor {
   transform-origin: 0 50%;
   -webkit-animation-name: open;
@@ -265,11 +286,11 @@
   -ms-animation-name: open;
   -o-animation-name: open;
   animation-name: open;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 1500ms;
+  -moz-animation-duration: 1500ms;
+  -ms-animation-duration: 1500ms;
+  -o-animation-duration: 1500ms;
+  animation-duration: 1500ms;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
@@ -326,6 +347,28 @@
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2000ms;
+  -moz-animation-delay: 2000ms;
+  -ms-animation-delay: 2000ms;
+  -o-animation-delay: 2000ms;
+  animation-delay: 2000ms; }
+
 .room-wrapper {
   text-align: center; }
 
@@ -354,7 +397,7 @@
   .proj-wrapper img:hover {
     transform: rotate(5deg);
     transform-origin: center top;
-    transition: all 100ms ease-in; }
+    transition: all 200ms ease-in-out; }
   .proj-wrapper h3 {
     font-size: 32px;
     font-weight: lighter;
@@ -363,12 +406,13 @@
     letter-spacing: 1px;
     margin: 10px 0;
     font-size: 16px;
-    font-weight: 300; }
+    font-weight: 300;
+    line-height: 20px; }
   .proj-wrapper .brief-details {
     margin-top: 19%; }
 
 .view-proj {
-  background: #7FD8BE;
+  background: #6ed8b8;
   border: none;
   color: #fff;
   padding: 12px 25px 10px;
@@ -387,7 +431,11 @@
   .coming-soon img:hover {
     transform: rotate(5deg);
     transform-origin: center top;
-    transition: all 100ms ease-in; }
+    transition: all 200ms ease-in-out; }
+  .coming-soon .second img:hover {
+    transform: rotate(-5deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out; }
   .coming-soon h3 {
     font-size: 32px;
     font-weight: lighter;
@@ -472,6 +520,8 @@
       font-size: 16px;
       padding-left: 0;
       margin-top: -20px; }
+    .detail-body div b {
+      font-size: 1.1em; }
   .detail-body div:first-child {
     padding-top: 0; }
   .detail-body div:last-child {
@@ -548,10 +598,10 @@ p {
   color: #717C89; }
 
 a {
-  color: #E84855; }
+  color: #ef6f6c; }
 
 a:hover {
-  color: #E84855;
+  color: #ef6f6c;
   text-decoration: none;
   font-weight: 500; }
 
@@ -574,10 +624,11 @@ button {
 
 .navbar-default {
   background-color: #fff; }
-  .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand:visited {
-    color: #293132; }
   .navbar-default a:hover {
     font-weight: 300; }
+
+.navbar-brand img {
+  height: 100%; }
 
 .navbar {
   margin-bottom: 0; }
