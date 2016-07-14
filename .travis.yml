@@ -9,7 +9,7 @@ deploy:
     secure: hk071yt1G6zaHMs/nG3gDhR1mbjkr2gATVrkKAT36y1G3NxKsHUGpr1UuvD9CEFxlv1ulj+8qDzjnCvYG0gs1WwqbptCVMTNzoDEryr3OgebR1hsME7gragjazdCsnGUjhDhAIfcwe/k2Q0oZAlaLTu3gwSGmegKXoFzjObZ4+YQI0bLB9Ek6IbZb0v+oBUk6EA+yGsiocul7TeY/2PBsnJPBB5eem1s7DSUoam7da91t/Md4gKnUzXZizLX7OmUMlUgxLD0Y99jibiKPWP+/8JeYAkK231qYdpSQAPaKtDijpCSc6dU8U8UPrasbaBYDuyvinreQlLrd0hl41uUQtXRKmCOL/d8AWG+59/xDwrUhsFfYInzfj44jbL2vjWlpYXccDpcJNdT/9+Zjr6jpzb047nbrdrwZ9Plb7Mj2PxF/AcdPyux6A40nk/ILUaHIUlyGGkisktJ+9ZuRU55BqvSelilp5PvqQltj+5FMffrNHWc8rnXs0NIykum7Lpm8Gm+Dlbwq76sVjurcSoCfFR+ZzgyqP2zWMIMWiT4t1J1huIWIBOxoNanT3EEQnHvmoAj14YBUDzIOBD73HaU24OLQPN56Ya/xrggZNoxTet7R5WRy7h553vtah+FUpfrQy+3aA/iC8PSauIwtradM61LYG08EizziDJSqLaYH0w=
   bucket: reneepadgham.com
   acl: public_read
-  region: us-west-2
+  region: us-west-1
   local_dir: dist
   on:
     repo: reneepadgham/portfolio2016
