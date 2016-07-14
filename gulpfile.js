@@ -64,11 +64,11 @@ gulp.task('index', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('jsmin', function() {
-  return gulp.src('scripts/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts'));
-});
+// gulp.task('jsmin', function() {
+//   return gulp.src('scripts/*.js')
+//     .pipe(uglify())
+//     .pipe(gulp.dest('dist/scripts'));
+// });
 
 gulp.task('jsonmin', function () {
     gulp.src('data/*.json')
@@ -85,4 +85,4 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['cssmin', 'htmlmin', 'jsmin', 'imagemin', 'index', 'jsonmin']);
+gulp.task('build', ['cssmin', 'htmlmin', 'imagemin', 'index', 'jsonmin']);
