@@ -6,6 +6,6 @@ deploy:
   bucket: reneepadgham.com
   acl: public_read
   region: us-west-2
-  upload-dir: dist
+  local_dir: dist
   on:
     repo: reneepadgham/portfolio2016
