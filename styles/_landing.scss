@@ -75,7 +75,7 @@
   @include prefix(animation-delay, 500ms, webkit moz ms o);
   transform-origin: top;
 }
-.fade {
+.fadeInput {
   @include prefix(animation-name, fadeOut, webkit moz ms o);
   @include prefix(animation-duration, 1s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);

@@ -63,7 +63,7 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
 
   function animateDoor() {
     $('.door').addClass('animatedDoor');
-    $('.landing-input').addClass('fade');
+    $('.landing-input').addClass('fadeInput');
     $('.landing-welcome').addClass('show');
     $('.door-wrapper').addClass('scale');
     $('.landing-wrapper').addClass('fadeOut');

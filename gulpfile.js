@@ -43,7 +43,7 @@ gulp.task('cssmin', function() {
   gulp.src('styles/*.css')
     .pipe(cssmin())
     .pipe(rename({
-      suffix: '.min'
+      suffix: ''
     }))
     .pipe(gulp.dest('dist/styles'));
 });
