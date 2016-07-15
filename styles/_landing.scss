@@ -18,7 +18,6 @@
 .name-input {
   opacity: 0;
   margin: auto;
-  width: 50%;
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 4s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);

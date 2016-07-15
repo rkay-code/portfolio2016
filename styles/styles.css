@@ -199,7 +199,6 @@
 .name-input {
   opacity: 0;
   margin: auto;
-  width: 50%;
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
   -ms-animation-name: fadeIn;
