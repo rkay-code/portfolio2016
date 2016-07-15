@@ -3,6 +3,9 @@
   margin-bottom: 75px;
   img {
     width: 100%;
+    transform: rotate(0deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out;
   }
   img:hover {
     transform: rotate(5deg);
@@ -42,6 +45,9 @@
   margin-top: 50px;
   img {
     width: 100%;
+    transform: rotate(0deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out;
   }
   img:hover {
     transform: rotate(5deg);

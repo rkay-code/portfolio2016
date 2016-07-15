@@ -393,7 +393,10 @@
   margin-top: 75px;
   margin-bottom: 75px; }
   .proj-wrapper img {
-    width: 100%; }
+    width: 100%;
+    transform: rotate(0deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out; }
   .proj-wrapper img:hover {
     transform: rotate(5deg);
     transform-origin: center top;
@@ -427,7 +430,10 @@
   text-align: center;
   margin-top: 50px; }
   .coming-soon img {
-    width: 100%; }
+    width: 100%;
+    transform: rotate(0deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out; }
   .coming-soon img:hover {
     transform: rotate(5deg);
     transform-origin: center top;
