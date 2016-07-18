@@ -61,6 +61,11 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
     return viewLocation === $location.path();
   };
 
+  $scope.sbmtName = function() {
+    $(" #sbmt ").click();
+    console.log('clicked!');
+  };
+
   function animateDoor() {
     $('.door').addClass('animatedDoor');
     $('.landing-input').addClass('fadeInput');

@@ -254,9 +254,11 @@
   color: #fff; }
 
 .landing-welcome {
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
 
 .show {
+  visibility: visible;
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
   -ms-animation-name: fadeIn;

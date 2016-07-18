@@ -52,8 +52,10 @@
 
 .landing-welcome {
   opacity: 0;
+  visibility: hidden;
 }
 .show {
+  visibility: visible;
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 750ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
