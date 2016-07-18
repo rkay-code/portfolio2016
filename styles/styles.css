@@ -224,12 +224,12 @@
 
 .name-input:focus {
   border-width: 0 0 2px 0;
-  border-color: #E84855;
+  border-color: #7FD8BE;
   outline: none; }
 
 .name-sbmt {
   color: #fff;
-  background-color: #E84855;
+  background-color: #7FD8BE;
   margin-left: 5px;
   padding: 7px 10px;
   border-radius: 2px;
