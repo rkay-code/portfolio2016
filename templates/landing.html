@@ -11,26 +11,25 @@
       <div class="door-wrapper slide_in">
         <div class="left-door"></div>
         <div class="right-door"></div>
-        <img src="img/living-room-light.png" />
+        <a ui-sref="work"><img src="img/living-room-light.png" /></a>
       </div>
       <div class="landing-input">
         <h1 class="landing-text">
-          Oh, hello there!
+          Oh, hello there! Welcome to my house<span ng-if="user.name">, {{user.name | capitalize}}</span>.
         </h1>
         <p>
-          I'm Renee, and this is where I live - well, at least, where I live on the internet...
+          I'm Renee - a product designer and front end developer in San Francisco.
           <br />
-          In the real world, I’m a product designer and front end developer in San Francisco. It seems a bit rude to talk about myself so much without an introduction, can you tell me your <input type="text" ng-model="user.name" class="name-input" id="name-input" name="name-input" placeholder="name" onkeydown="if (event.keyCode == 13)
-                        document.getElementById('sbmt').click()" autofocus>?
-        <span class="tip">Hitting enter is the magic word! ;)</span>
+          What's your name?
+          <br />
+          <input type="text" ng-model="user.name" class="name-input" id="name-input" name="name-input" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('sbmt').click()" autofocus>
+        <span class="tip" ui-sref="work">enter</span>
         </p>
 
 
         <div class="col-md-6 col-md-offset-3"><a class="name-sbmt" id="sbmt" ng-click="btnClicked(); delayTransition()">Hi!</a>
         </div>
-      </div>
-      <div class="landing-welcome">
-        <h1 class="landing-text">Hello<span ng-if="user.name">, {{user.name | capitalize}}</span>! Welcome to my home.</h1>
       </div>
     </div>
   </div>

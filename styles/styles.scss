@@ -20,7 +20,7 @@
 
 $red: rgba(239, 111, 108, 1);
 $orange: rgba(255, 155, 113, 1);
-$teal: rgba(110, 216, 184, 1);
+$teal: rgba(91, 216, 179, 1);
 $blue: rgba(34, 116, 165, 1);
 $brown: rgba(91, 75, 73, 1);
 
@@ -60,10 +60,10 @@ p {
   color: #717C89;
 }
 a {
-  color: $orange;
+  color: $teal;
 }
 a:hover {
-  color: $orange;
+  color: $teal;
   text-decoration: none;
   font-weight: 500;
 }

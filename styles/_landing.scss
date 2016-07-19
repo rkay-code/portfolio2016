@@ -14,10 +14,13 @@
   font-size: 14px;
   font-weight: bolder;
   display: block;
-  margin-top: 15px;
+  margin-top: 5px;
   letter-spacing: .5px;
-  color: $orange;
+  color: $teal;
   }
+.landing-input .tip:hover {
+  cursor: pointer;
+}
 .name-input {
   margin: auto;
   border-width: 0 0 2px 0;
@@ -53,31 +56,6 @@
   opacity: 0;
   visibility: hidden;
   margin-top: -20px;
-}
-.show {
-  visibility: visible;
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 500ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  @include prefix(animation-delay, 750ms, webkit moz ms o);
-}
-.scale {
-  @include prefix(animation-name, zoomIn, webkit moz ms o);
-  @include prefix(animation-duration, 750ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  @include prefix(animation-delay, 500ms, webkit moz ms o);
-  transform-origin: top;
-}
-.fadeInput {
-  @include prefix(animation-name, fadeOut, webkit moz ms o);
-  @include prefix(animation-duration, 1s, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-}
-.fadeOut {
-  @include prefix(animation-name, fadeOut, webkit moz ms o);
-  @include prefix(animation-duration, 1s, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  @include prefix(animation-delay, 2000ms, webkit moz ms o);
 }
 .door-wrapper {
   position: relative;
@@ -162,4 +140,29 @@
 }
 .slide_in {
   overflow: hidden;
+}
+.show {
+  visibility: visible;
+  @include prefix(animation-name, fadeIn, webkit moz ms o);
+  @include prefix(animation-duration, 500ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-delay, 750ms, webkit moz ms o);
+}
+.scale {
+  @include prefix(animation-name, zoomIn, webkit moz ms o);
+  @include prefix(animation-duration, 750ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-delay, 500ms, webkit moz ms o);
+  transform-origin: top;
+}
+.fadeInput {
+  @include prefix(animation-name, fadeOut, webkit moz ms o);
+  @include prefix(animation-duration, 1s, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+}
+.fadeOut {
+  @include prefix(animation-name, fadeOut, webkit moz ms o);
+  @include prefix(animation-duration, 1s, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-delay, 2000ms, webkit moz ms o);
 }
