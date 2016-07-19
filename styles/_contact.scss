@@ -17,7 +17,7 @@
       display: inline-block;
       width: 30px;
       height: 30px;
-      background-color: #FF9B71;
+      background-color: $orange;
       border-radius: 50%;
       margin: 0 6px;
       a {
@@ -101,7 +101,7 @@
     top: 2%;
     width: 20px;
     height: 16px;
-    background: #FF9B71;
+    background: $orange;
   }
   &:before {
     position: absolute;

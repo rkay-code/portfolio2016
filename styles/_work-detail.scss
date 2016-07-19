@@ -108,7 +108,7 @@
 }
 .work-nav {
   background-color: #6ED8B8;
-  padding: 20px 0 15px;
+  padding: 25px 0;
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 2s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);

@@ -2,28 +2,27 @@
   margin-top: 20vh;
   text-align: center;
 }
-.door-wrapper {
-  width: 150px;
-  margin: 0 auto 25px;
-  img {
-    max-width: 100%;
-  }
-}
 .landing-text {
   display: inline-block;
   font-size: 26px;
   font-family: "proxima-nova", sans-serif;
-  margin: 20px auto 30px;
+  margin: 20px auto 15px;
 }
-.name-input {
-  opacity: 0;
+
+.landing-input .tip{
   margin: auto;
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 4s, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  font-size: 14px;
+  font-weight: bolder;
+  display: block;
+  margin-top: 15px;
+  letter-spacing: .5px;
+  color: $orange;
+  }
+.name-input {
+  margin: auto;
   border-width: 0 0 2px 0;
-  font-size: 22px;
-  line-height: 30px;
+  font-size:16px;
+  line-height: 16px;
   text-align: center;
   a {
     text-decoration: none;
@@ -44,30 +43,23 @@
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 4s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  display: none;
 }
 .name-sbmt:hover {
   text-decoration: none;
   color: #fff;
 }
-
 .landing-welcome {
   opacity: 0;
   visibility: hidden;
+  margin-top: -20px;
 }
 .show {
   visibility: visible;
   @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 750ms, webkit moz ms o);
+  @include prefix(animation-duration, 500ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  @include prefix(animation-delay, 950ms, webkit moz ms o);
-}
-.animatedDoor {
-  transform-origin: 0 50%;
-  @include prefix(animation-name, open, webkit moz ms o);
-  @include prefix(animation-duration, 1500ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  @include prefix(animation-delay, 1s, webkit moz ms o);
-  @include prefix(animation-timing-function, ease-in-out, webkit moz ms o);
+  @include prefix(animation-delay, 750ms, webkit moz ms o);
 }
 .scale {
   @include prefix(animation-name, zoomIn, webkit moz ms o);
@@ -86,4 +78,88 @@
   @include prefix(animation-duration, 1s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   @include prefix(animation-delay, 2000ms, webkit moz ms o);
+}
+.door-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  z-index: 1;
+  img {
+    text-align: center;
+    width: 80%;
+    margin: 40% auto;
+  }
+}
+.left-door {
+  position: absolute;
+  background: #7FD8BE;
+  bottom: 0;
+  right: 50%;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  border: 5px double #4A4A4A;
+  opacity: 1;
+  &:after {
+    position: absolute;
+    content: " ";
+    width: 5px;
+    height: 15px;
+    top: 85px;
+    right: 10px;
+    background-color: #4A4A4A;
+    border-radius: 5px;
+  }
+}
+.door-wrapper:hover .left-door, .door-wrapper-hover .left-door  {
+  right: 100%;
+  left: -50%;
+}
+.door-wrapper-hover .left-door  {
+  right: 100%;
+  left: -50%;
+  transition: all 1s ease-out;
+  transition-delay: 750ms;
+}
+.right-door {
+  position: absolute;
+  background: #7FD8BE;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  border: 5px double #4A4A4A;
+  &:after {
+    position: absolute;
+    content: " ";
+    width: 5px;
+    height: 15px;
+    top: 85px;
+    left: 10px;
+    background-color: #4A4A4A;
+    border-radius: 5px;
+  }
+}
+.door-wrapper:hover .right-door {
+  left: 100%;
+  right: -50%;
+}
+.door-wrapper-hover .right-door  {
+  left: 100%;
+  right: -50%;
+  transition: all 1s ease-out;
+  transition-delay: 750ms;
+}
+.slide_in {
+  overflow: hidden;
 }
