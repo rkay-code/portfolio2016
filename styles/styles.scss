@@ -112,7 +112,7 @@ button {
   @include prefix(animation-name, scale, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  transform-origin: center;
+  transform-origin: center 45%;
 }
 .header-img {
   text-align: center;

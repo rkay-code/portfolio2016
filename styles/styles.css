@@ -73,18 +73,18 @@
     padding: 0; }
     .contact-icons ul li {
       display: inline-block;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       background-color: #ff9b71;
       border-radius: 50%;
       margin: 0 6px; }
       .contact-icons ul li a {
-        font-size: 14px;
+        font-size: 18px;
         vertical-align: middle;
         text-align: center;
         color: #fff; }
         .contact-icons ul li a i {
-          margin-top: 8px; }
+          margin-top: 11px; }
 
 .box {
   position: relative;
@@ -736,7 +736,7 @@ button {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  transform-origin: center; }
+  transform-origin: center 45%; }
 
 .header-img {
   text-align: center; }

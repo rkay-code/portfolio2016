@@ -61,9 +61,14 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
     return viewLocation === $location.path();
   };
 
+  $scope.sbmtName = function() {
+    $(" #sbmt ").click();
+    console.log('clicked!');
+  };
+
   function animateDoor() {
-    $('.door').addClass('animatedDoor');
-    $('.landing-input').addClass('fade');
+    $('.door-wrapper').addClass('door-wrapper-hover');
+    $('.landing-input').addClass('fadeInput');
     $('.landing-welcome').addClass('show');
     $('.door-wrapper').addClass('scale');
     $('.landing-wrapper').addClass('fadeOut');
