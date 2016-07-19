@@ -1,3 +1,7 @@
+.work-wrapper a {
+  font-weight: bolder;
+}
+
 .proj-wrapper {
   margin-top: 75px;
   margin-bottom: 75px;
@@ -73,4 +77,29 @@
     font-weight: lighter;
     margin: 0 auto 25px;
   }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .proj-wrapper {
+    text-align: left;
+    img {
+    width: 100%;
+  }
+  .brief-details {
+    width: 100%;
+    text-align: left;
+  }
+}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .proj-wrapper {
+    text-align: left;
+    img {
+    width: 100%;
+  }
+  .brief-details {
+    width: 100%;
+    text-align: left;
+  }
+}
 }
