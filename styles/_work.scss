@@ -23,15 +23,18 @@
     margin: 0;
   }
   h4 {
-    letter-spacing: 1px;
-    margin: 10px 0;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 20px;
+    letter-spacing: .5px;
+      margin: 5px 0;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 22px;
   }
   .brief-details {
-    margin-top: 5%;
+    padding-top: 40px;
     width: 90%;
+    margin-left: 5%;
+    text-align: left;
+    position: static;
   }
 }
 .proj-brief-wrapper:nth-of-type(2n) {

@@ -456,14 +456,17 @@
     font-weight: lighter;
     margin: 0; }
   .proj-wrapper h4 {
-    letter-spacing: 1px;
-    margin: 10px 0;
-    font-size: 16px;
+    letter-spacing: .5px;
+    margin: 5px 0;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 20px; }
+    line-height: 22px; }
   .proj-wrapper .brief-details {
-    margin-top: 5%;
-    width: 90%; }
+    padding-top: 40px;
+    width: 90%;
+    margin-left: 5%;
+    text-align: left;
+    position: static; }
 
 .proj-brief-wrapper:nth-of-type(2n) img:hover {
   transform: rotate(-5deg);
@@ -585,7 +588,7 @@
   .detail-body div {
     padding: 40px 0 0 0; }
     .detail-body div h2 {
-      color: #ff9b71;
+      color: #5bd8b3;
       font-weight: 400;
       margin-bottom: 30px; }
     .detail-body div img {
@@ -678,7 +681,8 @@ p {
   color: #717C89; }
 
 a {
-  color: #5bd8b3; }
+  color: #5bd8b3;
+  font-weight: 500; }
 
 a:hover {
   color: #5bd8b3;
