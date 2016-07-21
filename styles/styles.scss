@@ -46,10 +46,10 @@ h6,
 .h6 {
   font-family: "proxima-nova", sans-serif;
   font-weight: lighter;
-  color: #293132;
+  color: #fff;
 }
 h4, .h4 {
-  color: #717C89;
+  color: #fff;
 }
 body {
   margin: 0;
@@ -57,7 +57,7 @@ body {
 }
 p {
   font-size: 16px;
-  color: #717C89;
+  color: #fff;
 }
 a {
   color: $teal;
@@ -110,15 +110,22 @@ button {
   background: #fff;
 }
 .wrapper {
+  @include prefix(animation-name, fadeIn, webkit moz ms o);
+  @include prefix(animation-duration, 1000ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  padding-top: 100px;
+}
+.work-wrapper {
   @include prefix(animation-name, scale, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   transform-origin: center 45%;
+  padding-top: 0;
 }
 .header-img {
   text-align: center;
   img {
-    max-width: 100%;
+    max-width: 70%;
   }
 }
 .intro-text {

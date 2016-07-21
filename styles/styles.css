@@ -17,9 +17,15 @@
   font-weight: bolder;
   src: url("fonts/ProximaNova-Bold.otf"); }
 
+@keyframes moveFromBottomFade {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); } }
+
 @keyframes fadeIn {
   from {
-    opacity: 0; }
+    opacity: 0.3; }
   to {
     opacity: 1; } }
 
@@ -56,9 +62,6 @@
     transform: rotate(-90deg); }
   100% {
     transform: rotate(0deg); } }
-
-.contact-wrapper {
-  margin-top: 100px; }
 
 .address {
   width: 25%;
@@ -169,16 +172,25 @@
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, 50%); }
 
+.desk {
+  background-color: #59C3C3;
+  color: #fff;
+  animation: moveFromBottomFade .7s ease both; }
+
 .design-process {
   margin: 0 auto 100px;
-  font-size: 16px;
-  text-align: center; }
+  font-size: 16px; }
+  .design-process .desk-img {
+    text-align: right; }
+  .design-process .row {
+    margin: 40px -15px 40px -15px; }
   .design-process img {
-    display: block;
-    margin: 100px auto 25px;
+    margin: auto;
+    vertical-align: top;
     height: 100px; }
-  .design-process img:first-child {
-    margin: 75px auto 25px; }
+
+.landing {
+  background-color: #4062BB; }
 
 .landing-wrapper {
   margin-top: 20vh;
@@ -414,6 +426,9 @@
   -ms-animation-delay: 2000ms;
   -o-animation-delay: 2000ms;
   animation-delay: 2000ms; }
+
+.room {
+  background-color: #F45B69; }
 
 .room-wrapper {
   text-align: center; }
@@ -667,10 +682,10 @@ h6,
 .h6 {
   font-family: "proxima-nova", sans-serif;
   font-weight: lighter;
-  color: #293132; }
+  color: #fff; }
 
 h4, .h4 {
-  color: #717C89; }
+  color: #fff; }
 
 body {
   margin: 0;
@@ -678,7 +693,7 @@ body {
 
 p {
   font-size: 16px;
-  color: #717C89; }
+  color: #fff; }
 
 a {
   color: #5bd8b3;
@@ -725,6 +740,24 @@ button {
   background: #fff; }
 
 .wrapper {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  padding-top: 100px; }
+
+.work-wrapper {
   -webkit-animation-name: scale;
   -moz-animation-name: scale;
   -ms-animation-name: scale;
@@ -740,12 +773,13 @@ button {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  transform-origin: center 45%; }
+  transform-origin: center 45%;
+  padding-top: 0; }
 
 .header-img {
   text-align: center; }
   .header-img img {
-    max-width: 100%; }
+    max-width: 70%; }
 
 .intro-text {
   margin: 50px auto 0;

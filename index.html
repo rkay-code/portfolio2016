@@ -26,7 +26,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 
 <!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
+<!-- <script>function utmx_section(){}function utmx(){}(function(){var
 k='125911570-0',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
 function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
@@ -37,12 +37,12 @@ length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
 '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
 valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
+</script><script>utmx('url','A/B');</script> -->
 <!-- End of Google Analytics Content Experiment code -->
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top ng-cloak" id="nav" ng-show="!isActive('/')">
+  <nav class="navbar navbar-default navbar-fixed-top ng-cloak" id="nav">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -56,23 +56,29 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a ui-sref="work" data-toggle="collapse">Home</a></li>
-          <li><a ui-sref="desk" data-toggle="collapse">Desk</a></li>
-          <li><a ui-sref="room" data-toggle="collapse">Room</a></li>
-          <li><a ui-sref="contact" data-toggle="collapse">Mailbox</a></li>
+          <li><a href="#work" data-toggle="collapse" target="_self">Home</a></li>
+          <li><a href="#desk" data-toggle="collapse" target="_self">Desk</a></li>
+          <li><a href="#room" data-toggle="collapse" target="_self">Room</a></li>
+          <li><a href="#contact" data-toggle="collapse" target="_self">Mailbox</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div>
-    <div ui-view autoscroll></div>
+    <div ui-view autoscroll>
+      <div ng-include src="'/templates/landing.html'" class="landing" id="landing"></div>
+      <div ng-include src="'/templates/work.html'" class="work" id="work"></div>
+      <div ng-include src="'/templates/desk.html'" class="desk" id="desk"></div>
+      <div ng-include src="'/templates/room.html'" class="room" id="room"></div>
+      <div ng-include src="'/templates/contact.html'" class="contact" id="contact"></div>
+    </div>
   </div>
 </body>
 
 </html>
 
-<script>
+<!-- <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -81,7 +87,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-81003140-1', 'auto');
 ga('send', 'pageview');
 
-</script>
+</script> -->
 
 <script src="/scripts/jquery-2.1.4.min.js"></script>
 <script src="/scripts/angular.min.js"></script>

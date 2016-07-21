@@ -1,42 +1,42 @@
 var portfolioApp = angular.module('portfolioApp', ['ui.router', 'ngSanitize']);
 
-portfolioApp.config(function($stateProvider, $urlRouterProvider, $provide) {
-
-  $urlRouterProvider.otherwise('/');
-
-  $stateProvider
-
-    .state('home', {
-    url: '/',
-    templateUrl: '/templates/landing.html',
-  })
-
-  .state('work', {
-    url: '/work',
-    templateUrl: '/templates/work.html',
-  })
-
-  .state('desk', {
-    url: '/mydesk',
-    templateUrl: '/templates/desk.html'
-  })
-
-  .state('room', {
-    url: '/myroom',
-    templateUrl: '/templates/room.html'
-  })
-
-  .state('contact', {
-    url: '/contact',
-    templateUrl: '/templates/contact.html'
-  })
-
-  .state('workDetail', {
-    url: '/work/:workId',
-    templateUrl: '/templates/work-detail.html'
-  });
-
-});
+// portfolioApp.config(function($stateProvider, $urlRouterProvider, $provide) {
+//
+//   $urlRouterProvider.otherwise('/');
+//
+//   $stateProvider
+//
+//     .state('home', {
+//     url: '/',
+//     templateUrl: '/templates/landing.html',
+//   })
+//
+//   .state('work', {
+//     url: '/work',
+//     templateUrl: '/templates/work.html',
+//   })
+//
+//   .state('desk', {
+//     url: '/mydesk',
+//     templateUrl: '/templates/desk.html'
+//   })
+//
+//   .state('room', {
+//     url: '/myroom',
+//     templateUrl: '/templates/room.html'
+//   })
+//
+//   .state('contact', {
+//     url: '/contact',
+//     templateUrl: '/templates/contact.html'
+//   })
+//
+//   .state('workDetail', {
+//     url: '/work/:workId',
+//     templateUrl: '/templates/work-detail.html'
+//   });
+//
+// });
 
 portfolioApp.filter('capitalize', function() {
   return function(input, all) {
@@ -83,6 +83,24 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
       $location.path("/work");
     }, 3000);
   };
+
+  $scope.templates = [{
+    name: 'work',
+    url: '/templates/work.html'
+  }, {
+    name: 'desk',
+    url: '/templates/desk.html'
+  }, {
+    name: 'room',
+    url: '/templates/room.html'
+  }, {
+    name: 'work-detail',
+    url: '/templates/work-detail.html'
+  }, {
+    name: 'contact',
+    url: '/templates/contact.html'
+  }];
+  $scope.template = $scope.templates[0];
 });
 
 
