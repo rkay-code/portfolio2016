@@ -70,6 +70,9 @@
     .contact .header-img h1, .contact .header-img h3, .contact .header-img h4, .contact .header-img p {
       color: #424C55; }
 
+.contact-wrapper {
+  padding-top: 150px; }
+
 .address {
   width: 25%;
   margin: auto;
@@ -181,8 +184,7 @@
 
 .desk {
   background-color: #FFFD82;
-  color: #0F1A20;
-  animation: moveFromBottomFade .7s ease both; }
+  color: #0F1A20; }
 
 .desk-wrapper h1, .desk-wrapper p {
   color: #0F1A20; }
@@ -467,12 +469,16 @@
     .profile-wrap .bio b {
       color: #EBEBEB; }
 
-.work-wrapper .intro-text h1, .work-wrapper p {
-  color: #424C55; }
+.container {
+  overflow: visible; }
 
-.work-wrapper a {
-  font-weight: bolder;
-  color: #F45B69; }
+.work-wrapper {
+  overflow-x: visible !important; }
+  .work-wrapper .intro-text h1, .work-wrapper p {
+    color: #424C55; }
+  .work-wrapper a {
+    font-weight: bolder;
+    color: #F45B69; }
 
 .proj-wrapper {
   margin-top: 75px;
@@ -503,6 +509,10 @@
     padding-top: 40px;
     text-align: left;
     width: 90%; }
+  .proj-wrapper .second:hover {
+    transform: rotate(-5deg);
+    transform-origin: center top;
+    transition: all 200ms ease-in-out; }
 
 .proj-brief-wrapper:nth-of-type(2n) img:hover {
   transform: rotate(-5deg);
@@ -590,7 +600,7 @@
         font-weight: 300;
         font-size: 14px;
         margin-top: 15px;
-        letter-spacing: .5px; }
+        letter-spacing: 0.5px; }
       .detail-nav ul li a:hover {
         text-decoration: none; }
         .detail-nav ul li a:hover img,
@@ -600,9 +610,9 @@
 .detail-body {
   margin: 75px auto 0; }
   .detail-body div {
-    padding: 40px 0 0 0; }
+    padding: 40px 0 0; }
     .detail-body div h2 {
-      color: #5bd8b3;
+      color: #59C3C3;
       font-weight: 400;
       margin-bottom: 30px; }
     .detail-body div img {
@@ -626,8 +636,9 @@
     margin-bottom: 0; }
 
 .work-nav {
-  background-color: #6ED8B8;
+  background-color: #59C3C3;
   padding: 25px 0;
+  margin-top: 75px;
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
   -ms-animation-name: fadeIn;
@@ -650,8 +661,9 @@
   .work-nav a:hover {
     text-decoration: none;
     cursor: pointer;
-    color: #fff;
-    font-weight: 300; }
+    color: #fff; }
+  .work-nav a:nth-child(2) {
+    text-align: center; }
   .work-nav a:last-child {
     text-align: right;
     float: right; }
@@ -692,7 +704,7 @@ body {
 
 p {
   font-size: 16px;
-  color: #fff; }
+  color: #424C55; }
 
 a {
   color: #5bd8b3;
@@ -711,11 +723,9 @@ a,
 button {
   cursor: pointer; }
 
-[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important; }
-
 .navbar-default {
-  background-color: #fff; }
+  background-color: #fff;
+  opacity: .9; }
   .navbar-default a:hover {
     font-weight: 300; }
 
@@ -726,12 +736,33 @@ button {
   margin-bottom: 0;
   display: none; }
 
+.navbar-back {
+  background: none;
+  border: none;
+  display: block; }
+  .navbar-back img {
+    height: 30px;
+    margin-left: -100px; }
+
 .navbar-default .navbar-toggle {
   border: none; }
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
   background: #fff; }
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-text {
+  color: #0F1A20;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  font-weight: 500;
+  background: inherit;
+  border-bottom: 1px solid #0F1A20;
+  padding-bottom: 5px;
+  color: #0F1A20; }
 
 .wrapper {
   -webkit-animation-name: fadeIn;
@@ -781,3 +812,14 @@ button {
     margin-top: 0; }
   .intro-text p {
     font-size: 18px; }
+
+* {
+  box-sizing: border-box; }
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+  .navbar .navbar-collapse {
+    text-align: center; } }

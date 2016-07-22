@@ -104,8 +104,9 @@
 <section class="work-nav ng-cloak">
   <div class="container ng-cloak">
     <div class="row">
-      <a ui-sref="workDetail({workId:prevWork})" class="col-md-6">&#8592; {{prevWork}}</a>
-      <a ui-sref="workDetail({workId:nextWork})" class="col-md-6">{{nextWork}} &#8594;</a>
+      <a ui-sref="workDetail({workId:prevWork})" class="col-md-4">&#8592; {{prevWork}}</a>
+      <a ui-sref="home" class="col-md-4">Go Home</a>
+      <a ui-sref="workDetail({workId:nextWork})" class="col-md-4">{{nextWork}} &#8594;</a>
     </div>
   </div>
 </section>

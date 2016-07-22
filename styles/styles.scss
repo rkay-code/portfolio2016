@@ -57,7 +57,7 @@ body {
 }
 p {
   font-size: 16px;
-  color: #fff;
+  color: #424C55;
 }
 a {
   color: $teal;
@@ -76,11 +76,9 @@ a,
 button {
   cursor: pointer;
 }
-[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
 .navbar-default {
   background-color: #fff;
+  opacity: .9;
   a:hover {
     font-weight: 300;
   }
@@ -92,6 +90,15 @@ button {
   margin-bottom: 0;
   display: none;
 }
+.navbar-back {
+  background: none;
+  border: none;
+  display: block;
+  img {
+    height: 30px;
+    margin-left: -100px
+  }
+}
 .navbar-default .navbar-toggle {
   border: none;
 }
@@ -100,6 +107,21 @@ button {
 .navbar-default .navbar-toggle:hover {
   background: #fff;
 }
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+    color: #0F1A20;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    font-weight: 500;
+    background: inherit;
+    border-bottom: 1px solid #0F1A20;
+    padding-bottom: 5px;
+    color: #0F1A20;
+  }
 .wrapper {
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 1000ms, webkit moz ms o);
@@ -127,4 +149,21 @@ button {
   p {
     font-size: 18px;
   }
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
 }

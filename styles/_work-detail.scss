@@ -59,7 +59,7 @@
         font-weight: 300;
         font-size: 14px;
         margin-top: 15px;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
       }
       a:hover {
         text-decoration: none;
@@ -74,9 +74,9 @@
 .detail-body {
   margin: 75px auto 0;
   div {
-    padding: 40px 0 0 0;
+    padding: 40px 0 0;
     h2 {
-      color: $teal;
+      color: #59C3C3;
       font-weight: 400;
       margin-bottom: 30px;
     }
@@ -95,7 +95,7 @@
       margin-top: -20px;
     }
     b {
-     font-size: 1.1em;
+      font-size: 1.1em;
     }
   }
   div:first-child {
@@ -107,8 +107,9 @@
   }
 }
 .work-nav {
-  background-color: #6ED8B8;
+  background-color: #59C3C3;
   padding: 25px 0;
+  margin-top: 75px;
   @include prefix(animation-name, fadeIn, webkit moz ms o);
   @include prefix(animation-duration, 2s, webkit moz ms o);
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
@@ -121,7 +122,9 @@
     text-decoration: none;
     cursor: pointer;
     color: #fff;
-    font-weight: 300;
+  }
+  a:nth-child(2) {
+    text-align: center;
   }
   a:last-child {
     text-align: right;

@@ -1,4 +1,9 @@
+.container {
+  overflow: visible;
+}
+
 .work-wrapper {
+  overflow-x: visible !important;
   .intro-text h1, p {
     color: #424C55;
   }
@@ -42,6 +47,11 @@ a {
     text-align: left;
     width: 90%;
   }
+  .second:hover {
+      transform: rotate(-5deg);
+      transform-origin: center top;
+      transition: all 200ms ease-in-out;
+  }
 }
 .proj-brief-wrapper:nth-of-type(2n) {
   img:hover {
@@ -61,7 +71,6 @@ a {
   text-transform: uppercase;
   margin-top: 15px;
 }
-
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .proj-wrapper {

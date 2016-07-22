@@ -1,42 +1,37 @@
 var portfolioApp = angular.module('portfolioApp', ['ui.router', 'ngSanitize']);
 
-// portfolioApp.config(function($stateProvider, $urlRouterProvider, $provide) {
-//
-//   $urlRouterProvider.otherwise('/');
-//
-//   $stateProvider
-//
-//     .state('home', {
-//     url: '/',
-//     templateUrl: '/templates/landing.html',
-//   })
-//
-//   .state('work', {
-//     url: '/work',
-//     templateUrl: '/templates/work.html',
-//   })
-//
-//   .state('desk', {
-//     url: '/mydesk',
-//     templateUrl: '/templates/desk.html'
-//   })
-//
-//   .state('room', {
-//     url: '/myroom',
-//     templateUrl: '/templates/room.html'
-//   })
-//
-//   .state('contact', {
-//     url: '/contact',
-//     templateUrl: '/templates/contact.html'
-//   })
-//
-//   .state('workDetail', {
-//     url: '/work/:workId',
-//     templateUrl: '/templates/work-detail.html'
-//   });
-//
-// });
+portfolioApp.config(function($stateProvider, $urlRouterProvider, $provide) {
+
+  // $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+
+    .state('home', {
+    url: '/',
+  })
+
+  .state('work', {
+    url: '/work',
+  })
+
+  .state('desk', {
+    url: '/desk',
+  })
+
+  .state('room', {
+    url: '/room',
+  })
+
+  .state('contact', {
+    url: '/contact',
+  })
+
+  .state('workDetail', {
+    url: '/work/:workId',
+    templateUrl: '/templates/work-detail.html'
+  });
+
+});
 
 portfolioApp.filter('capitalize', function() {
   return function(input, all) {
@@ -48,10 +43,12 @@ portfolioApp.filter('capitalize', function() {
 });
 
 
-portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
+portfolioApp.controller('mainCtrl', function($scope, $timeout, $location, $state) {
   $scope.user = {
     name: ''
   };
+
+  $scope.$state = $state;
 
   function titleCase(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -83,24 +80,6 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location) {
       $location.path("/work");
     }, 3000);
   };
-
-  $scope.templates = [{
-    name: 'work',
-    url: '/templates/work.html'
-  }, {
-    name: 'desk',
-    url: '/templates/desk.html'
-  }, {
-    name: 'room',
-    url: '/templates/room.html'
-  }, {
-    name: 'work-detail',
-    url: '/templates/work-detail.html'
-  }, {
-    name: 'contact',
-    url: '/templates/contact.html'
-  }];
-  $scope.template = $scope.templates[0];
 });
 
 
@@ -117,7 +96,7 @@ portfolioApp.controller('workCtrl', ['$scope', '$stateParams', '$http', '$locati
       $http.get('/data/projects.json').success(function(data) {
         $scope.allWorks = data;
         var currentWorkIndex;
-        var l = $scope.allWorks.length;
+        var l = 4;
         for (var i = 0; i < l; i++) {
           if ($scope.allWorks[i].id === $stateParams.workId) {
             currentWorkIndex = i;
