@@ -56,10 +56,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#work" data-toggle="collapse" target="_self">Home</a></li>
-          <li><a href="#desk" data-toggle="collapse" target="_self">Desk</a></li>
-          <li><a href="#room" data-toggle="collapse" target="_self">Room</a></li>
-          <li><a href="#contact" data-toggle="collapse" target="_self">Mailbox</a></li>
+          <li><a href="#work" scroll-on-click>Home</a></li>
+          <li><a href="#desk" scroll-on-click>Desk</a></li>
+          <li><a href="#room" scroll-on-click>Room</a></li>
+          <li><a href="#contact" scroll-on-click>Mailbox</a></li>
         </ul>
       </div>
     </div>
@@ -67,7 +67,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   <div>
     <div ui-view autoscroll>
-      <div ng-include src="'/templates/landing.html'" class="landing" id="landing"></div>
       <div ng-include src="'/templates/work.html'" class="work" id="work"></div>
       <div ng-include src="'/templates/desk.html'" class="desk" id="desk"></div>
       <div ng-include src="'/templates/room.html'" class="room" id="room"></div>

@@ -4,6 +4,9 @@
 
 .room-wrapper {
   text-align: center;
+  h1, p {
+    color: #0F1A20;
+  }
 }
 .profile-wrap {
   margin-top: 25px;
@@ -12,8 +15,6 @@
     margin-top: 50px;
     img {
       width: 300px;
-      box-shadow: 0 0 5px #aaa;
-      border-radius: 5px;
     }
   }
   .bio {
@@ -23,6 +24,12 @@
       display: block;
       margin: 50px auto 25px;
       height: 150px;
+    }
+    a {
+      color: #FFFD82;
+    }
+    b {
+      color: #EBEBEB;
     }
   }
 }

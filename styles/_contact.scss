@@ -1,3 +1,13 @@
+.contact {
+  min-height: 100vh;
+  .header-img {
+    text-align: center;
+    h1, h3, h4, p {
+      color: #424C55;
+    }
+  }
+}
+
 .address {
   width: 25%;
   margin: auto;
@@ -13,7 +23,7 @@
       display: inline-block;
       width: 40px;
       height: 40px;
-      background-color: $orange;
+      background-color: #59C3C3;
       border-radius: 50%;
       margin: 0 6px;
       a {
@@ -30,7 +40,7 @@
 }
 .box {
   position: relative;
-  background-color: #7FD8BE;
+  background-color: #F45B69;
   width: 200px;
   height: 100px;
   display: inline-block;
@@ -52,7 +62,7 @@
     content: " ";
     height: 90px;
     width: 40px;
-    background-color: #38b993;
+    background-color: #da0f21;
     right: 5px;
     top: 5px;
     -webkit-border-radius: 50% / 100%;
@@ -76,7 +86,7 @@
   left: 50%;
   bottom: 50%;
   display: inline-block;
-  background-color: #E7E5E5;
+  background-color: #EBEBEB;
   -webkit-transform-origin: bottom center;
   -moz-transform-origin: bottom center;
   -o-transform-origin: bottom center;
@@ -97,7 +107,7 @@
     top: 2%;
     width: 20px;
     height: 16px;
-    background: $orange;
+    background: #59C3C3;
   }
   &:before {
     position: absolute;
@@ -106,7 +116,7 @@
     content: " ";
     width: 15px;
     height: 15px;
-    background: #E7E5E5;
+    background: #EBEBEB;
     -webkit-transform: translate(-50%, 50%);
     -moz-transform: translate(-50%, 50%);
     -o-transform: translate(-50%, 50%);

@@ -76,16 +76,6 @@ a,
 button {
   cursor: pointer;
 }
-.wf-loading {
-  body {
-    display: none;
-  }
-}
-.wf-active {
-  body {
-    display: inline;
-  }
-}
 [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
@@ -100,6 +90,7 @@ button {
 }
 .navbar {
   margin-bottom: 0;
+  display: none;
 }
 .navbar-default .navbar-toggle {
   border: none;
@@ -123,14 +114,16 @@ button {
   padding-top: 0;
 }
 .header-img {
-  text-align: center;
+  text-align: left;
   img {
-    max-width: 70%;
+    max-width: 90%;
   }
 }
 .intro-text {
-  margin: 50px auto 0;
-  text-align: center;
+  text-align: left;
+  h1 {
+    margin-top: 0;
+  }
   p {
     font-size: 18px;
   }
