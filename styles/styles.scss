@@ -46,15 +46,13 @@ h6,
 .h6 {
   font-family: "proxima-nova", sans-serif;
   font-weight: lighter;
-  color: #fff;
-}
-h4, .h4 {
-  color: #fff;
+  color: #424C55;
 }
 body {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow-x: hidden;
 }
 p {
   font-size: 16px;
