@@ -12,9 +12,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="col-md-4"><a ui-sref="workDetail({workId:prevWork})">&#8592; {{prevWork}}</a></li>
-        <li class="col-md-4"><a ui-sref="home" class="col-md-4"><img src="img/home.png" /></a></li>
-        <li class="col-md-4"><a ui-sref="workDetail({workId:nextWork})" class="col-md-4">{{nextWork}} &#8594;</a></li>
+        <li class="col-md-4"><a ui-sref="workDetail({workId:prevWork})">&#8592; <%= prevWork %></a></li>
+        <li class="col-md-4"><a href="#" class="col-md-4"><img src="img/home.png" /></a></li>
+        <li class="col-md-4"><a ui-sref="workDetail({workId:nextWork})" class="col-md-4"><%= nextWork%> &#8594;</a></li>
       </ul>
     </div>
   </div>
@@ -25,11 +25,11 @@
     <div class="detail-brief-wrapper">
       <div class="detail-brief">
         <div class="detail-brief-img col-md-4 col-md-offset-4">
-          <img ng-src="{{work.briefImg}}" />
+          <img ng-src="<%= work.briefImg %>" />
         </div>
         <div class="detail-brief-text col-md-8 col-md-offset-2">
-          <h3>{{work.title}}: {{work.tagline}}</h3>
-          <h4>{{work.responsibility}}</h4>
+          <h3><%= work.title %>: <%= work.tagline %></h3>
+          <h4><%= work.responsibility %></h4>
         </div>
       </div>
     </div>
@@ -38,32 +38,34 @@
   <section class="detail-nav row hidden-s hidden-xs">
     <ul>
       <li ng-if="work.problem">
-        <a href="#/work/{{work.id}}#problem">
+        <a href="#/work/<%= work.id %>#problem">
           <img src="img/problem.png" />
           <h4>Problem</h4></a>
       </li>
       <li ng-if="work.constraints">
-        <a href="#/work/{{work.id}}#constraints">
+        <a href="#/work/<%= work.id %>#constraints">
           <img src="img/constraints.png" />
           <h4>Constraints</h4></a>
       </li>
-      <li ng-if="work.research">
-        <a href="#/work/{{work.id}}#research">
-          <img src="img/research.png" />
-          <h4>Research</h4></a>
-      </li>
+      <% if (work.research) { %>
+        <li>
+          <a href="#/work/<%= work.id %>#research">
+            <img src="img/research.png" />
+            <h4>Research</h4></a>
+        </li>
+      <% } %>
       <li ng-if="work.sketch">
-        <a href="#/work/{{work.id}}#sketch">
+        <a href="#/work/<%= work.id %>#sketch">
           <img src="img/sketch.png" />
           <h4>Sketch</h4></a>
       </li>
       <li ng-if="work.design">
-        <a href="#/work/{{work.id}}#design">
+        <a href="#/work/<%= work.id %>#design">
           <img src="img/design.png" />
           <h4>Design</h4></a>
       </li>
       <li ng-if="work.retrospective">
-        <a href="#/work/{{work.id}}#lessons">
+        <a href="#/work/<%= work.id %>#lessons">
           <img src="img/retrospective.png" />
           <h4>Future</h4></a>
       </li>
@@ -74,11 +76,11 @@
     <div id="problem" ng-if="work.problem" class="col-md-10 col-md-offset-1">
       <h2>Problem</h2>
       <p ng-bind-html="work.problem"></p><br />
-      <img ng-src="{{work.problemImg1}}" ng-if="work.problemImg1" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.problemImg1 %>" ng-if="work.problemImg1" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.problemCaption1" ng-if="work.problemCaption1" class="col-md-8 col-md-offset-2"></p>
-      <img ng-src="{{work.problemImg2}}" ng-if="work.problemImg2" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.problemImg2 %>" ng-if="work.problemImg2" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.problemCaption2" ng-if="work.problemCaption2" class="col-md-8 col-md-offset-2"></p>
-      <img ng-src="{{work.problemImg3}}" ng-if="work.problemImg3" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.problemImg3 %>" ng-if="work.problemImg3" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.problemCaption3" ng-if="work.problemCaption3" class="col-md-8 col-md-offset-2"></p>
 
 
@@ -91,9 +93,9 @@
     <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
       <h2>Research</h2>
       <p ng-bind-html="work.research"></p>
-      <img ng-src="{{work.researchImg1}}" ng-if="work.researchImg1" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.researchImg1 %>" ng-if="work.researchImg1" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.researchCaption1" ng-if="work.researchCaption1" class="col-md-8 col-md-offset-2"></p>
-      <img ng-src="{{work.researchImg2}}" ng-if="work.researchImg2" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.researchImg2 %>" ng-if="work.researchImg2" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.researchCaption2" ng-if="work.researchCaption2" class="col-md-8 col-md-offset-2"></p>
     </div>
     <div id="sketch" ng-if="work.sketch" class="col-md-10 col-md-offset-1">
@@ -104,13 +106,13 @@
     <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
       <h2>Design</h2>
       <p ng-bind-html="work.design"></p>
-      <img ng-src="{{work.designImg1}}" ng-if="work.designImg1" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.designImg1 %>" ng-if="work.designImg1" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.designCaption1" ng-if="work.designCaption1" class="col-md-8 col-md-offset-2"></p>
-      <img ng-src="{{work.designImg2}}" ng-if="work.designImg2" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.designImg2 %>" ng-if="work.designImg2" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.designCaption2" ng-if="work.designCaption2" class="col-md-8 col-md-offset-2"></p>
-      <img ng-src="{{work.designImg3}}" ng-if="work.designImg3" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.designImg3 %>" ng-if="work.designImg3" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.designCaption3" ng-if="work.designCaption3" class="col-md-8 col-md-offset-2"></p>
-      <img ng-src="{{work.designImg4}}" ng-if="work.designImg4" class="col-md-8 col-md-offset-2"/>
+      <img ng-src="<%= work.designImg4 %>" ng-if="work.designImg4" class="col-md-8 col-md-offset-2"/>
       <p ng-bind-html="work.designCaption4" ng-if="work.designCaption4" class="col-md-8 col-md-offset-2"></p>
     </div>
     <div id="lessons" ng-if="work.retrospective" class="col-md-10 col-md-offset-1">
@@ -119,18 +121,6 @@
       </p>
     </div>
   </section>
-
 </div>
-
-<!-- <section class="work-nav">
-  <div class="container navbar-fixed-top">
-    <div class="row">
-      <a ui-sref="workDetail({workId:prevWork})" class="col-md-4">&#8592; {{prevWork}}</a>
-      <a ui-sref="home" class="col-md-4">Go Home</a>
-      <a ui-sref="workDetail({workId:nextWork})" class="col-md-4">{{nextWork}} &#8594;</a>
-    </div>
-  </div>
-</section> -->
-
 
 </div>
