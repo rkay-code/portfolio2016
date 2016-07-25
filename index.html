@@ -26,7 +26,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 </head>
 
-<body data-spy="scroll" data-target="#my-nav">
+<body>
   <nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
     <div class="container">
       <div class="navbar-header">
@@ -279,6 +279,10 @@
 
       console.log(hash);
     };
+
+    $('body').scrollspy({
+      target: '#my-nav'
+    });
   </script>
 </body>
 
