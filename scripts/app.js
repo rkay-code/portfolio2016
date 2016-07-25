@@ -9,6 +9,7 @@ var Router = Backbone.Router.extend({
 
   routes: {
     '': 'index',
+    'work/:id/:section': 'workScroll',
     'work/:id': 'work',
     'work': 'index',
     'desk': 'index',
@@ -43,6 +44,15 @@ var Router = Backbone.Router.extend({
     $('body').scrollspy({
       target: '#my-nav'
     });
+  },
+
+  workScroll: function(id, section) {
+    if (this.currentTemplate === 'work-detail-' + id) {
+      var position = $('#' + section).position();
+      window.scrollTo(0, position.top);
+    } else {
+      this.work(id);
+    }
   },
 
   work: function(id) {
