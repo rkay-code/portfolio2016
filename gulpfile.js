@@ -38,7 +38,13 @@ gulp.task('sass:watch', function() {
   gulp.watch('styles/*.scss', ['sass']);
 });
 
-gulp.task('default', ['connect', 'watch', 'sass', 'sass:watch']);
+gulp.task('index-live', function() {
+  return gulp.src('index.html')
+    .pipe(fileinclude())
+    .pipe(gulp.dest(''));
+});
+
+gulp.task('default', ['connect', 'watch', 'sass', 'sass:watch', 'index-live']);
 
 gulp.task('cssmin', function() {
   gulp.src('styles/*.css')
