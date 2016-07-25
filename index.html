@@ -29,10 +29,6 @@
 <body>
   <div id="app"></div>
 
-  <script type="text/template" id="project-detail-brief-content">
-    @@include('templates/project-detail-brief.html')
-  </script>
-
   <script type="text/template" id="work-detail-content">
     @@include('templates/work-detail.html')
   </script>
@@ -61,7 +57,7 @@
     </nav>
 
     <div class="work" id="work">
-      @@include('./templates/work.html')
+      @@include('./templates/work-rendered.html')
     </div>
     <div class="desk" id="desk">
       @@include('./templates/desk.html')
@@ -72,6 +68,10 @@
     <div class="contact" id="contact">
       @@include('./templates/contact.html')
     </div>
+  </script>
+
+  <script>
+    window.WORK = @@include('scripts/work.json')
   </script>
 
   <script src="/scripts/jquery-2.1.4.min.js"></script>
