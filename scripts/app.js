@@ -50,7 +50,7 @@ var Router = Backbone.Router.extend({
 
     this.$app.html(this.templates.index);
 
-    var projBriefTemplate = _.template($('#project-detail-brief-content').html());
+    var projBriefTemplate = this.templates.projectBrief;
 
     var html = work.map(function(w) {
       return projBriefTemplate({work: w});
@@ -70,7 +70,7 @@ var Router = Backbone.Router.extend({
 
     this.currentTemplate = 'work-detail';
 
-    var html = _.template(this.templates.work)({
+    var html = this.templates.work({
       prevWork: '',
       nextWork: '',
       work: {
@@ -99,7 +99,8 @@ $(document).ready(function() {
     app: $('#app'),
     templates: {
       index: $('#index-content').html(),
-      work: $('#work-detail-content').html()
+      work: _.template($('#work-detail-content').html()),
+      projectBrief: _.template($('#project-detail-brief-content').html())
     }
   });
 
