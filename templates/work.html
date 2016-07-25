@@ -14,7 +14,22 @@
   </div>
 
   <div class="row" ng-controller="workCtrl">
-    <div class="proj-brief-wrapper"></div>
+    <div class="proj-brief-wrapper">
+      {% for project in projects %}
+        <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
+          <a href="/work/{{ project.id }}">
+            <img src="{{ project.img }}" />
+          </a>
+          <div class="brief-details">
+            <h3>{{ project.title }}</h3>
+            <h4>{{ project.responsibility }}</h4>
+            <a href="#/work/{{ project.id }}">
+              <button class="view-proj">{{ project.type }}</button>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
 
     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 static-proj-wrapper">
       <img src="img/greylock-frame.png" />
