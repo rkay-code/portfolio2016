@@ -690,7 +690,8 @@ h4, .h4 {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
 
 p {
   font-size: 16px;
@@ -723,8 +724,7 @@ button {
   height: 20px; }
 
 .navbar {
-  margin-bottom: 0;
-  display: none; }
+  margin-bottom: 0; }
 
 .navbar-back {
   background: none;
