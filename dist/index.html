@@ -1,24 +1,56 @@
-<!doctype html><html ng-app="portfolioApp" ng-controller="mainCtrl"><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Renee Padgham - Product Design</title><meta name="description" content="The online home and portfolio of Renee Padgham."><meta name="author" content="Renee Padgham"><!-- Social: Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@reneepadgham"><meta name="twitter:creator" content="reneepadgham"><meta name="twitter:title" content="Renee Padgham - Product Design"><meta name="twitter:description" content="The online home and portfolio of Renee Padgham."><meta name="twitter:image:src" content="http://www.reneepadgham.com/img/me.jpg"><!-- Social: Facebook / Open Graph --><meta property="og:url" content="http://www.reneepadgham.com"><meta property="og:title" content="Renee Padgham - Product Design"><meta property="og:image" content="http://www.reneepadgham.com/img/me.jpg"><meta property="og:description" content="The online home and portfolio of Renee Padgham."><meta property="article:author" content="https://www.facebook.com/reneepadgham"><link rel="stylesheet" type="text/css" href="/styles/normalize.min.css"><link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="/styles/styles.css"><!-- Google Analytics Content Experiment code --><!-- <script>function utmx_section(){}function utmx(){}(function(){var
-k='125911570-0',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script> --><!-- End of Google Analytics Content Experiment code --></head><body><div ui-view></div><!-- <div ui-view="work" class="work" id="work"></div>
-  <div ui-view="desk" class="desk" id="desk" ng-hide="$state.includes('workDetail')"></div>
-  <div ui-view="room" class="room" id="room" ng-hide="$state.includes('workDetail')"></div>
-  <div ui-view="contact" class="contact" id="contact" ng-hide="$state.includes('workDetail')"></div> --></body></html><!-- <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!doctype html><html ng-app="portfolioApp" ng-controller="mainCtrl"><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Renee Padgham - Product Design</title><meta name="description" content="The online home and portfolio of Renee Padgham."><meta name="author" content="Renee Padgham"><!-- Social: Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@reneepadgham"><meta name="twitter:creator" content="reneepadgham"><meta name="twitter:title" content="Renee Padgham - Product Design"><meta name="twitter:description" content="The online home and portfolio of Renee Padgham."><meta name="twitter:image:src" content="http://www.reneepadgham.com/img/me.jpg"><!-- Social: Facebook / Open Graph --><meta property="og:url" content="http://www.reneepadgham.com"><meta property="og:title" content="Renee Padgham - Product Design"><meta property="og:image" content="http://www.reneepadgham.com/img/me.jpg"><meta property="og:description" content="The online home and portfolio of Renee Padgham."><meta property="article:author" content="https://www.facebook.com/reneepadgham"><link rel="stylesheet" type="text/css" href="/styles/normalize.min.css"><link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="/styles/styles.css"></head><body><nav class="navbar navbar-default navbar-fixed-top" id="my-nav"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div></div><div class="collapse navbar-collapse" id="my-nav-buttons"><ul class="nav navbar-nav"><li><a href="#work">Home</a></li><li><a href="#desk">Desk</a></li><li><a href="#room">Room</a></li><li><a href="#contact">Mail</a></li></ul></div></nav><div ui-view="work" class="work" id="work"><div class="work-wrapper wrapper container" ng-cloak><div class="row"><div class="col-md-5 header-img"><img src="/img/living-room.png"></div><div class="intro-text col-md-7"><h1>Thanks for stopping by!</h1><p>This is where I live - well, at least, where I live on the internet...<br>In the real world, I'm a product designer and front-end developer in San Francisco. I’d love to <a ui-sref="contact">meet for coffee</a>, but in the meantime my online home can tell you a bit about <a ui-sref="room">me</a> and <a ui-sref="desk">my work style</a>. The tour starts in the living room where I hang my latest work!</p></div></div><div class="row" ng-controller="workCtrl"><div class="proj-brief-wrapper" ng-repeat="work in works"></div><div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper"><img src="img/greylock-frame.png"><div class="brief-details"><h3>Greylock Partners</h3><h4>Coming soon!</h4></div></div><div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper"><img src="img/fidelity-frame.png" class="second"><div class="brief-details"><h3>Fidelity</h3><h4>Coming soon!</h4></div></div></div></div></div><div ui-view="desk" class="desk" id="desk" ng-hide="$state.includes('workDetail')"><div class="desk-wrapper wrapper container"><div class="row"><div class="col-md-5 header-img"><img src="/img/desk.png"></div><div class="intro-text col-md-7"><h1>This is my desk.</h1><p>There are many like it, but this one is mine. It’s pretty minimal, but it gets the job done.</p></div></div><div class="col-md-12 design-process"><div class="row"><div class="col-md-4"><img src="img/hat.png"><h3>Empathize</h3><p>When I come to my desk for a new project, I start by putting on my empathy hat. To me, this is one of the most valuable parts of my design process. I like to envision a day in the life of my user and feel their pain points. I create personas that allow me to understand the different types of experiences that might bring a user to my product.</p></div><div class="col-md-4"><img src="img/postit.png"><h3>Research</h3><p>I use resources such as customer support, sales teams, and user interviews to help build out my understanding of the user. If the client has been tracking any quantitative data, I also invite it to the party. This gets my bachelor’s in Quantitative Methods in Economics and Mathematics really excited.</p></div><div class="col-md-4"><img src="img/tea.png"><h3>Brainstorm/Prototype</h3><p>I then invite my oldest friends, Pencil and Paper, over. We have a tea party (Earl Grey ftw), and after a few rounds, we get the basics together in a flow that can be shown to users and internal teams for feedback. I often invite Invision, one of Invision’s close relatives, or HTML/CSS into the mix depending on the vibe.</p></div></div><div class="row"><div class="col-md-4"><img src="img/tools.png"><h3>Polish</h3><p>Before I take my work out, I normally dress it up with my new friend Sketch - but sometimes I reach out to my old friends Illustrator and Photoshop. I also like to bring my design to life using html, css, and javascript.</p></div><div class="col-md-4"><img src="img/laptop.png"><h3>Test</h3><p>During this time, I like to dress it up in a few different options and get user feedback. This process, called A/B testing, helps me figure out which version solves my user’s problems the best.</p></div><div class="col-md-4"><img src="img/rocket.png"><h3>Ship</h3><p>With that information, I polish it up and help my team ship it off.</p></div></div></div></div></div><div ui-view="room" class="room" id="room" ng-hide="$state.includes('workDetail')"><div class="room-wrapper wrapper container"><div class="row"><div class="col-md-5 header-img"><img src="/img/room.png"></div><div class="intro-text col-md-7"><h1>This is where it gets personal.</h1><p>I would say you'll find out all my secrets - but if you take a look around, you'll notice that everything around here is pretty minimal. That’s more than an aesthetic - I’ve spent the past year and a half traveling (sixteen countries!) and just settled back in San Francisco.</p></div></div><div class="row"><div class="col-md-10 col-md-offset-1 profile-wrap"><div class="polaroid"><img src="img/polaroid-me.png" class="profile-pic"></div><div class="bio"><p>Outside of being jet-lagged, I enjoy teaching design and computer science to high schoolers through <a href="http://hacker.fund/" target="_blank">Hacker Fund</a>, taking <a href="https://www.instagram.com/reneepadgham" target="_blank">pictures</a> of all the places I go, reading, and <a href="https://www.medium.com/@reneepadgham" target="_blank">writing</a>. I organize dancing and women in tech communities (message me if you want to join!). If I’m lost, you can probably find me at the closest tea room or taqueria. I prefer high fives to handshakes, but hugs trump both.<br><br>I stumbled into design in 4th grade when I realized I could draw on a computer. Since then, I've added in a love for technology, understanding others, and software development, along with a degree in quantitative methods in economics in mathematics - which makes me a <s>jack of all trades</s> <b>product designer.</b></p></div></div></div></div></div><div ui-view="contact" class="contact" id="contact" ng-hide="$state.includes('workDetail')"><div class="contact-wrapper wrapper container"><div class="row"><div class="col-md-8 col-md-offset-2 header-img"><h1>Say hello!</h1><div class="box"><span class="rod"></span></div><div><h3>Renée Padgham</h3><h4>renee at padgham dot com</h4></div></div></div><div class="contact-icons"><ul><li><a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li><li><a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a></li><li><a href="https://www.angel.co/reneepadgham" target="_blank"><i class="fa fa-angellist" aria-hidden="true"></i></a></li><li><a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li></ul></div></div></div><script src="/scripts/jquery-2.1.4.min.js"></script><script src="/scripts/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script>var workTemplate = [
+      '<div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">',
+        '<a href="/work/<%= work.id %>">',
+          '<img ng-src="<%= work.img %>" />',
+        '</a>',
+        '<div class="brief-details">',
+          '<h3><%= work.title %></h3>',
+          '<h4><%= work.responsibility %></h4>',
+          '<a href="#/work/<%= work.id %>">',
+            '<button class="view-proj" ng-if="work.type"><%= work.type %></button>',
+          '</a>',
+        '</div>',
+      '</div>'
+    ].join('');
 
-ga('create', 'UA-81003140-1', 'auto');
-ga('send', 'pageview');
+    var work = [
+      {
+        id: 1,
+        img: '',
+        title: 'Boss',
+        responsibility: 'More boss',
+        type: 'test'
+      },
+      {
+        id: 2,
+        img: '',
+        title: 'Boss',
+        responsibility: 'More boss',
+        type: 'test'
+      },
+      {
+        id: 3,
+        img: '',
+        title: 'Boss',
+        responsibility: 'More boss',
+        type: 'test'
+      }
+    ];
 
-</script> --><script src="/scripts/jquery-2.1.4.min.js"></script><script src="/scripts/angular.min.js"></script><script src="/scripts/angular-ui-router.min.js"></script><script src="/scripts/angular-sanitize.min.js"></script><script src="/scripts/bootstrap.min.js"></script><script src="/scripts/ui-bootstrap.min.js"></script><script src="/scripts/angular-ui-router-uib-modal.js"></script><!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-animate.min.js"></script> --><script src="/scripts/controller.js"></script><script src="/scripts/app.js"></script>
+    var template = _.template(workTemplate);
+
+    var html = work.map(function(w) {
+      return template({work: w});
+    });
+
+    $('.proj-brief-wrapper').html(html.join(''));
+
+    window.onhashchange = function() {
+      var hash = window.location.hash.substring(1);
+
+      console.log(hash);
+    };
+
+    $('body').scrollspy({
+      target: '#my-nav'
+    });</script></body></html>

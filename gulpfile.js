@@ -10,6 +10,7 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
+var fileinclude = require('gulp-file-include');
 
 gulp.task('connect', function() {
   connect.server({
@@ -58,6 +59,7 @@ gulp.task('htmlmin', function() {
 
 gulp.task('index', function() {
   return gulp.src('index.html')
+    .pipe(fileinclude())
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
