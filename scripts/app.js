@@ -134,6 +134,8 @@ var Router = Backbone.Router.extend({
 
     this.currentTemplate = 'work-detail';
 
+    window.scrollTo(0, 0);
+
     var work = _.find(WORK, function(w) {
       return w.id === id
     });
