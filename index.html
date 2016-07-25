@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="portfolioApp" ng-controller="mainCtrl">
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -60,16 +60,16 @@
       </div>
     </nav>
 
-    <div ui-view="work" class="work" id="work">
+    <div class="work" id="work">
       @@include('./templates/work.html')
     </div>
-    <div ui-view="desk" class="desk" id="desk" ng-hide="$state.includes('workDetail')">
+    <div class="desk" id="desk">
       @@include('./templates/desk.html')
     </div>
-    <div ui-view="room" class="room" id="room" ng-hide="$state.includes('workDetail')">
+    <div class="room" id="room">
       @@include('./templates/room.html')
     </div>
-    <div ui-view="contact" class="contact" id="contact" ng-hide="$state.includes('workDetail')">
+    <div class="contact" id="contact">
       @@include('./templates/contact.html')
     </div>
   </script>
