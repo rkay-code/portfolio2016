@@ -1,18 +1,3 @@
-var workTemplate = _.template([
-  '<div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">',
-    '<a href="/work/<%= work.id %>">',
-      '<img ng-src="<%= work.img %>" />',
-    '</a>',
-    '<div class="brief-details">',
-      '<h3><%= work.title %></h3>',
-      '<h4><%= work.responsibility %></h4>',
-      '<a href="#/work/<%= work.id %>">',
-        '<button class="view-proj" ng-if="work.type"><%= work.type %></button>',
-      '</a>',
-    '</div>',
-  '</div>'
-].join(''));
-
 var work = [
   {
     id: "gigster",
@@ -124,8 +109,10 @@ var Router = Backbone.Router.extend({
 
     this.$app.html(this.templates.index);
 
+    var projBriefTemplate = this.templates.projectBrief;
+
     var html = work.map(function(w) {
-      return workTemplate({work: w});
+      return projBriefTemplate({work: w});
     });
 
     $('.proj-brief-wrapper').html(html.join(''));
@@ -142,7 +129,7 @@ var Router = Backbone.Router.extend({
 
     this.currentTemplate = 'work-detail';
 
-    var html = _.template(this.templates.work)({
+    var html = this.templates.work({
       prevWork: '',
       nextWork: '',
       work: {
@@ -171,7 +158,8 @@ $(document).ready(function() {
     app: $('#app'),
     templates: {
       index: $('#index-content').html(),
-      work: $('#work-detail-content').html()
+      work: _.template($('#work-detail-content').html()),
+      projectBrief: _.template($('#project-detail-brief-content').html())
     }
   });
 
