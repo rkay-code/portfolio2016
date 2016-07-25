@@ -12,13 +12,12 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="col-md-4"><a ui-sref="workDetail({workId:prevWork})">&#8592; <%= prevWork %></a></li>
+          <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
           <li class="col-md-4">
             <a href="#" class="col-md-4"><img src="img/home.png" /></a>
           </li>
           <li class="col-md-4">
-            <a ui-sref="workDetail({workId:nextWork})" class="col-md-4">
-              <%= nextWork%> &#8594;</a>
+            <a href="#/work/<%= nextWork %>"class="col-md-4"><%= nextWork%> &#8594;</a>
           </li>
         </ul>
       </div>

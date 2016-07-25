@@ -46,20 +46,25 @@ var Router = Backbone.Router.extend({
   },
 
   work: function(id) {
-    if (this.currentTemplate === 'work-detail') {
+    if (this.currentTemplate === 'work-detail-' + id) {
       return;
     }
 
-    this.currentTemplate = 'work-detail';
+    this.currentTemplate = 'work-detail-' + id;
 
-    var work = _.find(window.WORK.projects, function(w) {
+    var projects = window.WORK.projects;
+
+    var currentWorkIndex = _.findIndex(projects, function(w) {
       return w.id === id
     });
 
+    var nextWorkIndex = currentWorkIndex < (projects.length - 1) ? (currentWorkIndex + 1) : 0;
+    var prevWorkIndex = currentWorkIndex > 0 ? (currentWorkIndex - 1) : projects.length - 1;
+
     var html = this.templates.work({
-      prevWork: '',
-      nextWork: '',
-      work: work
+      prevWork: projects[prevWorkIndex].id,
+      nextWork: projects[nextWorkIndex].id,
+      work: projects[currentWorkIndex]
     });
 
     this.$app.html(html);
