@@ -1,4 +1,4 @@
-var work = [
+var WORK = [
   {
     id: "gigster",
     title: "Gigster",
@@ -17,7 +17,8 @@ var work = [
     designCaption1: "I created a visual dashboard based on key information states.",
     designImg2: "img/gigster-project.png",
     designCaption2: "The modularized dashboard is easier to navigate and find key information regularly.",
-    retrospective: "In retrospect (and going forward!), I’m aware of some weaknesses in the current design. As Gigster scales, the timeline for a project to be completely handed off/deactivated can be much longer than the actual end date. Because of this, an individual user’s dashboard can be filled with more projects than the max project estimate in the original designs - reducing the intended simplicity."
+    retrospective: "In retrospect (and going forward!), I’m aware of some weaknesses in the current design. As Gigster scales, the timeline for a project to be completely handed off/deactivated can be much longer than the actual end date. Because of this, an individual user’s dashboard can be filled with more projects than the max project estimate in the original designs - reducing the intended simplicity.",
+    type: "Case Study"
   },
   {
     id: "riskmaster",
@@ -39,7 +40,8 @@ var work = [
     designCaption3: "The back side of a card, accessed by tapping on either a card or logo in grid view. Easily dismissed by swiping down.",
     designImg4: "img/riskmaster-gridview.png",
     designCaption4: "The filtered grid view.",
-    retrospective: "Having social information for the founder and multi-tier filtering would provide an even better solution to the problem. These were left out in the original development cycle due to time/data constraints."
+    retrospective: "Having social information for the founder and multi-tier filtering would provide an even better solution to the problem. These were left out in the original development cycle due to time/data constraints.",
+    type: "Case Study"
   },
   {
     id: "coinmotion",
@@ -59,7 +61,8 @@ var work = [
     research: "The company was part of the Boost accelerator, and through another company in the class we had access to the largest active Q&A forum of bitcoin users. We used this to discover common questions and complaints about existing wallet sites, to ask how users are currently utilizing their wallets, and to ask what an ideal use flow would be.",
     constraints: "<b>Timeline:</b> 3 weeks for design and development.",
     designImg1: "img/coinmotion-new.png",
-    design: "I took the many possible actions/views on the primary wallet interface and consolidated them into a single screen view. This was done by giving send money (one of the highest use cases) a permanent home at the top and moving less common transactional flows into modals. I also added in light gamification of the registration system to increase the amount of information provided.<br><br>Not pictured: I modified the UI of other screens within the site to match the new elements."
+    design: "I took the many possible actions/views on the primary wallet interface and consolidated them into a single screen view. This was done by giving send money (one of the highest use cases) a permanent home at the top and moving less common transactional flows into modals. I also added in light gamification of the registration system to increase the amount of information provided.<br><br>Not pictured: I modified the UI of other screens within the site to match the new elements.",
+    type: "Overview"
   },
   {
     id: "gamesmith",
@@ -77,7 +80,8 @@ var work = [
     designCaption1: "A user's network is represented by a deck of cards, giving a more playful, physical feel.",
     designImg2: "img/gamesmith-card.png",
     designCaption2: "Cards can be expanded into a detail view of a user's career, credibility, and connections.",
-    retrospective: "The deck nature of the layout works well in early stages, but alternate layouts that allow the same playful feel are being explored as the product scales."
+    retrospective: "The deck nature of the layout works well in early stages, but alternate layouts that allow the same playful feel are being explored as the product scales.",
+    type: "Overview"
   }
 ];
 
@@ -111,7 +115,7 @@ var Router = Backbone.Router.extend({
 
     var projBriefTemplate = this.templates.projectBrief;
 
-    var html = work.map(function(w) {
+    var html = WORK.map(function(w) {
       return projBriefTemplate({work: w});
     });
 
@@ -129,24 +133,14 @@ var Router = Backbone.Router.extend({
 
     this.currentTemplate = 'work-detail';
 
+    var work = _.find(WORK, function(w) {
+      return w.id === id
+    });
+
     var html = this.templates.work({
       prevWork: '',
       nextWork: '',
-      work: {
-        id: id,
-        briefImg: '',
-        title: 'My Work',
-        tagline: 'My tagline',
-        responsibility: 'All of it',
-        problemImg1: '',
-        problemImg2: '',
-        problemImg3: '',
-        researchImg1: '',
-        researchImg2: '',
-        designImg1: '',
-        designImg2: '',
-        designImg3: ''
-      }
+      work: work
     });
 
     this.$app.html(html);
