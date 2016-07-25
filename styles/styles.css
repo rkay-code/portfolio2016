@@ -23,6 +23,24 @@
     -webkit-transform: translateY(100%);
     transform: translateY(100%); } }
 
+@keyframes moveToTopFade {
+  from { }
+  to {
+    opacity: 0.3;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+@keyframes moveToTop {
+  from { }
+  to {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+@keyframes fade {
+  from { }
+  to {
+    opacity: 0.3; } }
+
 @keyframes fadeIn {
   from {
     opacity: 0.3; }
@@ -147,19 +165,12 @@
   bottom: 50%;
   display: inline-block;
   background-color: #EBEBEB;
+  transform: rotate(-90deg);
   -webkit-transform-origin: bottom center;
   -moz-transform-origin: bottom center;
   -o-transform-origin: bottom center;
   -ms-transform-origin: bottom center;
-  transform-origin: bottom center;
-  -webkit-animation: pop 2s linear;
-  -moz-animation: pop 2s linear;
-  -o-animation: pop 2s linear;
-  animation: pop 2s linear;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  transform-origin: bottom center; }
   .rod:after {
     position: absolute;
     content: " ";
@@ -182,8 +193,18 @@
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, 50%); }
 
+.transform {
+  -webkit-animation: pop 2s linear;
+  -moz-animation: pop 2s linear;
+  -o-animation: pop 2s linear;
+  animation: pop 2s linear;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  animation-fill-mode: forwards; }
+
 .desk {
-  background-color: #FFFD82;
   color: #0F1A20; }
 
 .desk-wrapper h1, .desk-wrapper p {
@@ -442,9 +463,6 @@
   -o-animation-delay: 2000ms;
   animation-delay: 2000ms; }
 
-.room {
-  background-color: #F45B69; }
-
 .room-wrapper {
   text-align: center; }
   .room-wrapper h1, .room-wrapper p {
@@ -689,7 +707,9 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: transparent;
+  transition: background 1s ease; }
 
 p {
   font-size: 16px;
@@ -752,8 +772,13 @@ button {
   padding-bottom: 5px;
   color: #0F1A20; }
 
+.wrapper-animated {
+  -webkit-animation: moveFromBottomFade .7s ease-in-out both;
+  animation: moveFromBottomFade .7s ease-in-out both; }
+
 .wrapper {
-  padding-top: 100px; }
+  padding: 100px 0;
+  position: relative; }
 
 .work-wrapper {
   -webkit-animation-name: scale;

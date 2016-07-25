@@ -13,6 +13,18 @@
     transform: translateY(100%);
   }
 }
+@keyframes moveToTopFade {
+	from { }
+	to { opacity: 0.3; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+	from { }
+	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+@keyframes fade {
+	from { }
+	to { opacity: 0.3; }
+}
 @keyframes fadeIn {
   from {
     opacity: 0.3;

@@ -53,6 +53,8 @@ body {
   padding: 0;
   position: relative;
   overflow-x: hidden;
+  background-color: transparent;
+  transition: background 1s ease;
 }
 p {
   font-size: 16px;
@@ -120,11 +122,13 @@ button {
     padding-bottom: 5px;
     color: #0F1A20;
   }
+.wrapper-animated {
+  -webkit-animation: moveFromBottomFade .7s ease-in-out both;
+	animation: moveFromBottomFade .7s ease-in-out both;
+}
 .wrapper {
-  // @include prefix(animation-name, fadeIn, webkit moz ms o);
-  // @include prefix(animation-duration, 1000ms, webkit moz ms o);
-  // @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  padding-top: 100px;
+  padding: 100px 0;
+  position: relative;
 }
 .work-wrapper {
   @include prefix(animation-name, scale, webkit moz ms o);

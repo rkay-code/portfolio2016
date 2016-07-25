@@ -26,18 +26,53 @@ var Router = Backbone.Router.extend({
 
     this.$app.html(this.templates.index);
 
-    $('#room').scrollex({
+    $('#work').scrollex({
+      top: '10%',
+      bottom: '30%',
       enter: function() {
+        $('body').css('background-color', '#FFF');
+      },
+      leave: function() {
+          // $('body').css('background-color', '');
 
-        // Set #foobar's background color to green when we scroll into it.
-          $(this).css('background-color', 'green');
+      }
+    });
+
+
+    $('#desk').scrollex({
+      top: '10%',
+      bottom: '30%',
+      enter: function() {
+        $('body').css('background-color', '#FFFD82');
+      },
+      leave: function() {
+          // $('body').css('background-color', '');
+
+      }
+    });
+
+    $('#room').scrollex({
+      top: '10%',
+      bottom: '30%',
+      enter: function() {
+          $('body').css('background-color', '#F45B69');
 
       },
       leave: function() {
+          // $('body').css('background-color', '#fff');
+      }
+    });
 
-        // Reset #foobar's background color when we scroll out of it.
-          $(this).css('background-color', '');
+    $('#contact').scrollex({
+      top: '10%',
+      bottom: '30%',
+      enter: function() {
+          $('body').css('background-color', '#fff');
+          $('.rod').addClass('transform');
 
+      },
+      leave: function() {
+          // $('body').css('background-color', '#fff');
       }
     });
 

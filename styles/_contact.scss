@@ -91,19 +91,12 @@
   bottom: 50%;
   display: inline-block;
   background-color: #EBEBEB;
+  transform: rotate(-90deg);
   -webkit-transform-origin: bottom center;
   -moz-transform-origin: bottom center;
   -o-transform-origin: bottom center;
   -ms-transform-origin: bottom center;
   transform-origin: bottom center;
-  -webkit-animation: pop 2s linear;
-  -moz-animation: pop 2s linear;
-  -o-animation: pop 2s linear;
-  animation: pop 2s linear;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   &:after {
     position: absolute;
     content: " ";
@@ -127,4 +120,16 @@
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, 50%);
   }
+}
+
+.transform {
+  -webkit-animation: pop 2s linear;
+  -moz-animation: pop 2s linear;
+  -o-animation: pop 2s linear;
+  animation: pop 2s linear;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  animation-fill-mode: forwards;
 }
