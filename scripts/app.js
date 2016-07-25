@@ -134,8 +134,6 @@ var Router = Backbone.Router.extend({
 
     this.currentTemplate = 'work-detail';
 
-    window.scrollTo(0, 0);
-
     var work = _.find(WORK, function(w) {
       return w.id === id
     });
@@ -147,6 +145,7 @@ var Router = Backbone.Router.extend({
     });
 
     this.$app.html(html);
+    window.scrollTo(0, 0);
   }
 });
 
@@ -161,4 +160,21 @@ $(document).ready(function() {
   });
 
   Backbone.history.start();
+});
+
+$(function() {
+  $('#room').scrollex({
+    enter: function() {
+
+      // Set #foobar's background color to green when we scroll into it.
+        $(this).css('background-color', 'green');
+
+    },
+    leave: function() {
+
+      // Reset #foobar's background color when we scroll out of it.
+        $(this).css('background-color', '');
+
+    }
+  });
 });
