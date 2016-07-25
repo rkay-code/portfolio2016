@@ -32,7 +32,7 @@
   <script type="text/template" id="project-detail-brief-content">
     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
   <a href="/work/<%= work.id %>">
-    <img src="<%= work.img %>" />
+    <img src="<%= work.briefImg %>" />
   </a>
   <div class="brief-details">
     <h3><%= work.title %></h3>
@@ -73,7 +73,7 @@
     <div class="detail-brief-wrapper">
       <div class="detail-brief">
         <div class="detail-brief-img col-md-4 col-md-offset-4">
-          <img ng-src="<%= work.briefImg %>" />
+          <img src="<%= work.briefImg %>" />
         </div>
         <div class="detail-brief-text col-md-8 col-md-offset-2">
           <h3><%= work.title %>: <%= work.tagline %></h3>
