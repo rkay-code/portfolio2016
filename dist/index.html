@@ -1,4 +1,36 @@
-<!doctype html><html ng-app="portfolioApp" ng-controller="mainCtrl"><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Renee Padgham - Product Design</title><meta name="description" content="The online home and portfolio of Renee Padgham."><meta name="author" content="Renee Padgham"><!-- Social: Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@reneepadgham"><meta name="twitter:creator" content="reneepadgham"><meta name="twitter:title" content="Renee Padgham - Product Design"><meta name="twitter:description" content="The online home and portfolio of Renee Padgham."><meta name="twitter:image:src" content="http://www.reneepadgham.com/img/me.jpg"><!-- Social: Facebook / Open Graph --><meta property="og:url" content="http://www.reneepadgham.com"><meta property="og:title" content="Renee Padgham - Product Design"><meta property="og:image" content="http://www.reneepadgham.com/img/me.jpg"><meta property="og:description" content="The online home and portfolio of Renee Padgham."><meta property="article:author" content="https://www.facebook.com/reneepadgham"><link rel="stylesheet" type="text/css" href="/styles/normalize.min.css"><link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="/styles/styles.css"></head><body><div id="app"></div><script type="text/template" id="project-detail-brief-content"><div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Renee Padgham - Product Design</title>
+  <meta name="description" content="The online home and portfolio of Renee Padgham." />
+  <meta name="author" content="Renee Padgham">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@reneepadgham">
+  <meta name="twitter:creator" content="reneepadgham">
+  <meta name="twitter:title" content="Renee Padgham - Product Design">
+  <meta name="twitter:description" content="The online home and portfolio of Renee Padgham.">
+  <meta name="twitter:image:src" content="http://www.reneepadgham.com/img/me.jpg">
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="http://www.reneepadgham.com">
+  <meta property="og:title" content="Renee Padgham - Product Design">
+  <meta property="og:image" content="http://www.reneepadgham.com/img/me.jpg" />
+  <meta property="og:description" content="The online home and portfolio of Renee Padgham.">
+  <meta property="article:author" content="https://www.facebook.com/reneepadgham">
+
+  <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script type="text/template" id="project-detail-brief-content">
+    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
   <a href="/work/<%= work.id %>">
     <img src="<%= work.img %>" />
   </a>
@@ -9,7 +41,12 @@
       <button class="view-proj" ng-if="work.type"><%= work.type %></button>
     </a>
   </div>
-</div></script><script type="text/template" id="work-detail-content"><div ng-controller="workCtrl" ng-cloak>
+</div>
+
+  </script>
+
+  <script type="text/template" id="work-detail-content">
+    <div ng-controller="workCtrl" ng-cloak>
 <nav class="navbar navbar-default navbar-fixed-top work-nav" id="nav">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -57,11 +94,15 @@
         <a href="#/work/<%= work.id %>#constraints">
           <img src="img/constraints.png" />
           <h4>Constraints</h4></a>
-      </li> <% if (work.research) { %> <li>
+      </li>
+      <% if (work.research) { %>
+        <li>
           <a href="#/work/<%= work.id %>#research">
             <img src="img/research.png" />
             <h4>Research</h4></a>
-        </li> <% } %> <li ng-if="work.sketch">
+        </li>
+      <% } %>
+      <li ng-if="work.sketch">
         <a href="#/work/<%= work.id %>#sketch">
           <img src="img/sketch.png" />
           <h4>Sketch</h4></a>
@@ -130,7 +171,12 @@
   </section>
 </div>
 
-</div></script><script type="text/template" id="index-content"><nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
+</div>
+
+  </script>
+
+  <script type="text/template" id="index-content">
+    <nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
@@ -152,7 +198,7 @@
       </div>
     </nav>
 
-    <div ui-view="work" class="work" id="work">
+    <div class="work" id="work">
       <div class="work-wrapper wrapper container" ng-cloak>
   <div class="row">
     <div class="col-md-5 header-img">
@@ -189,7 +235,7 @@
 </div>
 
     </div>
-    <div ui-view="desk" class="desk" id="desk" ng-hide="$state.includes('workDetail')">
+    <div class="desk" id="desk">
       <div class="desk-wrapper wrapper container">
   <div class="row">
     <div class="col-md-5 header-img">
@@ -270,7 +316,7 @@
 </div>
 
     </div>
-    <div ui-view="room" class="room" id="room" ng-hide="$state.includes('workDetail')">
+    <div class="room" id="room">
       <div class="room-wrapper wrapper container">
   <div class="row">
     <div class="col-md-5 header-img">
@@ -305,7 +351,7 @@
 </div>
 
     </div>
-    <div ui-view="contact" class="contact" id="contact" ng-hide="$state.includes('workDetail')">
+    <div class="contact" id="contact">
       <div class="contact-wrapper wrapper container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 header-img">
@@ -341,4 +387,14 @@
     </div>
 </div>
 
-    </div></script><script src="/scripts/jquery-2.1.4.min.js"></script><script src="/scripts/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script><script src="/scripts/app.js"></script></body></html>
+    </div>
+  </script>
+
+  <script src="/scripts/jquery-2.1.4.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+  <script src="/scripts/app.js"></script>
+</body>
+
+</html>
