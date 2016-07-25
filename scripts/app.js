@@ -58,8 +58,7 @@ $(document).ready(function() {
     app: $('#app'),
     templates: {
       index: $('#index-content').html(),
-      work: _.template($('#work-detail-content').html()),
-      projectBrief: _.template($('#project-detail-brief-content').html())
+      work: _.template($('#work-detail-content').html())
     }
   });
 
