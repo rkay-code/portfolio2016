@@ -2,6 +2,7 @@ var WORK = [
   {
     id: "gigster",
     title: "Gigster",
+    img: "img/gigster-frame.png",
     briefImg: "img/gigster.jpg",
     responsibility: "I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.",
     tagline: "On demand software development.",
@@ -23,7 +24,7 @@ var WORK = [
   {
     id: "riskmaster",
     title: "Riskmaster",
-    img: "img/riskmaster-logo.png",
+    img: "img/riskmaster-frame.png",
     briefImg: "img/riskmaster-thumb.png",
     role: "Design | Development",
     responsibility: "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
@@ -46,7 +47,7 @@ var WORK = [
   {
     id: "coinmotion",
     title: "Coinmotion",
-    img: "img/coinmotion-logo.png",
+    img: "img/coinmotion-frame.png",
     briefImg: "img/coinmotion.jpg",
     role: "Design | Development",
     responsibility: "I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.",
@@ -67,7 +68,7 @@ var WORK = [
   {
     id: "gamesmith",
     title: "Gamesmith",
-    img: "img/gamesmith-logo.png",
+    img: "img/gamesmith-frame.png",
     briefImg: "img/gamesmith-carousel.jpg",
     role: "Design",
     responsibility: "I led product design on a social network for the video game industry.",
