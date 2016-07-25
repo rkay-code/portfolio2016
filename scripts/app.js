@@ -12,10 +12,8 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 200) {
       $('.navbar-scroll').fadeIn(500);
-    } else {
-      $('.navbar-scroll').fadeOut(500);
     }
   });
 
-$('body').scrollspy({ target: '#nav' })
+$('.body-main').scrollspy({ target: '#spy-nav' })
 });

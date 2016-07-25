@@ -2,28 +2,28 @@ var portfolioApp = angular.module('portfolioApp', ['ui.router', 'ngSanitize']);
 
 portfolioApp.config(function($stateProvider, $urlRouterProvider, $provide) {
 
-  // $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
-
     .state('home', {
     url: '/',
-  })
-
-  .state('work', {
-    url: '/work',
-  })
-
-  .state('desk', {
-    url: '/desk',
-  })
-
-  .state('room', {
-    url: '/room',
-  })
-
-  .state('contact', {
-    url: '/contact',
+    views: {
+      '': {
+          templateUrl: '/templates/home.html',
+      },
+      'work@home': {
+        templateUrl: '/templates/work.html',
+      },
+      'desk@home': {
+        templateUrl: '/templates/desk.html',
+      },
+      'room@home': {
+        templateUrl: '/templates/room.html',
+      },
+      'contact@home': {
+        templateUrl: '/templates/contact.html',
+      },
+    }
   })
 
   .state('workDetail', {
@@ -43,7 +43,13 @@ portfolioApp.filter('capitalize', function() {
 });
 
 
-portfolioApp.controller('mainCtrl', function($scope, $timeout, $location, $state) {
+portfolioApp.run(['$anchorScroll', function($anchorScroll) {
+  $anchorScroll.yOffset = 50;
+}]);
+
+
+portfolioApp.controller('mainCtrl', function($scope, $timeout, $location, $state, $anchorScroll) {
+
   $scope.user = {
     name: ''
   };
@@ -52,6 +58,26 @@ portfolioApp.controller('mainCtrl', function($scope, $timeout, $location, $state
 
   function titleCase(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  $scope.gotoWork = function() {
+    $location.hash('work');
+    $anchorScroll();
+  };
+
+  $scope.gotoDesk = function() {
+    $location.hash('desk');
+    $anchorScroll();
+  };
+
+  $scope.gotoRoom = function() {
+    $location.hash('room');
+    $anchorScroll();
+  };
+
+  $scope.gotoContact = function() {
+    $location.hash('contact');
+    $anchorScroll();
   };
 
   $scope.isActive = function(viewLocation) {

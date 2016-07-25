@@ -107,29 +107,33 @@
   }
 }
 .work-nav {
-  background-color: #59C3C3;
-  padding: 25px 0;
-  margin-top: 75px;
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 2s, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  a {
+  display: block !important;
+  .navbar-nav {
+    width: 100%;
+  li a {
     text-transform: uppercase;
-    color: #fff;
+    color: #424C55 !important;
     letter-spacing: 1px;
+    text-align: left;
+    font-weight: 500 !important;
+    width: 100%;
   }
-  a:hover {
+  li img {
+    height: 20px;
+  }
+  li a:hover {
     text-decoration: none;
     cursor: pointer;
-    color: #fff;
   }
-  a:nth-child(2) {
+  li:nth-child(2) a {
     text-align: center;
+margin: auto;
   }
-  a:last-child {
+  li:last-child a {
     text-align: right;
     float: right;
-  }
+  }}
+
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .detail-body div {

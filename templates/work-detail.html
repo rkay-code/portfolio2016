@@ -1,4 +1,25 @@
 <div ng-controller="workCtrl" ng-cloak>
+<nav class="navbar navbar-default navbar-fixed-top work-nav" id="nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="col-md-4"><a ui-sref="workDetail({workId:prevWork})">&#8592; {{prevWork}}</a></li>
+        <li class="col-md-4"><a ui-sref="home" class="col-md-4"><img src="img/home.png" /></a></li>
+        <li class="col-md-4"><a ui-sref="workDetail({workId:nextWork})" class="col-md-4">{{nextWork}} &#8594;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <div class="work wrapper" ng-cloak>
   <section id="brief" class="row">
     <div class="detail-brief-wrapper">
@@ -101,13 +122,15 @@
 
 </div>
 
-<section class="work-nav ng-cloak">
-  <div class="container ng-cloak">
+<!-- <section class="work-nav">
+  <div class="container navbar-fixed-top">
     <div class="row">
       <a ui-sref="workDetail({workId:prevWork})" class="col-md-4">&#8592; {{prevWork}}</a>
       <a ui-sref="home" class="col-md-4">Go Home</a>
       <a ui-sref="workDetail({workId:nextWork})" class="col-md-4">{{nextWork}} &#8594;</a>
     </div>
   </div>
-</section>
+</section> -->
+
+
 </div>

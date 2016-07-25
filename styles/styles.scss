@@ -123,9 +123,9 @@ button {
     color: #0F1A20;
   }
 .wrapper {
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 1000ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  // @include prefix(animation-name, fadeIn, webkit moz ms o);
+  // @include prefix(animation-duration, 1000ms, webkit moz ms o);
+  // @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   padding-top: 100px;
 }
 .work-wrapper {
