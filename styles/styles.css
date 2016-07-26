@@ -41,22 +41,49 @@
   to {
     opacity: 0.3; } }
 
+@keyframes leftDoor {
+  0% { }
+  50% {
+    right: 100%;
+    left: -50%;
+    opacity: 0; }
+  100% {
+    right: 100%;
+    left: -50%;
+    opacity: 0; } }
+
+@keyframes rightDoor {
+  0% { }
+  50% {
+    left: 100%;
+    right: -50%;
+    opacity: 0; }
+  100% {
+    left: 100%;
+    right: -50%;
+    opacity: 0; } }
+
 @keyframes fadeIn {
   from {
-    opacity: 0.3; }
+    opacity: 0; }
   to {
     opacity: 1; } }
 
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1; }
-  to {
-    opacity: 0; } }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    animation-play-state: paused; } }
 
 @keyframes zoomIn {
-  from {
+  0% {
     transform: scale(1); }
-  to {
+  20% {
+    transform: scale(1.5); }
+  100% {
     transform: scale(1.5); } }
 
 @keyframes scale {
@@ -231,84 +258,65 @@
     display: block;
     margin: auto auto 40px auto; }
 
-.landing {
-  background-color: #4062BB; }
-
-.landing-wrapper {
-  padding-top: 20vh;
-  text-align: center; }
-
-.landing-text {
-  display: inline-block;
-  font-size: 26px;
-  font-family: "proxima-nova", sans-serif;
-  margin: 20px auto 15px; }
-
-.landing-input .tip {
-  margin: auto;
-  font-size: 14px;
-  font-weight: bolder;
-  display: block;
-  margin-top: 5px;
-  letter-spacing: .5px;
-  color: #5bd8b3; }
-
-.landing-input .tip:hover {
-  cursor: pointer; }
-
-.name-input {
-  margin: auto;
-  border-width: 0 0 2px 0;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center; }
-  .name-input a {
-    text-decoration: none;
-    margin: 0 5px; }
-
-.name-input:focus {
-  border-width: 0 0 2px 0;
-  border-color: #7FD8BE;
-  outline: none; }
-
-.name-sbmt {
-  color: #fff;
-  background-color: #7FD8BE;
-  margin-left: 5px;
-  padding: 7px 10px;
-  border-radius: 2px;
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -ms-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  -ms-animation-duration: 4s;
-  -o-animation-duration: 4s;
-  animation-duration: 4s;
+#landing {
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 2000ms;
+  -moz-animation-duration: 2000ms;
+  -ms-animation-duration: 2000ms;
+  -o-animation-duration: 2000ms;
+  animation-duration: 2000ms;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  display: none; }
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -ms-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms; }
 
-.name-sbmt:hover {
-  text-decoration: none;
-  color: #fff; }
-
-.landing-welcome {
-  opacity: 0;
-  visibility: hidden;
-  margin-top: -20px; }
+.landing-wrapper {
+  margin-top: 30vh; }
 
 .door-wrapper {
   position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-  z-index: 1; }
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  text-align: center;
+  background-color: #fff;
+  -webkit-animation-name: zoomIn;
+  -moz-animation-name: zoomIn;
+  -ms-animation-name: zoomIn;
+  -o-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 2500ms;
+  -moz-animation-duration: 2500ms;
+  -ms-animation-duration: 2500ms;
+  -o-animation-duration: 2500ms;
+  animation-duration: 2500ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  transform-origin: center; }
   .door-wrapper img {
     text-align: center;
     width: 80%;
@@ -316,70 +324,89 @@
 
 .left-door {
   position: absolute;
-  background: #7FD8BE;
+  background: #FFE484;
+  border: 5px double #4A4A4A;
   bottom: 0;
   right: 50%;
   left: 0;
   top: 0;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  border: 5px double #4A4A4A;
-  opacity: 1; }
+  -webkit-animation-name: leftDoor;
+  -moz-animation-name: leftDoor;
+  -ms-animation-name: leftDoor;
+  -o-animation-name: leftDoor;
+  animation-name: leftDoor;
+  -webkit-animation-duration: 2000ms;
+  -moz-animation-duration: 2000ms;
+  -ms-animation-duration: 2000ms;
+  -o-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -ms-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms; }
   .left-door:after {
     position: absolute;
     content: " ";
     width: 5px;
     height: 15px;
-    top: 85px;
+    top: 115px;
     right: 10px;
     background-color: #4A4A4A;
     border-radius: 5px; }
 
-.door-wrapper:hover .left-door, .door-wrapper-hover .left-door {
-  right: 100%;
-  left: -50%; }
-
-.door-wrapper-hover .left-door {
-  right: 100%;
-  left: -50%;
-  transition: all 1s ease-out;
-  transition-delay: 750ms; }
-
 .right-door {
   position: absolute;
-  background: #7FD8BE;
+  background: #FFE484;
   bottom: 0;
   left: 50%;
   right: 0;
   top: 0;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  border: 5px double #4A4A4A; }
+  border: 5px double #4A4A4A;
+  -webkit-animation-name: rightDoor;
+  -moz-animation-name: rightDoor;
+  -ms-animation-name: rightDoor;
+  -o-animation-name: rightDoor;
+  animation-name: rightDoor;
+  -webkit-animation-duration: 2000ms;
+  -moz-animation-duration: 2000ms;
+  -ms-animation-duration: 2000ms;
+  -o-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -ms-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms; }
   .right-door:after {
     position: absolute;
     content: " ";
     width: 5px;
     height: 15px;
-    top: 85px;
+    top: 115px;
     left: 10px;
     background-color: #4A4A4A;
     border-radius: 5px; }
-
-.door-wrapper:hover .right-door {
-  left: 100%;
-  right: -50%; }
-
-.door-wrapper-hover .right-door {
-  left: 100%;
-  right: -50%;
-  transition: all 1s ease-out;
-  transition-delay: 750ms; }
 
 .slide_in {
   overflow: hidden; }

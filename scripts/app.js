@@ -26,6 +26,14 @@ var Router = Backbone.Router.extend({
 
     this.$app.html(this.templates.index);
 
+    var landing = document.getElementById('landing');
+    var work = document.getElementById('work');
+    landing.addEventListener('animationend',function( event ) {
+      landing.style.display = 'none';
+      $('#work').addClass('show');},
+      false);
+
+
     $('#work').scrollex({
       top: '10%',
       bottom: '30%',
@@ -43,7 +51,7 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-        $('body').css('background-color', '#FFFD82');
+        $('body').css('background-color', '#FFF3B2');
       },
       leave: function() {
           // $('body').css('background-color', '');
@@ -55,7 +63,7 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-          $('body').css('background-color', '#F45B69');
+          $('body').css('background-color', '#FFBFC3');
 
       },
       leave: function() {
@@ -67,7 +75,7 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-          $('body').css('background-color', '#fff');
+          $('body').css('background-color', '#FFF2F2');
           $('.rod').addClass('transform');
 
       },
