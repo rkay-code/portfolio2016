@@ -2,15 +2,21 @@
   overflow: visible;
 }
 
+.work.wrapper {
+  @include prefix(animation-name, fadeInTheMusical, webkit moz ms o);
+  @include prefix(animation-duration, 1.2s, webkit moz ms o);
+  @include prefix(animation-timing-function, ease-out, webkit moz ms o);
+}
+
 .work-wrapper {
   overflow-x: visible !important;
   .intro-text h1, p {
     color: #424C55;
   }
-a {
-  font-weight: bolder;
-  color: #F45B69;
-}
+  a {
+    font-weight: bolder;
+    color: #F45B69;
+  }
 }
 
 .proj-wrapper, .static-proj-wrapper {
