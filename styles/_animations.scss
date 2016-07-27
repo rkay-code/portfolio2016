@@ -13,27 +13,74 @@
     transform: translateY(100%);
   }
 }
+@keyframes moveToTopFade {
+	from { }
+	to { opacity: 0.3; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+	from { }
+	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+@keyframes fade {
+	from { }
+	to { opacity: 0.3; }
+}
+@keyframes leftDoor {
+  0% {
+  }
+  50% {
+    right: 100%;
+    left: -50%;
+    opacity: 0;
+  }
+  100% {
+    right: 100%;
+    left: -50%;
+    opacity: 0;
+  }
+}
+@keyframes rightDoor {
+  0% {
+  }
+  50% {
+    left: 100%;
+    right: -50%;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    right: -50%;
+    opacity: 0;
+  }
+}
 @keyframes fadeIn {
   from {
-    opacity: 0.3;
+    opacity: 0;
   }
   to {
     opacity: 1;
   }
 }
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  80% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
+    animation-play-state: paused;
   }
 }
 @keyframes zoomIn {
-  from {
+  0% {
     transform: scale(1);
   }
-  to {
+  20% {
+    transform: scale(1.5);
+  }
+  100% {
     transform: scale(1.5);
   }
 }
@@ -64,5 +111,15 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeInTheMusical {
+  0% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
