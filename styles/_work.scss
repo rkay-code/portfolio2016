@@ -1,11 +1,21 @@
-.work-wrapper a {
-  font-weight: bolder;
+.container {
+  overflow: visible;
 }
 
-.proj-wrapper {
+.work.wrapper {
+  @include prefix(animation-name, fadeInTheMusical, webkit moz ms o);
+  @include prefix(animation-duration, 1.2s, webkit moz ms o);
+  @include prefix(animation-timing-function, ease-out, webkit moz ms o);
+}
+
+.work-wrapper {
+  overflow-x: visible !important;
+}
+
+.proj-wrapper, .static-proj-wrapper {
   margin-top: 75px;
   margin-bottom: 75px;
-  text-align: center;
+  text-align: left;
   img {
     width: 90%;
     transform: rotate(0deg);
@@ -18,26 +28,21 @@
     transition: all 200ms ease-in-out;
   }
   h3 {
-    font-size: 32px;
-    font-weight: lighter;
     margin: 0;
-  }
-  h4 {
-    letter-spacing: .5px;
-      margin: 5px 0;
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 22px;
   }
   .brief-details {
     padding-top: 40px;
-    width: 90%;
-    margin-left: 5%;
     text-align: left;
-    position: static;
+    width: 90%;
+    height: 200px;
+  }
+  .second:hover {
+      transform: rotate(-5deg);
+      transform-origin: center top;
+      transition: all 200ms ease-in-out;
   }
 }
-.proj-brief-wrapper:nth-of-type(2n) {
+.proj-wrapper:nth-of-type(2n) {
   img:hover {
     transform: rotate(-5deg);
     transform-origin: center top;
@@ -45,7 +50,7 @@
   }
 }
 .view-proj {
-  background: $teal;
+  background: #5BC0BE;
   border: none;
   color: #fff;
   padding: 12px 25px 10px;
@@ -54,32 +59,6 @@
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 15px;
-}
-.coming-soon {
-  text-align: center;
-  margin-top: 50px;
-  img {
-    margin: auto 10%;
-    width: 80%;
-    transform: rotate(0deg);
-    transform-origin: center top;
-    transition: all 200ms ease-in-out;
-  }
-  img:hover {
-    transform: rotate(5deg);
-    transform-origin: center top;
-    transition: all 200ms ease-in-out;
-  }
-  .second img:hover {
-    transform: rotate(-5deg);
-    transform-origin: center top;
-    transition: all 200ms ease-in-out;
-  }
-  h3 {
-    font-size: 32px;
-    font-weight: lighter;
-    margin: 0 auto 25px;
-  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

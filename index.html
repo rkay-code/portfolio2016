@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="portfolioApp" ng-controller="mainCtrl">
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -24,69 +24,63 @@
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
-
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='125911570-0',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top ng-cloak" id="nav" ng-show="!isActive('/')">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" ui-sref="work"><img src="img/name.png" /></a>
-      </div>
+  <div id="app"></div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a ui-sref="work" data-toggle="collapse">Home</a></li>
-          <li><a ui-sref="desk" data-toggle="collapse">Desk</a></li>
-          <li><a ui-sref="room" data-toggle="collapse">Room</a></li>
-          <li><a ui-sref="contact" data-toggle="collapse">Mailbox</a></li>
+  <script type="text/template" id="work-detail-content">
+    @@include('templates/work-detail.html')
+  </script>
+
+  <script type="text/template" id="index-content">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="/img/name.png" /></a>
+        </div>
+
+      <div class="collapse navbar-collapse" id="my-nav-buttons">
+        <ul class="nav navbar-nav">
+          <li><a href="#home"><img src="img/home-icon.png" /> Home</a></li>
+          <li><a href="#desk"><img src="img/desk-icon.png" /> Desk</a></li>
+          <li><a href="#room"><img src="img/room-icon.png" /> Room</a></li>
+          <li><a href="#mail"><img src="img/mail-icon.png" /> Mail</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+      </div>
+    </nav>
 
-  <div>
-    <div ui-view autoscroll></div>
-  </div>
+    <div class="work" id="home">
+      @@include('./templates/work-rendered.html')
+    </div>
+    <div class="desk" id="desk" data-background="#FFFD82">
+      @@include('./templates/desk.html')
+    </div>
+    <div class="room" id="room" data-background="#F45B69">
+      @@include('./templates/room.html')
+    </div>
+    <div class="contact" id="mail">
+      @@include('./templates/contact.html')
+    </div>
+  </script>
+
+  <script>
+    window.WORK = @@include('scripts/work.json')
+  </script>
+
+  <script src="/scripts/jquery-2.1.4.min.js"></script>
+  <script src="/scripts/jquery.scrollex.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+  <script src="/scripts/underscore-min.js"></script>
+  <script src="/scripts/backbone-min.js"></script>
+  <script src="/scripts/app.js"></script>
 </body>
 
 </html>
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-81003140-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-
-<script src="/scripts/jquery-2.1.4.min.js"></script>
-<script src="/scripts/angular.min.js"></script>
-<script src="/scripts/angular-ui-router.min.js"></script>
-<script src="/scripts/angular-sanitize.min.js"></script>
-<script src="/scripts/bootstrap.min.js"></script>
-<script src="/scripts/controller.js"></script>
-<script src="/scripts/app.js"></script>

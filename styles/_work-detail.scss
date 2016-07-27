@@ -1,11 +1,6 @@
 .work.wrapper {
   transform-origin: 50% 20%;
-}
-.active {
-  display: block;
-}
-.inactive {
-  display: none;
+  background: #fff;
 }
 .detail-brief-wrapper {
   text-align: center;
@@ -16,19 +11,6 @@
       margin-bottom: 40px;
       img {
         width: 100%;
-      }
-    }
-    .detail-brief-text {
-      color: #4A4A4A;
-      h3 {
-        font-size: 35px;
-        font-weight: lighter;
-        margin: 0;
-      }
-      h4 {
-        font-weight: lighter;
-        letter-spacing: 1px;
-        margin: 10px 0;
       }
     }
   }
@@ -59,7 +41,7 @@
         font-weight: 300;
         font-size: 14px;
         margin-top: 15px;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
       }
       a:hover {
         text-decoration: none;
@@ -74,9 +56,9 @@
 .detail-body {
   margin: 75px auto 0;
   div {
-    padding: 40px 0 0 0;
+    padding: 40px 0 0;
     h2 {
-      color: $teal;
+      color: #5BC0BE;
       font-weight: 400;
       margin-bottom: 30px;
     }
@@ -90,12 +72,11 @@
       max-width: 100%;
     }
     p {
-      font-size: 16px;
       padding-left: 0;
       margin-top: -20px;
     }
     b {
-     font-size: 1.1em;
+      font-size: 1.1em;
     }
   }
   div:first-child {
@@ -107,25 +88,52 @@
   }
 }
 .work-nav {
-  background-color: #6ED8B8;
-  padding: 25px 0;
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 2s, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  .navbar-nav {
+    width: 100%;
+    li a {
+      text-transform: uppercase;
+      color: #424C55 !important;
+      letter-spacing: 1px;
+      text-align: left;
+      font-weight: 500 !important;
+      width: 100%;
+    }
+    li img {
+      height: 20px;
+    }
+    li a:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    li:nth-child(2) a {
+      text-align: center;
+      margin: auto;
+    }
+    li:last-child a {
+      text-align: right;
+      float: right;
+    }
+  }
+}
+.mobile-nav {
   a {
     text-transform: uppercase;
-    color: #fff;
+    color: #424C55;
     letter-spacing: 1px;
+    text-align: left;
+    font-weight: 500;
+    padding: 10px 20px;
+border: 1px solid #424C55;
   }
-  a:hover {
-    text-decoration: none;
-    cursor: pointer;
-    color: #fff;
-    font-weight: 300;
+  a:first-child {
+        float: left;
   }
   a:last-child {
     text-align: right;
     float: right;
+  }
+  a:hover {
+    color: #424C55;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
