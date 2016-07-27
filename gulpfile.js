@@ -4,7 +4,6 @@ var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var jpegtran = require('imagemin-jpegtran');
-var jsonmin = require('gulp-jsonmin');
 var pngquant = require('imagemin-pngquant');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -88,11 +87,6 @@ gulp.task('index', function() {
 //     .pipe(gulp.dest('dist/scripts'));
 // });
 
-gulp.task('jsonmin', function () {
-    gulp.src('data/*.json')
-        .pipe(jsonmin())
-        .pipe(gulp.dest('dist/data'));
-});
 
 gulp.task('imagemin', () => {
   return gulp.src('img/*')
@@ -103,4 +97,4 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['cssmin', 'htmlmin', 'imagemin', 'projects', 'index', 'jsonmin']);
+gulp.task('build', ['cssmin', 'htmlmin', 'imagemin', 'projects', 'index']);
