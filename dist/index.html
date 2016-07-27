@@ -1,5 +1,37 @@
-<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Renee Padgham - Product Design</title><meta name="description" content="The online home and portfolio of Renee Padgham."><meta name="author" content="Renee Padgham"><!-- Social: Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@reneepadgham"><meta name="twitter:creator" content="reneepadgham"><meta name="twitter:title" content="Renee Padgham - Product Design"><meta name="twitter:description" content="The online home and portfolio of Renee Padgham."><meta name="twitter:image:src" content="http://www.reneepadgham.com/img/me.jpg"><!-- Social: Facebook / Open Graph --><meta property="og:url" content="http://www.reneepadgham.com"><meta property="og:title" content="Renee Padgham - Product Design"><meta property="og:image" content="http://www.reneepadgham.com/img/me.jpg"><meta property="og:description" content="The online home and portfolio of Renee Padgham."><meta property="article:author" content="https://www.facebook.com/reneepadgham"><link rel="stylesheet" type="text/css" href="/styles/normalize.min.css"><link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="/styles/styles.css"></head><body><div id="app"></div><script type="text/template" id="work-detail-content"><div>
-  <nav class="navbar navbar-default navbar-fixed-top work-nav" id="nav">
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Renee Padgham - Product Design</title>
+  <meta name="description" content="The online home and portfolio of Renee Padgham." />
+  <meta name="author" content="Renee Padgham">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@reneepadgham">
+  <meta name="twitter:creator" content="reneepadgham">
+  <meta name="twitter:title" content="Renee Padgham - Product Design">
+  <meta name="twitter:description" content="The online home and portfolio of Renee Padgham.">
+  <meta name="twitter:image:src" content="http://www.reneepadgham.com/img/me.jpg">
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="http://www.reneepadgham.com">
+  <meta property="og:title" content="Renee Padgham - Product Design">
+  <meta property="og:image" content="http://www.reneepadgham.com/img/me.jpg" />
+  <meta property="og:description" content="The online home and portfolio of Renee Padgham.">
+  <meta property="article:author" content="https://www.facebook.com/reneepadgham">
+
+  <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script type="text/template" id="work-detail-content">
+    <div>
+  <nav class="navbar navbar-default navbar-fixed-top work-nav hidden-xs hidden-sm" id="nav">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -14,7 +46,7 @@
         <ul class="nav navbar-nav">
           <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
           <li class="col-md-4">
-            <a href="#" class="col-md-4"><img src="img/home.png" /></a>
+            <a href="#" class="col-md-4"><img src="/img/gohome.png" /></a>
           </li>
           <li class="col-md-4">
             <a href="#/work/<%= nextWork %>"class="col-md-4"><%= nextWork%> &#8594;</a>
@@ -24,7 +56,7 @@
     </div>
   </nav>
 
-  <div class="work wrapper">
+  <div class="work wrapper" id="work-wrapper">
     <section id="brief" class="row">
       <div class="detail-brief-wrapper">
         <div class="detail-brief">
@@ -32,8 +64,8 @@
             <img src="<%= work.briefImg %>" />
           </div>
           <div class="detail-brief-text col-md-8 col-md-offset-2">
-            <h3><%= work.title %>: <%= work.tagline %></h3>
-            <h4><%= work.responsibility %></h4>
+            <h1><%= work.title %>: <%= work.tagline %></h1>
+            <h3><%= work.responsibility %></h3>
           </div>
         </div>
       </div>
@@ -41,20 +73,27 @@
 
     <section class="detail-nav row hidden-s hidden-xs">
       <ul>
+        <% if (work.problem) { %>
         <li>
           <a href="#/work/<%= work.id %>/problem">
             <img src="img/problem.png" />
             <h4>Problem</h4></a>
         </li>
+        <% } %>
+
         <li>
           <a href="#/work/<%= work.id %>/constraints">
             <img src="img/constraints.png" />
             <h4>Constraints</h4></a>
-        </li> <% if (work.research) { %> <li>
+        </li>
+        <% if (work.research) { %>
+          <li>
             <a href="#/work/<%= work.id %>/research">
               <img src="img/research.png" />
               <h4>Research</h4></a>
-          </li> <% } %> <li>
+          </li>
+          <% } %>
+            <li>
               <a href="#/work/<%= work.id %>/design">
                 <img src="img/design.png" />
                 <h4>Design</h4></a>
@@ -67,18 +106,98 @@
       </ul>
     </section>
 
-    <section class="detail-body container"> <% if (work.problem) { %> <div id="problem" class="col-md-10 col-md-offset-1">
-          <h2>Problem</h2> <% if (work.problem) { %><p> <%= work.problem %> </p><% } %> <br /> <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" /><% } %> <% if (work.problemCaption1) { %><p> <%= work.problemCaption1 %> </p><% } %> <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" /><% } %> <% if (work.problemCaption2) { %><p> <%= work.problemCaption2 %> </p><% } %> <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" /><% } %> <% if (work.problemCaption3) { %><p> <%= work.problemCaption3 %> </p><% } %> </div> <% } %> <% if (work.constraints) { %> <div id="constraints" class="col-md-10 col-md-offset-1">
+    <section class="detail-body container">
+      <% if (work.problem) { %>
+        <div id="problem" class="col-md-10 col-md-offset-1">
+          <h2>Problem</h2>
+          <% if (work.problem) { %><p>
+            <%= work.problem %>
+          </p><% } %>
+          <br />
+          <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" /><% } %>
+          <% if (work.problemCaption1) { %><p>
+            <%= work.problemCaption1 %>
+          </p><% } %>
+          <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" /><% } %>
+          <% if (work.problemCaption2) { %><p>
+            <%= work.problemCaption2 %>
+          </p><% } %>
+          <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" /><% } %>
+          <% if (work.problemCaption3) { %><p>
+            <%= work.problemCaption3 %>
+          </p><% } %>
+        </div>
+        <% } %>
+
+        <% if (work.constraints) { %>
+          <div id="constraints" class="col-md-10 col-md-offset-1">
             <h2>Constraints</h2>
-            <p> <%= work.constraints %> </p>
-          </div> <% } %> <% if (work.research) { %> <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
-              <h2>Research</h2> <% if (work.research) { %><p> <%= work.research %> </p><% } %> <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" /><% } %> <% if (work.researchCaption1) { %><p> <%= work.researchCaption1 %> </p><% } %> <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" /><% } %> <% if (work.researchCaption2) { %><p> <%= work.researchCaption2 %> </p><% } %> </div> <% } %> <% if (work.design) { %> <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
-              <h2>Design</h2> <% if (work.design) { %><p> <%= work.design %> </p><% } %> <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" /><% } %> <% if (work.designCaption1) { %><p> <%= work.designCaption1 %> </p><% } %> <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" /><% } %> <% if (work.designCaption2) { %><p> <%= work.designCaption2 %> </p><% } %> <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" /><% } %> <% if (work.designCaption3) { %><p> <%= work.designCaption3 %> </p><% } %> <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" /><% } %> <% if (work.designCaption4) { %><p> <%= work.designCaption4 %> </p><% } %> </div> <% } %> <% if (work.retrospective) { %> <div id="lessons" class="col-md-10 col-md-offset-1">
+            <p>
+              <%= work.constraints %>
+            </p>
+          </div>
+          <% } %>
+          <% if (work.research) { %>
+            <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
+              <h2>Research</h2>
+              <% if (work.research) { %><p>
+                <%= work.research %>
+              </p><% } %>
+              <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" /><% } %>
+              <% if (work.researchCaption1) { %><p>
+                <%= work.researchCaption1 %>
+              </p><% } %>
+              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" /><% } %>
+              <% if (work.researchCaption2) { %><p>
+                <%= work.researchCaption2 %>
+              </p><% } %>
+            </div>
+            <% } %>
+            <% if (work.design) { %>
+            <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
+              <h2>Design</h2>
+              <% if (work.design) { %><p>
+                <%= work.design %>
+              </p><% } %>
+              <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" /><% } %>
+              <% if (work.designCaption1) { %><p>
+                <%= work.designCaption1 %>
+              </p><% } %>
+              <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" /><% } %>
+              <% if (work.designCaption2) { %><p>
+                <%= work.designCaption2 %>
+              </p><% } %>
+              <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" /><% } %>
+              <% if (work.designCaption3) { %><p>
+                <%= work.designCaption3 %>
+              </p><% } %>
+              <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" /><% } %>
+              <% if (work.designCaption4) { %><p>
+                <%= work.designCaption4 %>
+              </p><% } %>
+            </div>
+            <% } %>
+            <% if (work.retrospective) { %>
+              <div id="lessons" class="col-md-10 col-md-offset-1">
                 <h2>Future</h2>
-                <p> <%= work.retrospective %> </p>
-              </div> <% } %> </section>
+                <p>
+                  <%= work.retrospective %>
+                </p>
+              </div>
+            <% } %>
+
+            <div class="mobile-nav visible-xs visible-sm hidden-md hidden-lg col-xs-12">
+              <a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a>
+              <a href="#/work/<%= nextWork %>"><%= nextWork%> &#8594;</a>
+            </div>
+    </section>
   </div>
-</div></script><script type="text/template" id="index-content"><nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
+</div>
+
+  </script>
+
+  <script type="text/template" id="index-content">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
@@ -92,44 +211,23 @@
 
       <div class="collapse navbar-collapse" id="my-nav-buttons">
         <ul class="nav navbar-nav">
-          <li><a href="#work">Home</a></li>
-          <li><a href="#desk">Desk</a></li>
-          <li><a href="#room">Room</a></li>
-          <li><a href="#contact">Mail</a></li>
+          <li><a href="#home"><img src="/img/home-icon.png" /> Home</a></li>
+          <li><a href="#desk"><img src="/img/desk-icon.png" /> Desk</a></li>
+          <li><a href="#room"><img src="/img/room-icon.png" /> Room</a></li>
+          <li><a href="#mail"><img src="/img/mail-icon.png" /> Mail</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="landing" id="landing">
-      <div class="landing-wrapper container-fluid" id="landing-wrapper">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-
-
-      <div class="door-wrapper slide_in" id="door">
-        <div class="left-door"></div>
-        <div class="right-door"></div>
-        <img src="/img/living-room-light.png" />
-      </div>
-    </div>
-  </div>
-    <!-- <div ui-view="work" class="work" id="work"></div>
-    <div ui-view="desk" class="desk" id="desk"></div>
-    <div ui-view="room" class="room" id="room"></div>
-    <div ui-view="contact" class="contact" id="contact"></div> -->
-</div>
-
-    </div>
-    <div class="work" id="work">
+    <div class="work" id="home">
       <div class="work-wrapper wrapper container">
   <div class="row">
-    <div class="col-md-5 header-img">
+    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
       <img src="/img/living-room.png" />
     </div>
-    <div class="intro-text col-md-7">
+    <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
       <h1>Thanks for stopping by!</h1>
       <p>This is where I live - well, at least, where I live on the internet...
-      <br />
       In the real world, I'm a product designer and front-end developer in San Francisco.
       I’d love to <a href="#contact">meet for coffee</a>, but in the meantime my online home can tell you a bit about <a href="#room">me</a> and <a href="#desk">my work style</a>.
       The tour starts in the living room where I hang my latest work!</p>
@@ -144,8 +242,8 @@
             <img src="img/gigster-frame.png" />
           </a>
           <div class="brief-details">
-            <h3>Gigster</h3>
-            <h4>I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.</h4>
+            <h2>Gigster</h2>
+            <p>I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.</p>
             <a href="#/work/gigster">
               <button class="view-proj">Case Study</button>
             </a>
@@ -157,8 +255,8 @@
             <img src="img/riskmaster-frame.png" />
           </a>
           <div class="brief-details">
-            <h3>Riskmaster</h3>
-            <h4>I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.</h4>
+            <h2>Riskmaster</h2>
+            <p>I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.</p>
             <a href="#/work/riskmaster">
               <button class="view-proj">Case Study</button>
             </a>
@@ -170,8 +268,8 @@
             <img src="img/coinmotion-frame.png" />
           </a>
           <div class="brief-details">
-            <h3>Coinmotion</h3>
-            <h4>I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.</h4>
+            <h2>Coinmotion</h2>
+            <p>I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.</p>
             <a href="#/work/coinmotion">
               <button class="view-proj">Overview</button>
             </a>
@@ -183,8 +281,8 @@
             <img src="img/gamesmith-frame.png" />
           </a>
           <div class="brief-details">
-            <h3>Gamesmith</h3>
-            <h4>I led product design on a social network for the video game industry.</h4>
+            <h2>Gamesmith</h2>
+            <p>I led product design on a social network for the video game industry.</p>
             <a href="#/work/gamesmith">
               <button class="view-proj">Overview</button>
             </a>
@@ -196,15 +294,15 @@
     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 static-proj-wrapper">
       <img src="img/greylock-frame.png" />
       <div class="brief-details">
-        <h3>Greylock Partners</h3>
-        <h4>Coming soon!</h4>
+        <h2>Greylock Partners</h2>
+        <p>Coming soon!</p>
       </div>
     </div>
     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 static-proj-wrapper">
       <img src="img/fidelity-frame.png" class="second" />
       <div class="brief-details">
-        <h3>Fidelity</h3>
-        <h4>Coming soon!</h4>
+        <h2>Fidelity</h2>
+        <p>Coming soon!</p>
       </div>
     </div>
   </div>
@@ -214,10 +312,10 @@
     <div class="desk" id="desk" data-background="#FFFD82">
       <div class="desk-wrapper wrapper container">
   <div class="row">
-    <div class="col-md-5 header-img">
+    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
       <img src="/img/desk.png" />
     </div>
-    <div class="intro-text col-md-7">
+    <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
       <h1>This is my desk.</h1>
       <p>There are many like it, but this one is mine. It’s pretty minimal, but it gets the job done.
       </p>
@@ -225,64 +323,62 @@
   </div>
   <div class="col-md-12 design-process">
     <div class="row">
-      <div class="col-md-4">
-        <img src="img/hat.png" />
-        <h3>Empathize</h3>
+      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
+        <div class="header">
+          <img src="img/cap.png" />
+          <h2>Empathize</h2>
+        </div>
         <p>
           When I come to my desk for a new project, I start by putting on my empathy hat. To me, this is one of the most valuable parts of my design process. I like to envision a day in the life of my user and feel their pain points. I create personas that allow
           me to understand the different types of experiences that might bring a user to my product.
         </p>
       </div>
-      <div class="col-md-4">
-
-        <img src="img/postit.png" />
-
-
-        <h3>Research</h3>
+      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
+        <div class="header">
+          <img src="img/research.png" />
+          <h2>Research</h2>
+        </div>
         <p>
           I use resources such as customer support, sales teams, and user interviews to help build out my understanding of the user. If the client has been tracking any quantitative data, I also invite it to the party. This gets my bachelor’s in Quantitative Methods
           in Economics and Mathematics really excited.
         </p>
       </div>
-      <div class="col-md-4">
-
-        <img src="img/tea.png" />
-
-
-        <h3>Brainstorm/Prototype</h3>
+      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
+        <div class="header">
+          <img src="img/brainstorm.png" />
+          <h2>Brainstorm/Prototype</h2>
+        </div>
         <p>
           I then invite my oldest friends, Pencil and Paper, over. We have a tea party (Earl Grey ftw), and after a few rounds, we get the basics together in a flow that can be shown to users and internal teams for feedback. I often invite Invision, one of Invision’s
           close relatives, or HTML/CSS into the mix depending on the vibe.
         </p>
 
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
 
-        <img src="img/tools.png" />
-
-
-        <h3>Polish</h3>
+      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
+        <div class="header">
+          <img src="img/polish.png" />
+          <h2>Polish</h2>
+        </div>
         <p>
           Before I take my work out, I normally dress it up with my new friend Sketch - but sometimes I reach out to my old friends Illustrator and Photoshop. I also like to bring my design to life using html, css, and javascript.
         </p>
 
       </div>
-      <div class="col-md-4">
-
-        <img src="img/laptop.png" />
-
-        <h3>Test</h3>
+      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
+        <div class="header">
+          <img src="img/test.png" />
+          <h2>Test</h2>
+        </div>
         <p>
           During this time, I like to dress it up in a few different options and get user feedback. This process, called A/B testing, helps me figure out which version solves my user’s problems the best.
         </p>
       </div>
-      <div class="col-md-4">
-
-        <img src="img/rocket.png" />
-
-        <h3>Ship</h3>
+      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
+        <div class="header">
+          <img src="img/ship.png" />
+          <h2>Ship</h2>
+        </div>
         <p>
           With that information, I polish it up and help my team ship it off.
         </p>
@@ -295,10 +391,10 @@
     <div class="room" id="room" data-background="#F45B69">
       <div class="room-wrapper wrapper container">
   <div class="row">
-    <div class="col-md-5 header-img">
+    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
       <img src="/img/room.png" />
     </div>
-    <div class="intro-text col-md-7">
+    <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
       <h1>This is where it gets personal.</h1>
       <p>
         I would say you'll find out all my secrets - but if you take a look around, you'll notice that everything around here is pretty minimal. That’s more than an aesthetic - I’ve spent the past year and a half traveling (sixteen countries!) and just settled back in San Francisco.
@@ -307,7 +403,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-10 col-md-offset-1 profile-wrap">
+    <div class="col-xs-10 col-xs-offset-1 profile-wrap">
       <div class="polaroid">
         <img src="img/polaroid-me.png" class="profile-pic" />
       </div>
@@ -327,8 +423,8 @@
 </div>
 
     </div>
-    <div class="contact" id="contact">
-      <div class="contact-wrapper wrapper container">
+    <div class="contact" id="mail">
+      <div class="contact-wrapper  container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 header-img">
       <h1>Say hello!</h1>
@@ -363,7 +459,11 @@
     </div>
 </div>
 
-    </div></script><script>window.WORK = {
+    </div>
+  </script>
+
+  <script>
+    window.WORK = {
   "projects": [
     {
       "id": "gigster",
@@ -451,4 +551,16 @@
       "type": "Overview"
     }
   ]
-}</script><script src="/scripts/jquery-2.1.4.min.js"></script><script src="/scripts/jquery.scrollex.min.js"></script><script src="/scripts/bootstrap.min.js"></script><script src="/scripts/underscore-min.js"></script><script src="/scripts/backbone-min.js"></script><script src="/scripts/app.js"></script></body></html>
+}
+
+  </script>
+
+  <script src="/scripts/jquery-2.1.4.min.js"></script>
+  <script src="/scripts/jquery.scrollex.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+  <script src="/scripts/underscore-min.js"></script>
+  <script src="/scripts/backbone-min.js"></script>
+  <script src="/scripts/app.js"></script>
+</body>
+
+</html>

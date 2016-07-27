@@ -26,22 +26,33 @@ var Router = Backbone.Router.extend({
 
     this.$app.html(this.templates.index);
 
-    var landing = document.getElementById('landing');
-    var work = document.getElementById('work');
-    landing.addEventListener('animationend',function( event ) {
-      landing.style.display = 'none';
-      $('#work').addClass('show');},
-      false);
+    $('a[href*=#]:not([href=#])').on('click', function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000);
+          return false;
+        }
+      }
+    });
 
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 200) {
+        $('.navbar-scroll').fadeIn(500);
+      }
+    });
 
-    $('#work').scrollex({
+    $('#home').scrollex({
       top: '10%',
       bottom: '30%',
       enter: function() {
         $('body').css('background-color', '#FFF');
       },
       leave: function() {
-          // $('body').css('background-color', '');
+        // $('body').css('background-color', '');
 
       }
     });
@@ -51,10 +62,10 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-        $('body').css('background-color', '#FFF3B2');
+        $('body').css('background-color', '#FFCFC9');
       },
       leave: function() {
-          // $('body').css('background-color', '');
+        // $('body').css('background-color', '');
 
       }
     });
@@ -63,29 +74,42 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-          $('body').css('background-color', '#FFBFC3');
+        $('body').css('background-color', '#FFEED3');
 
       },
       leave: function() {
-          // $('body').css('background-color', '#fff');
+        // $('body').css('background-color', '#fff');
       }
     });
 
-    $('#contact').scrollex({
+    $('#mail').scrollex({
       top: '10%',
       bottom: '30%',
       enter: function() {
-          $('body').css('background-color', '#FFF2F2');
-          $('.rod').addClass('transform');
+        $('body').css('background-color', '#FFFBF9');
+        $('.rod').addClass('transform');
 
       },
       leave: function() {
-          // $('body').css('background-color', '#fff');
+        $('.rod').removeClass('transform');
       }
     });
 
+    $('#work-wrapper').scrollex({
+      top: '10%',
+      bottom: '30%',
+      enter: function() {
+        $('body').css('background-color', '#FFF');
+
+      },
+      leave: function() {
+      }
+    });
+
+
     $('body').scrollspy({
-      target: '#my-nav'
+      target: '#my-nav',
+      offset: 50
     });
   },
 

@@ -34,7 +34,7 @@
   </script>
 
   <script type="text/template" id="index-content">
-    <nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
@@ -48,18 +48,15 @@
 
       <div class="collapse navbar-collapse" id="my-nav-buttons">
         <ul class="nav navbar-nav">
-          <li><a href="#work">Home</a></li>
-          <li><a href="#desk">Desk</a></li>
-          <li><a href="#room">Room</a></li>
-          <li><a href="#contact">Mail</a></li>
+          <li><a href="#home"><img src="/img/home-icon.png" /> Home</a></li>
+          <li><a href="#desk"><img src="/img/desk-icon.png" /> Desk</a></li>
+          <li><a href="#room"><img src="/img/room-icon.png" /> Room</a></li>
+          <li><a href="#mail"><img src="/img/mail-icon.png" /> Mail</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="landing" id="landing">
-      @@include('./templates/landing.html')
-    </div>
-    <div class="work" id="work">
+    <div class="work" id="home">
       @@include('./templates/work-rendered.html')
     </div>
     <div class="desk" id="desk" data-background="#FFFD82">
@@ -68,7 +65,7 @@
     <div class="room" id="room" data-background="#F45B69">
       @@include('./templates/room.html')
     </div>
-    <div class="contact" id="contact">
+    <div class="contact" id="mail">
       @@include('./templates/contact.html')
     </div>
   </script>

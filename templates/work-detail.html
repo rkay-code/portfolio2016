@@ -1,5 +1,5 @@
 <div>
-  <nav class="navbar navbar-default navbar-fixed-top work-nav" id="nav">
+  <nav class="navbar navbar-default navbar-fixed-top work-nav hidden-xs hidden-sm" id="nav">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -14,7 +14,7 @@
         <ul class="nav navbar-nav">
           <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
           <li class="col-md-4">
-            <a href="#" class="col-md-4"><img src="img/home.png" /></a>
+            <a href="#" class="col-md-4"><img src="/img/gohome.png" /></a>
           </li>
           <li class="col-md-4">
             <a href="#/work/<%= nextWork %>"class="col-md-4"><%= nextWork%> &#8594;</a>
@@ -24,7 +24,7 @@
     </div>
   </nav>
 
-  <div class="work wrapper">
+  <div class="work wrapper" id="work-wrapper">
     <section id="brief" class="row">
       <div class="detail-brief-wrapper">
         <div class="detail-brief">
@@ -32,8 +32,8 @@
             <img src="<%= work.briefImg %>" />
           </div>
           <div class="detail-brief-text col-md-8 col-md-offset-2">
-            <h3><%= work.title %>: <%= work.tagline %></h3>
-            <h4><%= work.responsibility %></h4>
+            <h1><%= work.title %>: <%= work.tagline %></h1>
+            <h3><%= work.responsibility %></h3>
           </div>
         </div>
       </div>
@@ -41,11 +41,14 @@
 
     <section class="detail-nav row hidden-s hidden-xs">
       <ul>
+        <% if (work.problem) { %>
         <li>
           <a href="#/work/<%= work.id %>/problem">
             <img src="img/problem.png" />
             <h4>Problem</h4></a>
         </li>
+        <% } %>
+
         <li>
           <a href="#/work/<%= work.id %>/constraints">
             <img src="img/constraints.png" />
@@ -150,6 +153,11 @@
                 </p>
               </div>
             <% } %>
+
+            <div class="mobile-nav visible-xs visible-sm hidden-md hidden-lg col-xs-12">
+              <a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a>
+              <a href="#/work/<%= nextWork %>"><%= nextWork%> &#8594;</a>
+            </div>
     </section>
   </div>
 </div>
