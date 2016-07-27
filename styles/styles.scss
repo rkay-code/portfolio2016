@@ -70,14 +70,10 @@ p {
   font-size: 18px;
   color: #3F4045;
 }
-a {
+a, a:hover, a:focus, a:visited {
   color: #E54B4B;
   font-weight: 500;
-}
-a:hover {
-  color: #E54B4B;
   text-decoration: none;
-  font-weight: 500;
 }
 b {
   color: #293132;
