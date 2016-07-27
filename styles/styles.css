@@ -108,6 +108,12 @@
   100% {
     transform: rotate(0deg); } }
 
+@keyframes fadeInTheMusical {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
 .contact {
   min-height: 100vh; }
   .contact .header-img {
@@ -514,12 +520,30 @@
 .container {
   overflow: visible; }
 
+.work.wrapper {
+  -webkit-animation-name: fadeInTheMusical;
+  -moz-animation-name: fadeInTheMusical;
+  -ms-animation-name: fadeInTheMusical;
+  -o-animation-name: fadeInTheMusical;
+  animation-name: fadeInTheMusical;
+  -webkit-animation-duration: 1.2s;
+  -moz-animation-duration: 1.2s;
+  -ms-animation-duration: 1.2s;
+  -o-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
 .work-wrapper {
   overflow-x: visible !important; }
-  .work-wrapper a, .work-wrapper a:hover {
+  .work-wrapper .intro-text h1, .work-wrapper p {
+    color: #424C55; }
+  .work-wrapper a {
     font-weight: bolder;
-    color: #FF8E7C;
-    text-decoration: none; }
+    color: #F45B69; }
 
 .proj-wrapper, .static-proj-wrapper {
   margin-top: 75px;

@@ -113,3 +113,13 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes fadeInTheMusical {
+  0% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
