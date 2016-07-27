@@ -117,7 +117,8 @@
 .contact {
   min-height: 100vh; }
   .contact .header-img {
-    text-align: center; }
+    text-align: center;
+    margin-top: 50px; }
 
 .contact-wrapper {
   padding: 125px 0 0 0; }
@@ -137,7 +138,7 @@
       display: inline-block;
       width: 40px;
       height: 40px;
-      background-color: #586994;
+      background-color: #5BC0BE;
       border-radius: 50%;
       margin: 0 6px; }
       .contact-icons ul li a {
@@ -150,7 +151,7 @@
 
 .box {
   position: relative;
-  background-color: #FF8E7C;
+  background-color: #FFA987;
   width: 200px;
   height: 100px;
   display: inline-block;
@@ -172,7 +173,7 @@
     content: " ";
     height: 90px;
     width: 40px;
-    background-color: #D8786A;
+    background-color: #E8997A;
     right: 5px;
     top: 5px;
     -webkit-border-radius: 50% / 100%;
@@ -195,7 +196,7 @@
   left: 50%;
   bottom: 50%;
   display: inline-block;
-  background-color: #FFEFD3;
+  background-color: #FFEECE;
   transform: rotate(-90deg);
   -webkit-transform-origin: bottom center;
   -moz-transform-origin: bottom center;
@@ -209,7 +210,7 @@
     top: 2%;
     width: 20px;
     height: 16px;
-    background: #586994; }
+    background: #5BC0BE; }
   .rod:before {
     position: absolute;
     bottom: 0;
@@ -217,7 +218,7 @@
     content: " ";
     width: 15px;
     height: 15px;
-    background: #FFEFD3;
+    background: #FFEECE;
     -webkit-transform: translate(-50%, 50%);
     -moz-transform: translate(-50%, 50%);
     -o-transform: translate(-50%, 50%);
@@ -248,10 +249,6 @@
       display: inline-block;
       margin: -1px 0 0 15px; }
   .design-process .item {
-    height: 350px; }
-  .design-process .item:nth-child(4),
-  .design-process .item:nth-child(5),
-  .design-process .item:nth-child(6) {
     height: 300px; }
   .design-process .row {
     margin-top: 100px;
@@ -497,8 +494,6 @@
 
 .room-wrapper {
   text-align: center; }
-  .room-wrapper h1, .room-wrapper p {
-    color: #0F1A20; }
 
 .profile-wrap {
   margin-top: 25px;
@@ -539,11 +534,6 @@
 
 .work-wrapper {
   overflow-x: visible !important; }
-  .work-wrapper .intro-text h1, .work-wrapper p {
-    color: #424C55; }
-  .work-wrapper a {
-    font-weight: bolder;
-    color: #F45B69; }
 
 .proj-wrapper, .static-proj-wrapper {
   margin-top: 75px;
@@ -576,7 +566,7 @@
   transition: all 200ms ease-in-out; }
 
 .view-proj {
-  background: #FF8E7C;
+  background: #5BC0BE;
   border: none;
   color: #fff;
   padding: 12px 25px 10px;
@@ -605,7 +595,8 @@
       text-align: left; } }
 
 .work.wrapper {
-  transform-origin: 50% 20%; }
+  transform-origin: 50% 20%;
+  background: #fff; }
 
 .detail-brief-wrapper {
   text-align: center;
@@ -615,14 +606,6 @@
     margin-bottom: 40px; }
     .detail-brief-wrapper .detail-brief .detail-brief-img img {
       width: 100%; }
-  .detail-brief-wrapper .detail-brief .detail-brief-text {
-    color: #4A4A4A; }
-    .detail-brief-wrapper .detail-brief .detail-brief-text h1 {
-      font-size: 36px;
-      font-weight: lighter;
-      margin: 0; }
-    .detail-brief-wrapper .detail-brief .detail-brief-text h3 {
-      margin: 10px 0; }
 
 .detail-nav {
   margin: 50px 0; }
@@ -660,7 +643,7 @@
   .detail-body div {
     padding: 40px 0 0; }
     .detail-body div h2 {
-      color: #FF8E7C;
+      color: #5BC0BE;
       font-weight: 400;
       margin-bottom: 30px; }
     .detail-body div img {
@@ -747,7 +730,7 @@ h6,
 .h6 {
   font-family: "proxima-nova", sans-serif;
   font-weight: lighter;
-  color: #2F2F2F; }
+  color: #1B1B1E; }
 
 h1, .h1 {
   font-size: 36px; }
@@ -771,14 +754,14 @@ body {
 
 p {
   font-size: 18px;
-  color: #6A6262; }
+  color: #3F4045; }
 
 a {
-  color: #5bd8b3;
+  color: #E54B4B;
   font-weight: 500; }
 
 a:hover {
-  color: #5bd8b3;
+  color: #E54B4B;
   text-decoration: none;
   font-weight: 500; }
 
@@ -849,7 +832,7 @@ button {
   animation: moveFromBottomFade 0.7s ease-in-out both; }
 
 .wrapper {
-  padding: 50px 0;
+  padding: 25px 0;
   position: relative; }
 
 .work-wrapper {
@@ -871,6 +854,9 @@ button {
   transform-origin: center 45%;
   padding-top: 0; }
 
+.room-wrapper, .desk-wrapper, .contact-wrapper {
+  opacity: .3; }
+
 .header-img {
   text-align: center; }
   .header-img img {
@@ -888,9 +874,7 @@ button {
   .header-img img {
     margin-bottom: 20px; }
   .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top; }
+    float: right; }
   .navbar .navbar-collapse {
     text-align: center; } }
 

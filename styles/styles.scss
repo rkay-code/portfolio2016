@@ -44,7 +44,7 @@ h6,
 .h6 {
   font-family: "proxima-nova", sans-serif;
   font-weight: lighter;
-  color: #2F2F2F;
+  color: #1B1B1E;
 }
 h1, .h1 {
 font-size: 36px;
@@ -68,14 +68,14 @@ body {
 }
 p {
   font-size: 18px;
-  color: #6A6262;
+  color: #3F4045;
 }
 a {
-  color: $teal;
+  color: #E54B4B;
   font-weight: 500;
 }
 a:hover {
-  color: $teal;
+  color: #E54B4B;
   text-decoration: none;
   font-weight: 500;
 }
@@ -148,7 +148,7 @@ button {
   animation: moveFromBottomFade 0.7s ease-in-out both;
 }
 .wrapper {
-  padding: 50px 0;
+  padding: 25px 0;
   position: relative;
 }
 .work-wrapper {
@@ -157,6 +157,9 @@ button {
   @include prefix(animation-fill-mode, forwards, webkit moz ms o);
   transform-origin: center 45%;
   padding-top: 0;
+}
+.room-wrapper, .desk-wrapper, .contact-wrapper {
+  opacity: .3;
 }
 .header-img {
   text-align: center;
@@ -179,9 +182,7 @@ button {
   }
 
   .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
+    float: right;
   }
   .navbar .navbar-collapse {
     text-align: center;

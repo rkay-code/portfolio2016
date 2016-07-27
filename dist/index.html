@@ -46,10 +46,11 @@
         <ul class="nav navbar-nav">
           <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
           <li class="col-md-4">
-            <a href="#" class="col-md-4"><img src="/img/gohome.png" /></a>
+            <a href="#" class="col-md-4"><img src="img/gohome.png" /></a>
           </li>
           <li class="col-md-4">
-            <a href="#/work/<%= nextWork %>"class="col-md-4"><%= nextWork%> &#8594;</a>
+            <a href="#/work/<%= nextWork %>" class="col-md-4">
+              <%= nextWork%> &#8594;</a>
           </li>
         </ul>
       </div>
@@ -64,7 +65,7 @@
             <img src="<%= work.briefImg %>" />
           </div>
           <div class="detail-brief-text col-md-8 col-md-offset-2">
-            <h1><%= work.title %>: <%= work.tagline %></h1>
+            <h2><%= work.title %>: <%= work.tagline %></h2>
             <h3><%= work.responsibility %></h3>
           </div>
         </div>
@@ -74,35 +75,40 @@
     <section class="detail-nav row hidden-s hidden-xs">
       <ul>
         <% if (work.problem) { %>
-        <li>
-          <a href="#/work/<%= work.id %>/problem">
-            <img src="img/problem.png" />
-            <h4>Problem</h4></a>
-        </li>
-        <% } %>
-
-        <li>
-          <a href="#/work/<%= work.id %>/constraints">
-            <img src="img/constraints.png" />
-            <h4>Constraints</h4></a>
-        </li>
-        <% if (work.research) { %>
           <li>
-            <a href="#/work/<%= work.id %>/research">
-              <img src="img/research.png" />
-              <h4>Research</h4></a>
+            <a href="#/work/<%= work.id %>/problem">
+              <img src="img/problem.png" />
+              <h4>Problem</h4></a>
           </li>
           <% } %>
+          <% if (work.constraints) { %>
             <li>
-              <a href="#/work/<%= work.id %>/design">
-                <img src="img/design.png" />
-                <h4>Design</h4></a>
+              <a href="#/work/<%= work.id %>/constraints">
+                <img src="img/constraints.png" />
+                <h4>Constraints</h4></a>
             </li>
-            <li>
-              <a href="#/work/<%= work.id %>/lessons">
-                <img src="img/retrospective.png" />
-                <h4>Future</h4></a>
-            </li>
+            <% } %>
+            <% if (work.research) { %>
+              <li>
+                <a href="#/work/<%= work.id %>/research">
+                  <img src="img/research-detail.png" />
+                  <h4>Research</h4></a>
+              </li>
+            <% } %>
+            <% if (work.design) { %>
+              <li>
+                <a href="#/work/<%= work.id %>/design">
+                  <img src="img/design.png" />
+                  <h4>Design</h4></a>
+              </li>
+            <% } %>
+            <% if (work.retrospective) { %>
+              <li>
+                <a href="#/work/<%= work.id %>/lessons">
+                  <img src="img/retrospective.png" />
+                  <h4>Future</h4></a>
+              </li>
+            <% } %>
       </ul>
     </section>
 
@@ -110,86 +116,120 @@
       <% if (work.problem) { %>
         <div id="problem" class="col-md-10 col-md-offset-1">
           <h2>Problem</h2>
-          <% if (work.problem) { %><p>
-            <%= work.problem %>
-          </p><% } %>
-          <br />
-          <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" /><% } %>
-          <% if (work.problemCaption1) { %><p>
-            <%= work.problemCaption1 %>
-          </p><% } %>
-          <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" /><% } %>
-          <% if (work.problemCaption2) { %><p>
-            <%= work.problemCaption2 %>
-          </p><% } %>
-          <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" /><% } %>
-          <% if (work.problemCaption3) { %><p>
-            <%= work.problemCaption3 %>
-          </p><% } %>
+          <% if (work.problem) { %>
+            <p>
+              <%= work.problem %>
+            </p>
+            <% } %>
+              <br />
+              <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" />
+                <% } %>
+                  <% if (work.problemCaption1) { %>
+                    <p>
+                      <%= work.problemCaption1 %>
+                    </p>
+                    <% } %>
+                      <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" />
+                        <% } %>
+                          <% if (work.problemCaption2) { %>
+                            <p>
+                              <%= work.problemCaption2 %>
+                            </p>
+                            <% } %>
+                              <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" />
+                                <% } %>
+                                  <% if (work.problemCaption3) { %>
+                                    <p>
+                                      <%= work.problemCaption3 %>
+                                    </p>
+                                    <% } %>
         </div>
         <% } %>
 
-        <% if (work.constraints) { %>
-          <div id="constraints" class="col-md-10 col-md-offset-1">
-            <h2>Constraints</h2>
-            <p>
-              <%= work.constraints %>
-            </p>
-          </div>
-          <% } %>
-          <% if (work.research) { %>
-            <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
-              <h2>Research</h2>
-              <% if (work.research) { %><p>
-                <%= work.research %>
-              </p><% } %>
-              <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" /><% } %>
-              <% if (work.researchCaption1) { %><p>
-                <%= work.researchCaption1 %>
-              </p><% } %>
-              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" /><% } %>
-              <% if (work.researchCaption2) { %><p>
-                <%= work.researchCaption2 %>
-              </p><% } %>
+          <% if (work.constraints) { %>
+            <div id="constraints" class="col-md-10 col-md-offset-1">
+              <h2>Constraints</h2>
+              <p>
+                <%= work.constraints %>
+              </p>
             </div>
             <% } %>
-            <% if (work.design) { %>
-            <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
-              <h2>Design</h2>
-              <% if (work.design) { %><p>
-                <%= work.design %>
-              </p><% } %>
-              <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" /><% } %>
-              <% if (work.designCaption1) { %><p>
-                <%= work.designCaption1 %>
-              </p><% } %>
-              <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" /><% } %>
-              <% if (work.designCaption2) { %><p>
-                <%= work.designCaption2 %>
-              </p><% } %>
-              <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" /><% } %>
-              <% if (work.designCaption3) { %><p>
-                <%= work.designCaption3 %>
-              </p><% } %>
-              <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" /><% } %>
-              <% if (work.designCaption4) { %><p>
-                <%= work.designCaption4 %>
-              </p><% } %>
-            </div>
-            <% } %>
-            <% if (work.retrospective) { %>
-              <div id="lessons" class="col-md-10 col-md-offset-1">
-                <h2>Future</h2>
-                <p>
-                  <%= work.retrospective %>
-                </p>
-              </div>
-            <% } %>
+              <% if (work.research) { %>
+                <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
+                  <h2>Research</h2>
+                  <% if (work.research) { %>
+                    <p>
+                      <%= work.research %>
+                    </p>
+                    <% } %>
+                      <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" />
+                        <% } %>
+                          <% if (work.researchCaption1) { %>
+                            <p>
+                              <%= work.researchCaption1 %>
+                            </p>
+                            <% } %>
+                              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" />
+                                <% } %>
+                                  <% if (work.researchCaption2) { %>
+                                    <p>
+                                      <%= work.researchCaption2 %>
+                                    </p>
+                                    <% } %>
+                </div>
+                <% } %>
+                  <% if (work.design) { %>
+                    <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
+                      <h2>Design</h2>
+                      <% if (work.design) { %>
+                        <p>
+                          <%= work.design %>
+                        </p>
+                        <% } %>
+                          <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" />
+                            <% } %>
+                              <% if (work.designCaption1) { %>
+                                <p>
+                                  <%= work.designCaption1 %>
+                                </p>
+                                <% } %>
+                                  <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" />
+                                    <% } %>
+                                      <% if (work.designCaption2) { %>
+                                        <p>
+                                          <%= work.designCaption2 %>
+                                        </p>
+                                        <% } %>
+                                          <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" />
+                                            <% } %>
+                                              <% if (work.designCaption3) { %>
+                                                <p>
+                                                  <%= work.designCaption3 %>
+                                                </p>
+                                                <% } %>
+                                                  <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" />
+                                                    <% } %>
+                                                      <% if (work.designCaption4) { %>
+                                                        <p>
+                                                          <%= work.designCaption4 %>
+                                                        </p>
+                                                        <% } %>
+                    </div>
+                    <% } %>
+                      <% if (work.retrospective) { %>
+                        <div id="lessons" class="col-md-10 col-md-offset-1">
+                          <h2>Future</h2>
+                          <p>
+                            <%= work.retrospective %>
+                          </p>
+                        </div>
+                        <% } %>
 
-            <div class="mobile-nav visible-xs visible-sm hidden-md hidden-lg col-xs-12">
-              <a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a>
-              <a href="#/work/<%= nextWork %>"><%= nextWork%> &#8594;</a>
-            </div>
+                          <div class="mobile-nav visible-xs visible-sm hidden-md hidden-lg col-xs-12">
+                            <a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a>
+                            <a href="#/work/<%= nextWork %>">
+                              <%= nextWork%> &#8594;</a>
+                          </div>
     </section>
   </div>
 </div>
@@ -198,7 +238,7 @@
 
   <script type="text/template" id="index-content">
     <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -206,26 +246,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand" href="#"><img src="/img/name.png" /></a>
         </div>
-      </div>
 
       <div class="collapse navbar-collapse" id="my-nav-buttons">
         <ul class="nav navbar-nav">
-          <li><a href="#home"><img src="/img/home-icon.png" /> Home</a></li>
-          <li><a href="#desk"><img src="/img/desk-icon.png" /> Desk</a></li>
-          <li><a href="#room"><img src="/img/room-icon.png" /> Room</a></li>
-          <li><a href="#mail"><img src="/img/mail-icon.png" /> Mail</a></li>
+          <li><a href="#home"><img src="img/home-icon.png" /> Home</a></li>
+          <li><a href="#desk"><img src="img/desk-icon.png" /> Desk</a></li>
+          <li><a href="#room"><img src="img/room-icon.png" /> Room</a></li>
+          <li><a href="#mail"><img src="img/mail-icon.png" /> Mail</a></li>
         </ul>
+      </div>
       </div>
     </nav>
 
     <div class="work" id="home">
       <div class="work-wrapper wrapper container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
-      <img src="/img/living-room.png" />
+    <div class="col-md-8 col-md-offset-2 header-img">
+      <img src="img/living-room.png" />
     </div>
-    <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+    <div class="intro-text col-md-10 col-md-offset-1">
       <h1>Thanks for stopping by!</h1>
       <p>This is where I live - well, at least, where I live on the internet...
       In the real world, I'm a product designer and front-end developer in San Francisco.
@@ -313,7 +354,7 @@
       <div class="desk-wrapper wrapper container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
-      <img src="/img/desk.png" />
+      <img src="img/desk.png" />
     </div>
     <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
       <h1>This is my desk.</h1>
@@ -329,8 +370,7 @@
           <h2>Empathize</h2>
         </div>
         <p>
-          When I come to my desk for a new project, I start by putting on my empathy hat. To me, this is one of the most valuable parts of my design process. I like to envision a day in the life of my user and feel their pain points. I create personas that allow
-          me to understand the different types of experiences that might bring a user to my product.
+          I start work by putting on my empathy hat. I like to envision a day in the life of my user and feel their pain points. I create personas that allow me to understand the different types of experiences that might bring a user to my product.
         </p>
       </div>
       <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
@@ -339,18 +379,16 @@
           <h2>Research</h2>
         </div>
         <p>
-          I use resources such as customer support, sales teams, and user interviews to help build out my understanding of the user. If the client has been tracking any quantitative data, I also invite it to the party. This gets my bachelor’s in Quantitative Methods
-          in Economics and Mathematics really excited.
+          I use resources such as customer support and user interviews to build out my understanding of the user and the problem. If I have access to quantitative data, I also invite it to the party.
         </p>
       </div>
       <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
         <div class="header">
           <img src="img/brainstorm.png" />
-          <h2>Brainstorm/Prototype</h2>
+          <h2>Sketch</h2>
         </div>
         <p>
-          I then invite my oldest friends, Pencil and Paper, over. We have a tea party (Earl Grey ftw), and after a few rounds, we get the basics together in a flow that can be shown to users and internal teams for feedback. I often invite Invision, one of Invision’s
-          close relatives, or HTML/CSS into the mix depending on the vibe.
+          I then invite my oldest friends, Pencil and Paper, over. We have a tea party and get the basics together in a flow that can be shown to users and internal teams for feedback. I often invite prototyping tools or code to join.
         </p>
 
       </div>
@@ -361,7 +399,7 @@
           <h2>Polish</h2>
         </div>
         <p>
-          Before I take my work out, I normally dress it up with my new friend Sketch - but sometimes I reach out to my old friends Illustrator and Photoshop. I also like to bring my design to life using html, css, and javascript.
+          Before we go out, I dress up my work with my new friend Sketch - but sometimes reach out to my old friend Adobe. I also like to bring my designs to life using html, css, and javascript.
         </p>
 
       </div>
@@ -371,7 +409,7 @@
           <h2>Test</h2>
         </div>
         <p>
-          During this time, I like to dress it up in a few different options and get user feedback. This process, called A/B testing, helps me figure out which version solves my user’s problems the best.
+          I have good ideas, but I don’t always know which is best. I like to dress up my work in a few different options and get feedback. This process, called A/B testing, helps me figure out which version is best.
         </p>
       </div>
       <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
@@ -380,7 +418,7 @@
           <h2>Ship</h2>
         </div>
         <p>
-          With that information, I polish it up and help my team ship it off.
+          With that information, I create a finished version. Then, I work with development to bring it to life and ship it off.
         </p>
       </div>
     </div>
@@ -392,7 +430,7 @@
       <div class="room-wrapper wrapper container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
-      <img src="/img/room.png" />
+      <img src="img/room.png" />
     </div>
     <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
       <h1>This is where it gets personal.</h1>
@@ -432,8 +470,7 @@
         <span class="rod"></span>
       </div>
       <div>
-        <h3>Renée Padgham</h3>
-        <h4>renee at padgham dot com</h4>
+        <h3>renee at padgham dot com</h3>
       </div>
     </div>
   </div>

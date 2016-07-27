@@ -47,13 +47,11 @@ var Router = Backbone.Router.extend({
 
     $('#home').scrollex({
       top: '10%',
-      bottom: '30%',
+      bottom: '20%',
       enter: function() {
         $('body').css('background-color', '#FFF');
       },
       leave: function() {
-        // $('body').css('background-color', '');
-
       }
     });
 
@@ -62,11 +60,10 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-        $('body').css('background-color', '#FFCFC9');
+        $('body').css('background-color', '#FCF6E8');
+        $('.desk-wrapper').css('opacity', '1');
       },
       leave: function() {
-        // $('body').css('background-color', '');
-
       }
     });
 
@@ -74,20 +71,22 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-        $('body').css('background-color', '#FFEED3');
+        $('body').css('background-color', '#FFE1D6');
+        $('.room-wrapper').css('opacity', '1');
 
       },
       leave: function() {
-        // $('body').css('background-color', '#fff');
+        $('.room-wrapper').css('opacity', '.3');
       }
     });
 
     $('#mail').scrollex({
-      top: '10%',
+      top: '5%',
       bottom: '30%',
       enter: function() {
-        $('body').css('background-color', '#FFFBF9');
+        $('body').css('background-color', '#FCF9F2');
         $('.rod').addClass('transform');
+        $('.contact-wrapper').css('opacity', '1');
 
       },
       leave: function() {
@@ -99,7 +98,7 @@ var Router = Backbone.Router.extend({
       top: '10%',
       bottom: '30%',
       enter: function() {
-        $('body').css('background-color', '#FFF');
+        $('body').css('background-color', '#fff');
 
       },
       leave: function() {

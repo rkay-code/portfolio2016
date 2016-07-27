@@ -14,10 +14,11 @@
         <ul class="nav navbar-nav">
           <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
           <li class="col-md-4">
-            <a href="#" class="col-md-4"><img src="/img/gohome.png" /></a>
+            <a href="#" class="col-md-4"><img src="img/gohome.png" /></a>
           </li>
           <li class="col-md-4">
-            <a href="#/work/<%= nextWork %>"class="col-md-4"><%= nextWork%> &#8594;</a>
+            <a href="#/work/<%= nextWork %>" class="col-md-4">
+              <%= nextWork%> &#8594;</a>
           </li>
         </ul>
       </div>
@@ -32,7 +33,7 @@
             <img src="<%= work.briefImg %>" />
           </div>
           <div class="detail-brief-text col-md-8 col-md-offset-2">
-            <h1><%= work.title %>: <%= work.tagline %></h1>
+            <h2><%= work.title %>: <%= work.tagline %></h2>
             <h3><%= work.responsibility %></h3>
           </div>
         </div>
@@ -42,35 +43,40 @@
     <section class="detail-nav row hidden-s hidden-xs">
       <ul>
         <% if (work.problem) { %>
-        <li>
-          <a href="#/work/<%= work.id %>/problem">
-            <img src="img/problem.png" />
-            <h4>Problem</h4></a>
-        </li>
-        <% } %>
-
-        <li>
-          <a href="#/work/<%= work.id %>/constraints">
-            <img src="img/constraints.png" />
-            <h4>Constraints</h4></a>
-        </li>
-        <% if (work.research) { %>
           <li>
-            <a href="#/work/<%= work.id %>/research">
-              <img src="img/research.png" />
-              <h4>Research</h4></a>
+            <a href="#/work/<%= work.id %>/problem">
+              <img src="img/problem.png" />
+              <h4>Problem</h4></a>
           </li>
           <% } %>
+          <% if (work.constraints) { %>
             <li>
-              <a href="#/work/<%= work.id %>/design">
-                <img src="img/design.png" />
-                <h4>Design</h4></a>
+              <a href="#/work/<%= work.id %>/constraints">
+                <img src="img/constraints.png" />
+                <h4>Constraints</h4></a>
             </li>
-            <li>
-              <a href="#/work/<%= work.id %>/lessons">
-                <img src="img/retrospective.png" />
-                <h4>Future</h4></a>
-            </li>
+            <% } %>
+            <% if (work.research) { %>
+              <li>
+                <a href="#/work/<%= work.id %>/research">
+                  <img src="img/research-detail.png" />
+                  <h4>Research</h4></a>
+              </li>
+            <% } %>
+            <% if (work.design) { %>
+              <li>
+                <a href="#/work/<%= work.id %>/design">
+                  <img src="img/design.png" />
+                  <h4>Design</h4></a>
+              </li>
+            <% } %>
+            <% if (work.retrospective) { %>
+              <li>
+                <a href="#/work/<%= work.id %>/lessons">
+                  <img src="img/retrospective.png" />
+                  <h4>Future</h4></a>
+              </li>
+            <% } %>
       </ul>
     </section>
 
@@ -78,86 +84,120 @@
       <% if (work.problem) { %>
         <div id="problem" class="col-md-10 col-md-offset-1">
           <h2>Problem</h2>
-          <% if (work.problem) { %><p>
-            <%= work.problem %>
-          </p><% } %>
-          <br />
-          <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" /><% } %>
-          <% if (work.problemCaption1) { %><p>
-            <%= work.problemCaption1 %>
-          </p><% } %>
-          <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" /><% } %>
-          <% if (work.problemCaption2) { %><p>
-            <%= work.problemCaption2 %>
-          </p><% } %>
-          <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" /><% } %>
-          <% if (work.problemCaption3) { %><p>
-            <%= work.problemCaption3 %>
-          </p><% } %>
+          <% if (work.problem) { %>
+            <p>
+              <%= work.problem %>
+            </p>
+            <% } %>
+              <br />
+              <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" />
+                <% } %>
+                  <% if (work.problemCaption1) { %>
+                    <p>
+                      <%= work.problemCaption1 %>
+                    </p>
+                    <% } %>
+                      <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" />
+                        <% } %>
+                          <% if (work.problemCaption2) { %>
+                            <p>
+                              <%= work.problemCaption2 %>
+                            </p>
+                            <% } %>
+                              <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" />
+                                <% } %>
+                                  <% if (work.problemCaption3) { %>
+                                    <p>
+                                      <%= work.problemCaption3 %>
+                                    </p>
+                                    <% } %>
         </div>
         <% } %>
 
-        <% if (work.constraints) { %>
-          <div id="constraints" class="col-md-10 col-md-offset-1">
-            <h2>Constraints</h2>
-            <p>
-              <%= work.constraints %>
-            </p>
-          </div>
-          <% } %>
-          <% if (work.research) { %>
-            <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
-              <h2>Research</h2>
-              <% if (work.research) { %><p>
-                <%= work.research %>
-              </p><% } %>
-              <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" /><% } %>
-              <% if (work.researchCaption1) { %><p>
-                <%= work.researchCaption1 %>
-              </p><% } %>
-              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" /><% } %>
-              <% if (work.researchCaption2) { %><p>
-                <%= work.researchCaption2 %>
-              </p><% } %>
+          <% if (work.constraints) { %>
+            <div id="constraints" class="col-md-10 col-md-offset-1">
+              <h2>Constraints</h2>
+              <p>
+                <%= work.constraints %>
+              </p>
             </div>
             <% } %>
-            <% if (work.design) { %>
-            <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
-              <h2>Design</h2>
-              <% if (work.design) { %><p>
-                <%= work.design %>
-              </p><% } %>
-              <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" /><% } %>
-              <% if (work.designCaption1) { %><p>
-                <%= work.designCaption1 %>
-              </p><% } %>
-              <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" /><% } %>
-              <% if (work.designCaption2) { %><p>
-                <%= work.designCaption2 %>
-              </p><% } %>
-              <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" /><% } %>
-              <% if (work.designCaption3) { %><p>
-                <%= work.designCaption3 %>
-              </p><% } %>
-              <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" /><% } %>
-              <% if (work.designCaption4) { %><p>
-                <%= work.designCaption4 %>
-              </p><% } %>
-            </div>
-            <% } %>
-            <% if (work.retrospective) { %>
-              <div id="lessons" class="col-md-10 col-md-offset-1">
-                <h2>Future</h2>
-                <p>
-                  <%= work.retrospective %>
-                </p>
-              </div>
-            <% } %>
+              <% if (work.research) { %>
+                <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
+                  <h2>Research</h2>
+                  <% if (work.research) { %>
+                    <p>
+                      <%= work.research %>
+                    </p>
+                    <% } %>
+                      <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" />
+                        <% } %>
+                          <% if (work.researchCaption1) { %>
+                            <p>
+                              <%= work.researchCaption1 %>
+                            </p>
+                            <% } %>
+                              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" />
+                                <% } %>
+                                  <% if (work.researchCaption2) { %>
+                                    <p>
+                                      <%= work.researchCaption2 %>
+                                    </p>
+                                    <% } %>
+                </div>
+                <% } %>
+                  <% if (work.design) { %>
+                    <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
+                      <h2>Design</h2>
+                      <% if (work.design) { %>
+                        <p>
+                          <%= work.design %>
+                        </p>
+                        <% } %>
+                          <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" />
+                            <% } %>
+                              <% if (work.designCaption1) { %>
+                                <p>
+                                  <%= work.designCaption1 %>
+                                </p>
+                                <% } %>
+                                  <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" />
+                                    <% } %>
+                                      <% if (work.designCaption2) { %>
+                                        <p>
+                                          <%= work.designCaption2 %>
+                                        </p>
+                                        <% } %>
+                                          <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" />
+                                            <% } %>
+                                              <% if (work.designCaption3) { %>
+                                                <p>
+                                                  <%= work.designCaption3 %>
+                                                </p>
+                                                <% } %>
+                                                  <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" />
+                                                    <% } %>
+                                                      <% if (work.designCaption4) { %>
+                                                        <p>
+                                                          <%= work.designCaption4 %>
+                                                        </p>
+                                                        <% } %>
+                    </div>
+                    <% } %>
+                      <% if (work.retrospective) { %>
+                        <div id="lessons" class="col-md-10 col-md-offset-1">
+                          <h2>Future</h2>
+                          <p>
+                            <%= work.retrospective %>
+                          </p>
+                        </div>
+                        <% } %>
 
-            <div class="mobile-nav visible-xs visible-sm hidden-md hidden-lg col-xs-12">
-              <a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a>
-              <a href="#/work/<%= nextWork %>"><%= nextWork%> &#8594;</a>
-            </div>
+                          <div class="mobile-nav visible-xs visible-sm hidden-md hidden-lg col-xs-12">
+                            <a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a>
+                            <a href="#/work/<%= nextWork %>">
+                              <%= nextWork%> &#8594;</a>
+                          </div>
     </section>
   </div>
 </div>

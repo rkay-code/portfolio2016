@@ -1,5 +1,6 @@
 .work.wrapper {
   transform-origin: 50% 20%;
+  background: #fff;
 }
 .detail-brief-wrapper {
   text-align: center;
@@ -10,17 +11,6 @@
       margin-bottom: 40px;
       img {
         width: 100%;
-      }
-    }
-    .detail-brief-text {
-      color: #4A4A4A;
-      h1 {
-        font-size: 36px;
-        font-weight: lighter;
-        margin: 0;
-      }
-      h3 {
-        margin: 10px 0;
       }
     }
   }
@@ -68,7 +58,7 @@
   div {
     padding: 40px 0 0;
     h2 {
-      color: #FF8E7C;
+      color: #5BC0BE;
       font-weight: 400;
       margin-bottom: 30px;
     }
