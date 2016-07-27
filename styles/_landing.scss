@@ -1,72 +1,32 @@
-.landing {
-  background-color: #4062BB;
+#landing {
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  @include prefix(animation-name, fadeOut, webkit moz ms o);
+  @include prefix(animation-duration, 2000ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-timing-function, ease-out, webkit moz ms o);
+  @include prefix(animation-delay, 500ms, webkit moz ms o);
 }
 
 .landing-wrapper {
-  padding-top: 20vh;
-  text-align: center;
-}
-.landing-text {
-  display: inline-block;
-  font-size: 26px;
-  font-family: "proxima-nova", sans-serif;
-  margin: 20px auto 15px;
+  margin-top: 30vh;
 }
 
-.landing-input .tip{
-  margin: auto;
-  font-size: 14px;
-  font-weight: bolder;
-  display: block;
-  margin-top: 5px;
-  letter-spacing: .5px;
-  color: $teal;
-  }
-.landing-input .tip:hover {
-  cursor: pointer;
-}
-.name-input {
-  margin: auto;
-  border-width: 0 0 2px 0;
-  font-size:16px;
-  line-height: 16px;
-  text-align: center;
-  a {
-    text-decoration: none;
-    margin: 0 5px;
-  }
-}
-.name-input:focus {
-  border-width: 0 0 2px 0;
-  border-color: #7FD8BE;
-  outline: none;
-}
-.name-sbmt {
-  color: #fff;
-  background-color: #7FD8BE;
-  margin-left: 5px;
-  padding: 7px 10px;
-  border-radius: 2px;
-  @include prefix(animation-name, fadeIn, webkit moz ms o);
-  @include prefix(animation-duration, 4s, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  display: none;
-}
-.name-sbmt:hover {
-  text-decoration: none;
-  color: #fff;
-}
-.landing-welcome {
-  opacity: 0;
-  visibility: hidden;
-  margin-top: -20px;
-}
 .door-wrapper {
   position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-  z-index: 1;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  text-align: center;
+  background-color: #fff;
+  @include prefix(animation-name, zoomIn, webkit moz ms o);
+  @include prefix(animation-duration, 2500ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  transform-origin: center;
   img {
     text-align: center;
     width: 80%;
@@ -75,72 +35,51 @@
 }
 .left-door {
   position: absolute;
-  background: #7FD8BE;
+  background: #FFE484;
+  border: 5px double #4A4A4A;
   bottom: 0;
   right: 50%;
   left: 0;
   top: 0;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  border: 5px double #4A4A4A;
-  opacity: 1;
+  @include prefix(animation-name, leftDoor, webkit moz ms o);
+  @include prefix(animation-duration, 2000ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-timing-function, ease-out, webkit moz ms o);
+  @include prefix(animation-delay, 500ms, webkit moz ms o);
   &:after {
     position: absolute;
     content: " ";
     width: 5px;
     height: 15px;
-    top: 85px;
+    top: 115px;
     right: 10px;
     background-color: #4A4A4A;
     border-radius: 5px;
   }
 }
-.door-wrapper:hover .left-door, .door-wrapper-hover .left-door  {
-  right: 100%;
-  left: -50%;
-}
-.door-wrapper-hover .left-door  {
-  right: 100%;
-  left: -50%;
-  transition: all 1s ease-out;
-  transition-delay: 750ms;
-}
 .right-door {
   position: absolute;
-  background: #7FD8BE;
+  background: #FFE484;
   bottom: 0;
   left: 50%;
   right: 0;
   top: 0;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
   border: 5px double #4A4A4A;
+  @include prefix(animation-name, rightDoor, webkit moz ms o);
+  @include prefix(animation-duration, 2000ms, webkit moz ms o);
+  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
+  @include prefix(animation-timing-function, ease-out, webkit moz ms o);
+  @include prefix(animation-delay, 500ms, webkit moz ms o);
   &:after {
     position: absolute;
     content: " ";
     width: 5px;
     height: 15px;
-    top: 85px;
+    top: 115px;
     left: 10px;
     background-color: #4A4A4A;
     border-radius: 5px;
   }
-}
-.door-wrapper:hover .right-door {
-  left: 100%;
-  right: -50%;
-}
-.door-wrapper-hover .right-door  {
-  left: 100%;
-  right: -50%;
-  transition: all 1s ease-out;
-  transition-delay: 750ms;
 }
 .slide_in {
   overflow: hidden;
