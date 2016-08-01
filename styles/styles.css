@@ -1,21 +1,16 @@
 @font-face {
-  font-family: ProximaNova;
-  src: url("fonts/ProximaNova-Regular.otf"); }
+  font-family: 'proxima-nova';
+  src: url("fonts/proximanova-regular-webfont.woff"); }
 
 @font-face {
-  font-family: ProximaNova;
-  font-weight: lighter;
-  src: url("fonts/ProximaNova-Light.otf"); }
+  font-family: 'proxima-nova';
+  font-weight: 400;
+  src: url("fonts/proximanova-semibold-webfont.woff"); }
 
 @font-face {
-  font-family: ProximaNova;
-  font-weight: bold;
-  src: url("fonts/ProximaNova-Semibold.otf"); }
-
-@font-face {
-  font-family: ProximaNova;
-  font-weight: bolder;
-  src: url("fonts/ProximaNova-Bold.otf"); }
+  font-family: 'proxima-nova';
+  font-weight: 500;
+  src: url("fonts/proximanova-bold-webfont.woff"); }
 
 @keyframes moveFromBottomFade {
   from {
@@ -121,7 +116,7 @@
     margin-top: 50px; }
 
 .contact-wrapper {
-  padding: 125px 0 0 0; }
+  padding: 50px 0 0 0; }
 
 .address {
   width: 25%;
@@ -728,7 +723,6 @@
   .detail-body div {
     padding: 10px 0; } }
 
-body,
 h1,
 h2,
 h3,
@@ -741,20 +735,24 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "proxima-nova", sans-serif;
-  font-weight: lighter;
+  font-family: "visby-cf", sans-serif;
+  font-weight: 500;
   color: #1B1B1E; }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 36px; }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 32px; }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 18px; }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 14px; }
 
 body {
@@ -763,13 +761,18 @@ body {
   position: relative;
   overflow-x: hidden;
   background-color: transparent;
-  transition: background 1s ease; }
+  transition: background 1s ease;
+  font-family: 'proxima-nova', sans-serif; }
 
 p {
   font-size: 18px;
-  color: #3F4045; }
+  color: #3F4045;
+  font-family: 'proxima-nova', sans-serif; }
 
-a, a:hover, a:focus, a:visited {
+a,
+a:hover,
+a:focus,
+a:visited {
   color: #E54B4B;
   font-weight: 500;
   text-decoration: none; }
@@ -783,8 +786,7 @@ button {
   cursor: pointer; }
 
 .navbar-default {
-  background-color: #fff;
-  opacity: 0.9; }
+  background-color: #fff; }
   .navbar-default a:hover {
     font-weight: 300; }
 
@@ -794,9 +796,6 @@ button {
 .navbar {
   margin-bottom: 0;
   border: none; }
-
-.navbar-scroll {
-  display: none; }
 
 .navbar-back {
   background: none;
@@ -816,17 +815,13 @@ button {
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-text {
   color: #0F1A20;
-  letter-spacing: 1px;
   font-weight: 300;
-  text-transform: uppercase;
-  opacity: 0.5; }
+  opacity: 0.5;
+  border: none; }
   .navbar-default .navbar-nav > li > a img,
   .navbar-default .navbar-text img {
     height: 20px;
     margin-right: 5px; }
-
-.nav > li > a {
-  padding: 15px 25px; }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -836,9 +831,61 @@ button {
   opacity: 1;
   color: #0F1A20; }
 
-.wrapper-animated {
-  -webkit-animation: moveFromBottomFade 0.7s ease-in-out both;
-  animation: moveFromBottomFade 0.7s ease-in-out both; }
+.navbar-fixed-side {
+  box-shadow: 1px 0 3px 0 #eee; }
+  .navbar-fixed-side .navbar-collapse {
+    border-top: none; }
+
+.profile-info {
+  position: relative; }
+
+.profile-img {
+  width: 100%;
+  position: relative; }
+  .profile-img img {
+    width: 100%; }
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 10px; }
+  .details h2,
+  .details h3 {
+    color: #fff;
+    margin-top: 0; }
+  .details h2 {
+    margin-bottom: 5px; }
+  .details h3 {
+    font-size: 22px; }
+
+.mini-bio,
+.contact-info {
+  width: 90%;
+  margin: 20px auto; }
+  .mini-bio p,
+  .contact-info p {
+    font-size: 16px; }
+
+.nav-elements {
+  margin-top: 100px; }
+
+.contact-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px; }
+  .contact-info .contact-icons {
+    text-align: left; }
+    .contact-info .contact-icons ul li {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      margin: 0 5px;
+      text-align: center; }
+    .contact-info .contact-icons li:first-child {
+      margin-left: 0; }
+    .contact-info .contact-icons a {
+      font-size: 12px; }
 
 .wrapper {
   padding: 25px 0;
@@ -863,8 +910,10 @@ button {
   transform-origin: center 45%;
   padding-top: 0; }
 
-.room-wrapper, .desk-wrapper, .contact-wrapper {
-  opacity: .3; }
+.room-wrapper,
+.desk-wrapper,
+.contact-wrapper {
+  opacity: 0.3; }
 
 .header-img {
   text-align: center; }
@@ -881,11 +930,7 @@ button {
 
 @media (min-width: 768px) {
   .header-img img {
-    margin-bottom: 20px; }
-  .navbar .navbar-nav {
-    float: right; }
-  .navbar .navbar-collapse {
-    text-align: center; } }
+    margin-bottom: 20px; } }
 
 @media (min-width: 320px) {
   .header-img img {

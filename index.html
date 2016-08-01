@@ -22,6 +22,7 @@
 
   <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-side.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 </head>
@@ -34,41 +35,87 @@
   </script>
 
   <script type="text/template" id="index-content">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="/img/name.png" /></a>
-        </div>
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">
+        <nav class="navbar navbar-default navbar-fixed-side" id="my-nav">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#"><img src="/img/name.png" /></a>
+              <div class="profile-info hidden-xs">
+                <div class="profile-img">
+                  <img src="/img/meheadshot.jpg" />
+                </div>
+                <div class="details">
+                  <h2>Renee Padgham</h2>
+                  <h3>UI/UX Designer</h3>
+                </div>
+              </div>
+              <div class="mini-bio">
+                <p>
+                  I made a career of asking too many questions.
+                </p>
+              </div>
+            </div>
 
-      <div class="collapse navbar-collapse" id="my-nav-buttons">
-        <ul class="nav navbar-nav">
-          <li><a href="#home"><img src="img/home-icon.png" /> Home</a></li>
-          <li><a href="#desk"><img src="img/desk-icon.png" /> Desk</a></li>
-          <li><a href="#room"><img src="img/room-icon.png" /> Room</a></li>
-          <li><a href="#mail"><img src="img/mail-icon.png" /> Mail</a></li>
-        </ul>
+          <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
+            <ul class="nav navbar-nav">
+              <li><a href="#home">Work</a></li>
+              <li><a href="#desk">Design Process</a></li>
+              <li><a href="#room">About</a></li>
+              <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
+            </ul>
+          </div>
+          <div class="contact-info hidden-xs">
+            <div class="hello">
+              <h3>Say hello!</h3>
+              <h4>renee at padgham dot com</h4>
+            </div>
+              <div class="contact-icons">
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                  </li>
+              <li>
+                <a href="https://www.linkedin.com/in/reneepadgham" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+                  <li>
+                    <a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                </ul>
+                </div>
+          </div>
+          </div>
+        </nav>
+    </div>
+    <div class="col-sm-9">
+      <div class="work" id="home">
+        @@include('./templates/work-rendered.html')
       </div>
+      <div class="desk" id="desk" data-background="#FFFD82">
+        @@include('./templates/desk.html')
       </div>
-    </nav>
-
-    <div class="work" id="home">
-      @@include('./templates/work-rendered.html')
+      <div class="room" id="room" data-background="#F45B69">
+        @@include('./templates/room.html')
+      </div>
+      <div class="contact hidden-sm hidden-md hidden-lg" id="mail">
+        @@include('./templates/contact.html')
+      </div>
     </div>
-    <div class="desk" id="desk" data-background="#FFFD82">
-      @@include('./templates/desk.html')
-    </div>
-    <div class="room" id="room" data-background="#F45B69">
-      @@include('./templates/room.html')
-    </div>
-    <div class="contact" id="mail">
-      @@include('./templates/contact.html')
-    </div>
+  </div>
+</div>
   </script>
 
   <script>
@@ -80,10 +127,8 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-81003140-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
   <script src="/scripts/jquery-2.1.4.min.js"></script>
