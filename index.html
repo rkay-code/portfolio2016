@@ -25,6 +25,11 @@
   <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-side.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <script src="https://use.typekit.net/rvm6uzx.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -50,25 +55,25 @@
               <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#"><img src="/img/name.png" /></a>
               <div class="profile-info hidden-xs">
                 <div class="profile-img">
-                  <img src="/img/meheadshot.jpg" />
+                  <img src="/img/megg.jpg" />
                 </div>
                 <div class="details">
                   <h2>Renee Padgham</h2>
                   <h3>UI/UX Designer</h3>
                 </div>
               </div>
-              <div class="mini-bio">
+              <!-- <div class="mini-bio">
                 <p>
-                  I made a career of asking too many questions.
+                  Creator of clean, simple interfaces. Writer. Photographer. Oh, and you can <a href="#">hire me.</a>
                 </p>
-              </div>
+              </div> -->
             </div>
 
           <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
             <ul class="nav navbar-nav">
-              <li><a href="#home">Work</a></li>
-              <li><a href="#desk">Design Process</a></li>
-              <li><a href="#room">About</a></li>
+              <li><a href="#home">&#x25cb;  Home</a></li>
+              <li><a href="#work">&#x25cb;  Work</a></li>
+              <li><a href="#process">&#x25cb;  Design Process</a></li>
               <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
             </ul>
           </div>
@@ -101,15 +106,18 @@
         </nav>
     </div>
     <div class="col-sm-9">
-      <div class="work" id="home">
+      <div class="home" id="home">
+        @@include('./templates/home.html')
+      </div>
+      <div class="work" id="work">
         @@include('./templates/work-rendered.html')
       </div>
-      <div class="desk" id="desk" data-background="#FFFD82">
+      <div class="process" id="process">
         @@include('./templates/desk.html')
       </div>
-      <div class="room" id="room" data-background="#F45B69">
+      <!-- <div class="room" id="room">
         @@include('./templates/room.html')
-      </div>
+      </div> -->
       <div class="contact hidden-sm hidden-md hidden-lg" id="mail">
         @@include('./templates/contact.html')
       </div>

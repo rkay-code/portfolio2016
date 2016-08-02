@@ -1,17 +1,17 @@
-@font-face {
-  font-family: 'proxima-nova';
-  src: url('fonts/proximanova-regular-webfont.woff');
-}
-@font-face {
-  font-family: 'proxima-nova';
-  font-weight: 400;
-  src: url('fonts/proximanova-semibold-webfont.woff');
-}
-@font-face {
-  font-family: 'proxima-nova';
-  font-weight: 500;
-  src: url('fonts/proximanova-bold-webfont.woff');
-}
+// @font-face {
+//   font-family: 'proxima-nova';
+//   src: url('fonts/proximanova-regular-webfont.woff');
+// }
+// @font-face {
+//   font-family: 'proxima-nova';
+//   font-weight: 400;
+//   src: url('fonts/proximanova-semibold-webfont.woff');
+// }
+// @font-face {
+//   font-family: 'proxima-nova';
+//   font-weight: 500;
+//   src: url('fonts/proximanova-bold-webfont.woff');
+// }
 // @font-face {
 //   font-family: 'visby-cf';
 //   src: url('fonts/visbycf-medium-webfont.woff');
@@ -55,25 +55,27 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "visby-cf", sans-serif;
-  font-weight: 500;
-  color: #1B1B1E;
+  font-family: 'lato', sans-serif;
+  color: #232626;
+  font-weight: 400;
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 44px;
+  font-weight: 700;
 }
 h2,
 .h2 {
   font-size: 32px;
+  font-weight: 700;
 }
 h3,
 .h3 {
-  font-size: 18px;
+  font-size: 22px;
 }
 h4,
 .h4 {
-  font-size: 14px;
+  font-size: 18px;
 }
 body {
   margin: 0;
@@ -82,18 +84,18 @@ body {
   overflow-x: hidden;
   background-color: transparent;
   transition: background 1s ease;
-  font-family: 'proxima-nova', sans-serif;
+  font-family: 'lato', sans-serif;
 }
 p {
   font-size: 18px;
-  color: #3F4045;
-  font-family: 'proxima-nova', sans-serif;
+  color: #343A39;
+  font-family: 'lato', sans-serif;
 }
 a,
 a:hover,
 a:focus,
 a:visited {
-  color: #E54B4B;
+  color: #36DB99;
   font-weight: 500;
   text-decoration: none;
 }
@@ -118,6 +120,9 @@ button {
   margin-bottom: 0;
   border: none;
 }
+.navbar-nav li {
+  margin-left: 35px;
+}
 .navbar-back {
   background: none;
   border: none;
@@ -140,6 +145,7 @@ button {
   font-weight: 300;
   opacity: 0.5;
   border: none;
+  font-size: 16px;
   img {
     height: 20px;
     margin-right: 5px;
@@ -161,21 +167,22 @@ button {
 }
 .profile-info {
   position: relative;
+  margin-top: 25px;
 }
 .profile-img {
   width: 100%;
   position: relative;
   img {
-    width: 100%;
+    width: 50%;
+    margin: 25px auto 25px 50px;
+    border-radius: 10px;
   }
 }
 .details {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
+  position: relative;
+  margin-left: 50px;
   h2,
   h3 {
-    color: #fff;
     margin-top: 0;
   }
   h2 {
@@ -185,10 +192,9 @@ button {
     font-size: 22px;
   }
 }
-.mini-bio,
-.contact-info {
+.mini-bio {
   width: 90%;
-  margin: 20px auto;
+  margin: 20px auto 0 50px;
   p {
     font-size: 16px;
   }
@@ -198,8 +204,8 @@ button {
 }
 .contact-info {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 25px;
+  left: 50px;
   .contact-icons {
     text-align: left;
     ul li {
@@ -222,29 +228,56 @@ button {
   padding: 25px 0;
   position: relative;
 }
-.work-wrapper {
-  @include prefix(animation-name, scale, webkit moz ms o);
-  @include prefix(animation-duration, 1000ms, webkit moz ms o);
-  @include prefix(animation-fill-mode, forwards, webkit moz ms o);
-  transform-origin: center 45%;
-  padding-top: 0;
-}
-.room-wrapper,
-.desk-wrapper,
-.contact-wrapper {
-  opacity: 0.3;
-}
 .header-img {
   text-align: center;
   img {
     max-width: 75%;
   }
 }
+.home {
+  height: 100vh;
+  width:110%;
+  background: linear-gradient(159deg, #fff 65%, #E0FFF2 35%);
+}
+.arrow {
+  margin: 150px 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
 .intro-text {
-  text-align: center;
+  padding: 25px 0 200px 0;
   h1 {
     margin-top: 0;
+    font-size: 44px;
   }
+  h3 {
+    line-height: 30px;
+  }
+}
+.divider {
+  width: 75px;
+  height: 6px;
+  margin: 30px 0 25px 0;
+  background: #30DB8B; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #70F4B7, #30DB8B); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #70F4B7, #30DB8B); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #70F4B7, #30DB8B); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #70F4B7, #30DB8B); /* Standard syntax */
 }
 * {
   box-sizing: border-box;
