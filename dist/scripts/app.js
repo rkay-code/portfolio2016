@@ -44,10 +44,10 @@ var Router = Backbone.Router.extend({
         $('.navbar-scroll').fadeIn(500);
       }
     });
-    
+
     $('body').scrollspy({
       target: '#my-nav',
-      offset: 50
+      offset: 40
     });
   },
 

@@ -126,6 +126,10 @@ button {
   float: right;
   margin-right: 35px;
 }
+.content-container {
+  transform: scale(.9);
+  transform-origin: top;
+}
 .wrapper {
   padding: 50px 0;
   position: relative;
