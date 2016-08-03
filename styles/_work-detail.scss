@@ -54,12 +54,16 @@
   }
 }
 .detail-body {
-  margin: 75px auto 0;
+  margin: 75px auto;
   div {
     padding: 40px 0 0;
+    .divider {
+      padding: 0;
+      margin-bottom: 25px;
+    }
     h2 {
-      color: #48DBB9;
-      font-weight: 400;
+      color: #36DB99;
+      font-weight: 700;
       margin-bottom: 30px;
     }
     img {
@@ -85,34 +89,6 @@
   div:last-child {
     padding-bottom: 0;
     margin-bottom: 0;
-  }
-}
-.work-nav {
-  .navbar-nav {
-    width: 100%;
-    li a {
-      text-transform: uppercase;
-      color: #424C55 !important;
-      letter-spacing: 1px;
-      text-align: left;
-      font-weight: 500 !important;
-      width: 100%;
-    }
-    li img {
-      height: 20px;
-    }
-    li a:hover {
-      text-decoration: none;
-      cursor: pointer;
-    }
-    li:nth-child(2) a {
-      text-align: center;
-      margin: auto;
-    }
-    li:last-child a {
-      text-align: right;
-      float: right;
-    }
   }
 }
 .mobile-nav {

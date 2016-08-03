@@ -40,10 +40,7 @@
   </script>
 
   <script type="text/template" id="index-content">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3">
-        <nav class="navbar navbar-default navbar-fixed-side" id="my-nav">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
@@ -52,78 +49,37 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#"><img src="/img/name.png" /></a>
-              <div class="profile-info hidden-xs">
-                <div class="profile-img">
-                  <img src="/img/megg.jpg" />
-                </div>
-                <div class="details">
-                  <h2>Renee Padgham</h2>
-                  <h3>UI/UX Designer</h3>
-                </div>
+              <a class="navbar-brand" href="#home">Renee Padgham</a>
               </div>
-              <!-- <div class="mini-bio">
-                <p>
-                  Creator of clean, simple interfaces. Writer. Photographer. Oh, and you can <a href="#">hire me.</a>
-                </p>
-              </div> -->
-            </div>
+
 
           <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
             <ul class="nav navbar-nav">
-              <li><a href="#home">&#x25cb;  Home</a></li>
-              <li><a href="#work">&#x25cb;  Work</a></li>
-              <li><a href="#process">&#x25cb;  Design Process</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#desk">Design Process</a></li>
+              <li><a href="#skills">Tools</a></li>
               <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
             </ul>
           </div>
-          <div class="contact-info hidden-xs">
-            <div class="hello">
-              <h3>Say hello!</h3>
-              <h4>renee at padgham dot com</h4>
-            </div>
-              <div class="contact-icons">
-                <ul>
-                  <li>
-                    <a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
-                  </li>
-              <li>
-                <a href="https://www.linkedin.com/in/reneepadgham" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-                  <li>
-                    <a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  </li>
-                </ul>
-                </div>
-          </div>
           </div>
         </nav>
-    </div>
-    <div class="col-sm-9">
-      <div class="home" id="home">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+
+      <section class="home" id="home">
         @@include('./templates/home.html')
-      </div>
-      <div class="work" id="work">
+      </section>
+      <section class="work" id="work">
         @@include('./templates/work-rendered.html')
-      </div>
-      <div class="process" id="process">
+      </section>
+      <section class="process" id="desk">
         @@include('./templates/desk.html')
+      </section>
+      <section class="skills" id="skills">
+        @@include('./templates/skills.html')
+      </section>
       </div>
-      <!-- <div class="room" id="room">
-        @@include('./templates/room.html')
-      </div> -->
-      <div class="contact hidden-sm hidden-md hidden-lg" id="mail">
-        @@include('./templates/contact.html')
-      </div>
-    </div>
   </div>
-</div>
   </script>
 
   <script>

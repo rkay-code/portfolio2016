@@ -1,10 +1,9 @@
 {
   "projects": [
     {
-      "id": "gigster",
+      "id": "Gigster",
       "title": "Gigster",
-      "img": "img/gigster-frame.png",
-      "testImg": "img/laptopmock.jpg",
+      "img": "img/gigsterhome.png",
       "briefImg": "img/gigster.jpg",
       "responsibility": "I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.",
       "tagline": "On demand software development.",
@@ -24,10 +23,9 @@
       "type": "Case Study"
     },
     {
-      "id": "riskmaster",
+      "id": "Riskmaster",
       "title": "Riskmaster",
-      "img": "img/riskmaster-frame.png",
-      "testImg": "img/laptopmock.jpg",
+      "img": "img/riskmasterhome.png",
       "briefImg": "img/riskmaster-thumb.png",
       "role": "Design | Development",
       "responsibility": "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
@@ -48,10 +46,9 @@
       "type": "Case Study"
     },
     {
-      "id": "coinmotion",
+      "id": "Coinmotion",
       "title": "Coinmotion",
-      "img": "img/coinmotion-frame.png",
-      "testImg": "img/laptopmock.jpg",
+      "img": "img/coinmotionhome.png",
       "briefImg": "img/coinmotion.jpg",
       "role": "Design | Development",
       "responsibility": "I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.",
@@ -70,10 +67,9 @@
       "type": "Overview"
     },
     {
-      "id": "gamesmith",
+      "id": "Gamesmith",
       "title": "Gamesmith",
-      "img": "img/gamesmith-frame.png",
-      "testImg": "img/laptopmock.jpg",
+      "img": "img/gamesmithhome.png",
       "briefImg": "img/gamesmith-carousel.jpg",
       "role": "Design",
       "responsibility": "I led product design on a social network for the video game industry.",

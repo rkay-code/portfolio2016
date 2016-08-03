@@ -45,68 +45,7 @@ var Router = Backbone.Router.extend({
         $('.navbar-scroll').fadeIn(500);
       }
     });
-    //
-    // $('#home').scrollex({
-    //   top: '10%',
-    //   bottom: '20%',
-    //   enter: function() {
-    //     $('body').css('background-color', '#FFF');
-    //   },
-    //   leave: function() {
-    //   }
-    // });
-    //
-    //
-    // $('#desk').scrollex({
-    //   top: '10%',
-    //   bottom: '30%',
-    //   enter: function() {
-    //     $('body').css('background-color', '#FCF6E8');
-    //     $('.desk-wrapper').css('opacity', '1');
-    //   },
-    //   leave: function() {
-    //   }
-    // });
-    //
-    // $('#room').scrollex({
-    //   top: '10%',
-    //   bottom: '30%',
-    //   enter: function() {
-    //     $('body').css('background-color', '#FFE1D6');
-    //     $('.room-wrapper').css('opacity', '1');
-    //
-    //   },
-    //   leave: function() {
-    //     $('.room-wrapper').css('opacity', '.3');
-    //   }
-    // });
-    //
-    // $('#mail').scrollex({
-    //   top: '5%',
-    //   bottom: '30%',
-    //   enter: function() {
-    //     $('body').css('background-color', '#FCF9F2');
-    //     $('.rod').addClass('transform');
-    //     $('.contact-wrapper').css('opacity', '1');
-    //
-    //   },
-    //   leave: function() {
-    //     $('.rod').removeClass('transform');
-    //   }
-    // });
-    //
-    // $('#work-wrapper').scrollex({
-    //   top: '10%',
-    //   bottom: '30%',
-    //   enter: function() {
-    //     $('body').css('background-color', '#fff');
-    //
-    //   },
-    //   leave: function() {
-    //   }
-    // });
-
-
+  
     $('body').scrollspy({
       target: '#my-nav',
       offset: 50
