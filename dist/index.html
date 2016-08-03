@@ -22,14 +22,10 @@
 
   <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-side.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <script src="https://use.typekit.net/rvm6uzx.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -46,7 +42,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#home">Renee Padgham</a>
+        <a class="navbar-brand" href="/">Renee Padgham</a>
       </div>
 
       <div class="collapse navbar-collapse">
@@ -67,7 +63,7 @@
           </div>
           <div class="detail-brief-text col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
             <h2><%= work.title %>: <%= work.tagline %></h2>
-            <h3><%= work.responsibility %></h3>
+            <h4><%= work.responsibility %></h4>
           </div>
         </div>
       </div>
@@ -259,9 +255,8 @@
           <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
             <ul class="nav navbar-nav">
               <li><a href="#work">Work</a></li>
-              <li><a href="#desk">Design Process</a></li>
-              <li><a href="#skills">Tools</a></li>
-              <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
+              <li><a href="#process">Design Process</a></li>
+              <li><a href="#tools">Tools</a></li>
             </ul>
           </div>
           </div>
@@ -271,7 +266,7 @@
         <section class="home" id="home">
           
     <div class="intro-text row">
-        <h1>Hi, I'm Renee.</h1>
+        <h1>Hi, Im Renee.</h1>
         <div class="divider"></div>
         <h3>
           I'm a San Francisco based product designer. I create experiences that are clean, minimalistic, and free of unnecessary complexity. I'm passionate about delightful interactions. I move pixels and prototype quickly, but empathy and data are the champions of my
@@ -302,7 +297,7 @@
           </ul>
           </div>
         <div class="arrow bounce">
-        <a href="#work"><img src="img/arrow1.png" /></a>
+        <a href="#work"><img src="img/arrow.png" /></a>
       </div>
     </div>
 
@@ -321,9 +316,7 @@
         <div class="brief-details">
             <h2>Gigster</h2>
             <p>I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.</p>
-            <a href="#/work/Gigster">
-              <button class="view-proj">Case Study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-            </a>
+            <a class="view-proj" href="#/work/Gigster">Case Study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
           </div>
       </div>
       
@@ -334,9 +327,7 @@
         <div class="brief-details">
             <h2>Riskmaster</h2>
             <p>I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.</p>
-            <a href="#/work/Riskmaster">
-              <button class="view-proj">Case Study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-            </a>
+            <a class="view-proj" href="#/work/Riskmaster">Case Study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
           </div>
       </div>
       
@@ -347,9 +338,7 @@
         <div class="brief-details">
             <h2>Coinmotion</h2>
             <p>I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.</p>
-            <a href="#/work/Coinmotion">
-              <button class="view-proj">Overview <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-            </a>
+            <a class="view-proj" href="#/work/Coinmotion">Overview <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
           </div>
       </div>
       
@@ -360,9 +349,7 @@
         <div class="brief-details">
             <h2>Gamesmith</h2>
             <p>I led product design on a social network for the video game industry.</p>
-            <a href="#/work/Gamesmith">
-              <button class="view-proj">Overview <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-            </a>
+            <a class="view-proj" href="#/work/Gamesmith">Overview <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
           </div>
       </div>
       
@@ -386,7 +373,7 @@
 </div>
 
         </section>
-        <section class="process" id="desk">
+        <section class="process" id="process">
           <div class="desk-wrapper wrapper">
   <div class="row">
     <h1>Design Process</h1>
@@ -429,7 +416,7 @@
 </div>
 
         </section>
-        <section class="skills" id="skills">
+        <section class="tools" id="tools">
           <div class="skills-wrapper wrapper">
   <div class="row">
     <h1>Skills</h1>

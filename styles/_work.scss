@@ -24,11 +24,14 @@
     text-align: left;
     width: 90%;
   }
+  p {
+   padding-bottom: 30px;
+  }
 }
 .view-proj {
   background: #fff;
-  border: 3px solid #36DB99;
-  color: #36DB99;
+  border: 3px solid $primary;
+  color: $primary;
   padding: 12px 25px 10px;
   font-weight: 500;
   font-size: 14px;

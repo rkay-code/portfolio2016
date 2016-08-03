@@ -1,0 +1,45 @@
+.home {
+  min-height: 100vh;
+}
+.arrow {
+  margin: 100px 0;
+  img {
+    width: 25px;
+  }
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+.intro-text {
+  padding: 125px 0 0 0;
+  h1 {
+    margin-top: 0;
+    font-size: 44px;
+  }
+  h3 {
+    line-height: 33px;
+  }
+  .contact-icons {
+    text-align: left;
+    ul li {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      margin: 0 5px;
+      text-align: center;
+    }
+    li:hover {
+      transform: scale(1.05);
+      transform-origin: center;
+    }
+    li:first-child {
+      margin-left: 0;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+}

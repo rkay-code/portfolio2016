@@ -6,113 +6,7 @@
   }
   #{$property}: #{$value};
 }
-@keyframes moveFromBottomFade {
-  from {
-    opacity: 0.3;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-@keyframes moveToTopFade {
-	from { }
-	to { opacity: 0.3; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
-}
-@keyframes moveToTop {
-	from { }
-	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
-}
-@keyframes fade {
-	from { }
-	to { opacity: 0.3; }
-}
-@keyframes leftDoor {
-  0% {
-  }
-  50% {
-    right: 100%;
-    left: -50%;
-    opacity: 0;
-  }
-  100% {
-    right: 100%;
-    left: -50%;
-    opacity: 0;
-  }
-}
-@keyframes rightDoor {
-  0% {
-  }
-  50% {
-    left: 100%;
-    right: -50%;
-    opacity: 0;
-  }
-  100% {
-    left: 100%;
-    right: -50%;
-    opacity: 0;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    animation-play-state: paused;
-  }
-}
-@keyframes zoomIn {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1.5);
-  }
-}
-@keyframes scale {
-  0% {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-}
-@keyframes open {
-  0% {
-    transform: scale(1) skew(0);
-  }
-  100% {
-    transform: scale(0.05, 1) skew(0, -20deg);
-  }
-}
-@keyframes pop {
-  0% {
-    transform: rotate(-90deg);
-  }
-  65% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
+
 
 @keyframes fadeInTheMusical {
   0% {
@@ -121,5 +15,17 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-10px);
   }
 }

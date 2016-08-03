@@ -1,99 +1,16 @@
-@keyframes moveFromBottomFade {
-  from {
-    opacity: 0.3;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%); } }
-
-@keyframes moveToTopFade {
-  from { }
-  to {
-    opacity: 0.3;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%); } }
-
-@keyframes moveToTop {
-  from { }
-  to {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%); } }
-
-@keyframes fade {
-  from { }
-  to {
-    opacity: 0.3; } }
-
-@keyframes leftDoor {
-  0% { }
-  50% {
-    right: 100%;
-    left: -50%;
-    opacity: 0; }
-  100% {
-    right: 100%;
-    left: -50%;
-    opacity: 0; } }
-
-@keyframes rightDoor {
-  0% { }
-  50% {
-    left: 100%;
-    right: -50%;
-    opacity: 0; }
-  100% {
-    left: 100%;
-    right: -50%;
-    opacity: 0; } }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  80% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    animation-play-state: paused; } }
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(1); }
-  20% {
-    transform: scale(1.5); }
-  100% {
-    transform: scale(1.5); } }
-
-@keyframes scale {
-  0% {
-    transform: scale(0.7);
-    opacity: 0; }
-  100% {
-    transform: scale(0.9);
-    opacity: 1; } }
-
-@keyframes open {
-  0% {
-    transform: scale(1) skew(0); }
-  100% {
-    transform: scale(0.05, 1) skew(0, -20deg); } }
-
-@keyframes pop {
-  0% {
-    transform: rotate(-90deg); }
-  65% {
-    transform: rotate(-90deg); }
-  100% {
-    transform: rotate(0deg); } }
-
 @keyframes fadeInTheMusical {
   0% {
     opacity: .2; }
   100% {
     opacity: 1; } }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-25px); }
+  60% {
+    transform: translateY(-10px); } }
 
 .contact {
   min-height: 100vh; }
@@ -230,6 +147,43 @@
   transition: all 0.2s ease;
   animation-fill-mode: forwards; }
 
+.home {
+  min-height: 100vh; }
+
+.arrow {
+  margin: 100px 0; }
+  .arrow img {
+    width: 25px; }
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; }
+
+.intro-text {
+  padding: 125px 0 0 0; }
+  .intro-text h1 {
+    margin-top: 0;
+    font-size: 44px; }
+  .intro-text h3 {
+    line-height: 33px; }
+  .intro-text .contact-icons {
+    text-align: left; }
+    .intro-text .contact-icons ul li {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      margin: 0 5px;
+      text-align: center; }
+    .intro-text .contact-icons li:hover {
+      transform: scale(1.05);
+      transform-origin: center; }
+    .intro-text .contact-icons li:first-child {
+      margin-left: 0; }
+    .intro-text .contact-icons a {
+      font-size: 12px; }
+
 .design-process {
   margin-top: 60px;
   margin-left: -15px; }
@@ -256,263 +210,34 @@
       margin-right: 10px;
       margin-top: 5px; }
 
-#landing {
-  background-color: #fff;
-  height: 100vh;
-  width: 100vw;
-  z-index: 10000;
-  position: fixed;
-  top: 0;
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -ms-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 2000ms;
-  -moz-animation-duration: 2000ms;
-  -ms-animation-duration: 2000ms;
-  -o-animation-duration: 2000ms;
-  animation-duration: 2000ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  -moz-animation-timing-function: ease-out;
-  -ms-animation-timing-function: ease-out;
-  -o-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-delay: 500ms;
-  -moz-animation-delay: 500ms;
-  -ms-animation-delay: 500ms;
-  -o-animation-delay: 500ms;
-  animation-delay: 500ms; }
+.skills {
+  height: 100vh; }
 
-.landing-wrapper {
-  margin-top: 30vh; }
-
-.door-wrapper {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  margin: auto;
-  text-align: center;
-  background-color: #fff;
-  -webkit-animation-name: zoomIn;
-  -moz-animation-name: zoomIn;
-  -ms-animation-name: zoomIn;
-  -o-animation-name: zoomIn;
-  animation-name: zoomIn;
-  -webkit-animation-duration: 2500ms;
-  -moz-animation-duration: 2500ms;
-  -ms-animation-duration: 2500ms;
-  -o-animation-duration: 2500ms;
-  animation-duration: 2500ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  transform-origin: center; }
-  .door-wrapper img {
-    text-align: center;
-    width: 80%;
-    margin: 40% auto; }
-
-.left-door {
-  position: absolute;
-  background: #FFE484;
-  border: 5px double #4A4A4A;
-  bottom: 0;
-  right: 50%;
-  left: 0;
-  top: 0;
-  -webkit-animation-name: leftDoor;
-  -moz-animation-name: leftDoor;
-  -ms-animation-name: leftDoor;
-  -o-animation-name: leftDoor;
-  animation-name: leftDoor;
-  -webkit-animation-duration: 2000ms;
-  -moz-animation-duration: 2000ms;
-  -ms-animation-duration: 2000ms;
-  -o-animation-duration: 2000ms;
-  animation-duration: 2000ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  -moz-animation-timing-function: ease-out;
-  -ms-animation-timing-function: ease-out;
-  -o-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-delay: 500ms;
-  -moz-animation-delay: 500ms;
-  -ms-animation-delay: 500ms;
-  -o-animation-delay: 500ms;
-  animation-delay: 500ms; }
-  .left-door:after {
-    position: absolute;
-    content: " ";
-    width: 5px;
-    height: 15px;
-    top: 115px;
-    right: 10px;
-    background-color: #4A4A4A;
-    border-radius: 5px; }
-
-.right-door {
-  position: absolute;
-  background: #FFE484;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-  top: 0;
-  border: 5px double #4A4A4A;
-  -webkit-animation-name: rightDoor;
-  -moz-animation-name: rightDoor;
-  -ms-animation-name: rightDoor;
-  -o-animation-name: rightDoor;
-  animation-name: rightDoor;
-  -webkit-animation-duration: 2000ms;
-  -moz-animation-duration: 2000ms;
-  -ms-animation-duration: 2000ms;
-  -o-animation-duration: 2000ms;
-  animation-duration: 2000ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  -moz-animation-timing-function: ease-out;
-  -ms-animation-timing-function: ease-out;
-  -o-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-delay: 500ms;
-  -moz-animation-delay: 500ms;
-  -ms-animation-delay: 500ms;
-  -o-animation-delay: 500ms;
-  animation-delay: 500ms; }
-  .right-door:after {
-    position: absolute;
-    content: " ";
-    width: 5px;
-    height: 15px;
-    top: 115px;
-    left: 10px;
-    background-color: #4A4A4A;
-    border-radius: 5px; }
-
-.slide_in {
-  overflow: hidden; }
-
-.show {
-  visibility: visible;
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -ms-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  animation-duration: 500ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 750ms;
-  -moz-animation-delay: 750ms;
-  -ms-animation-delay: 750ms;
-  -o-animation-delay: 750ms;
-  animation-delay: 750ms; }
-
-.scale {
-  -webkit-animation-name: zoomIn;
-  -moz-animation-name: zoomIn;
-  -ms-animation-name: zoomIn;
-  -o-animation-name: zoomIn;
-  animation-name: zoomIn;
-  -webkit-animation-duration: 750ms;
-  -moz-animation-duration: 750ms;
-  -ms-animation-duration: 750ms;
-  -o-animation-duration: 750ms;
-  animation-duration: 750ms;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 500ms;
-  -moz-animation-delay: 500ms;
-  -ms-animation-delay: 500ms;
-  -o-animation-delay: 500ms;
-  animation-delay: 500ms;
-  transform-origin: top; }
-
-.fadeInput {
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -ms-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -ms-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 2000ms;
-  -moz-animation-delay: 2000ms;
-  -ms-animation-delay: 2000ms;
-  -o-animation-delay: 2000ms;
-  animation-delay: 2000ms; }
-
-.room-wrapper {
-  text-align: center; }
-
-.profile-wrap {
-  margin-top: 25px;
-  margin-bottom: 100px; }
-  .profile-wrap .polaroid {
-    margin-top: 50px; }
-    .profile-wrap .polaroid img {
-      width: 300px; }
-  .profile-wrap .bio {
-    margin-top: 25px;
-    text-align: center; }
-    .profile-wrap .bio img {
-      display: block;
-      margin: 50px auto 25px;
-      height: 150px; }
-    .profile-wrap .bio a {
-      color: #0F1A20; }
+.skills-list {
+  margin-top: 60px;
+  margin-left: -15px; }
+  .skills-list .item {
+    background: #fff;
+    padding: 50px 0;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #D4D4D4; }
+  .skills-list .divider.thin {
+    width: 90%;
+    height: 2px;
+    margin: 11px auto 40px auto; }
+  .skills-list h2,
+  .skills-list p {
+    width: 88%;
+    margin: auto; }
+  .skills-list h2 {
+    padding-bottom: 20px; }
+    .skills-list h2 img {
+      height: 26px;
+      vertical-align: top;
+      margin-right: 10px;
+      margin-top: 5px; }
 
 .work.wrapper {
   -webkit-animation-name: fadeInTheMusical;
@@ -547,11 +272,13 @@
   .proj-wrapper .brief-details, .static-proj-wrapper .brief-details {
     text-align: left;
     width: 90%; }
+  .proj-wrapper p, .static-proj-wrapper p {
+    padding-bottom: 30px; }
 
 .view-proj {
   background: #fff;
-  border: 3px solid #36DB99;
-  color: #36DB99;
+  border: 3px solid #36db99;
+  color: #36db99;
   padding: 12px 25px 10px;
   font-weight: 500;
   font-size: 14px;
@@ -579,10 +306,6 @@
       width: 100%;
       text-align: left; } }
 
-.work.wrapper {
-  transform-origin: 50% 20%;
-  background: #fff; }
-
 .detail-brief-wrapper {
   text-align: center;
   margin-top: 50px; }
@@ -591,6 +314,8 @@
     margin-bottom: 40px; }
     .detail-brief-wrapper .detail-brief .detail-brief-img img {
       width: 100%; }
+  .detail-brief-wrapper .detail-brief h3 {
+    margin-top: 0; }
 
 .detail-nav {
   margin: 50px 0; }
@@ -631,7 +356,7 @@
       padding: 0;
       margin-bottom: 25px; }
     .detail-body div h2 {
-      color: #36DB99;
+      color: #36db99;
       font-weight: 700;
       margin-bottom: 30px; }
     .detail-body div img {
@@ -682,35 +407,6 @@
   .detail-body div {
     padding: 10px 0; } }
 
-.skills {
-  height: 100vh; }
-
-.skills-list {
-  margin-top: 60px;
-  margin-left: -15px; }
-  .skills-list .item {
-    background: #fff;
-    padding: 50px 0;
-    height: 300px;
-    margin-bottom: 30px;
-    border-radius: 3px;
-    box-shadow: 0 0 10px #D4D4D4; }
-  .skills-list .divider.thin {
-    width: 90%;
-    height: 2px;
-    margin: 11px auto 40px auto; }
-  .skills-list h2,
-  .skills-list p {
-    width: 88%;
-    margin: auto; }
-  .skills-list h2 {
-    padding-bottom: 20px; }
-    .skills-list h2 img {
-      height: 26px;
-      vertical-align: top;
-      margin-right: 10px;
-      margin-top: 5px; }
-
 h1,
 h2,
 h3,
@@ -724,7 +420,7 @@ h6,
 .h5,
 .h6 {
   font-family: 'lato', sans-serif;
-  color: #232626;
+  color: #061314;
   font-weight: 400; }
 
 h1,
@@ -757,20 +453,20 @@ body {
 
 p {
   font-size: 18px;
-  color: #343A39;
+  color: #343837;
   font-family: 'lato', sans-serif; }
 
 a,
 a:hover,
 a:focus,
 a:visited {
-  color: #36DB99;
+  color: #36db99;
   font-weight: 500;
   text-decoration: none; }
 
 b {
-  color: #293132;
-  font-weight: 500; }
+  color: #061314;
+  font-weight: 700; }
 
 a,
 button {
@@ -779,7 +475,7 @@ button {
 .navbar-default {
   background-color: #fff; }
   .navbar-default .navbar-brand {
-    color: #232626;
+    color: #061314;
     font-weight: 700;
     margin-left: 35px !important; }
 
@@ -815,10 +511,12 @@ button {
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
   font-weight: 700;
   background: inherit;
-  color: #36DB99; }
+  color: #36db99; }
 
 .navbar-nav {
   float: right;
@@ -833,60 +531,15 @@ button {
   .header-img img {
     max-width: 75%; }
 
-.home {
-  min-height: 100vh; }
-
-.arrow {
-  margin: 100px 0; }
-
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite; }
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0); }
-  40% {
-    transform: translateY(-25px); }
-  60% {
-    transform: translateY(-10px); } }
-
-.intro-text {
-  padding: 125px 0 0 0; }
-  .intro-text h1 {
-    margin-top: 0;
-    font-size: 44px; }
-  .intro-text h3 {
-    line-height: 33px; }
-  .intro-text .contact-icons {
-    text-align: left; }
-    .intro-text .contact-icons ul li {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 5px;
-      margin: 0 5px;
-      text-align: center; }
-    .intro-text .contact-icons li:first-child {
-      margin-left: 0; }
-    .intro-text .contact-icons a {
-      font-size: 12px; }
-
 .divider {
   width: 75px;
   height: 6px;
   margin: 30px 0 25px 0;
   background: #30DB8B;
-  /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, #70F4B7, #30DB8B);
-  /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #70F4B7, #30DB8B);
-  /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #70F4B7, #30DB8B);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #70F4B7, #30DB8B);
-  /* Standard syntax */ }
+  background: linear-gradient(to bottom right, #70F4B7, #30DB8B); }
 
 * {
   box-sizing: border-box; }

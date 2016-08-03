@@ -11,9 +11,7 @@
         <div class="brief-details">
             <h2>{{ project.title }}</h2>
             <p>{{ project.responsibility }}</p>
-            <a href="#/work/{{ project.id }}">
-              <button class="view-proj">{{ project.type }} <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-            </a>
+            <a class="view-proj" href="#/work/{{ project.id }}">{{ project.type }} <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
           </div>
       </div>
       {% endfor %}

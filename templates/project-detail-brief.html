@@ -5,8 +5,6 @@
   <div class="brief-details">
     <h3><%= work.title %></h3>
     <h4><%= work.responsibility %></h4>
-    <a href="#/work/<%= work.id %>">
-      <button class="view-proj"><%= work.type %></button>
-    </a>
+    <a class="view-proj" href="#/work/<%= work.id %>"><%= work.type %></a>
   </div>
 </div>

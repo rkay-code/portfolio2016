@@ -1,16 +1,13 @@
-$red: rgba(239, 111, 108, 1);
-$orange: rgba(255, 155, 113, 1);
-$teal: rgba(91, 216, 179, 1);
-$blue: rgba(34, 116, 165, 1);
-$brown: rgba(91, 75, 73, 1);
+$primary: rgba(54, 219, 153, 1);
+$black: rgba(6, 19, 20, 1);
+$grey: rgba(52, 56, 55, 1);
 @import 'animations';
 @import 'contact';
-@import 'desk';
-@import 'landing';
-@import 'room';
+@import 'home';
+@import 'process';
+@import 'tools';
 @import 'work';
 @import 'work-detail';
-@import 'skills';
 h1,
 h2,
 h3,
@@ -24,7 +21,7 @@ h6,
 .h5,
 .h6 {
   font-family: 'lato', sans-serif;
-  color: #232626;
+  color: $black;
   font-weight: 400;
 }
 h1,
@@ -57,20 +54,20 @@ body {
 }
 p {
   font-size: 18px;
-  color: #343A39;
+  color: $grey;
   font-family: 'lato', sans-serif;
 }
 a,
 a:hover,
 a:focus,
 a:visited {
-  color: #36DB99;
+  color: $primary;
   font-weight: 500;
   text-decoration: none;
 }
 b {
-  color: #293132;
-  font-weight: 500;
+  color: $black;
+  font-weight: 700;
 }
 a,
 button {
@@ -79,7 +76,7 @@ button {
 .navbar-default {
   background-color: #fff;
   .navbar-brand {
-    color: #232626;
+    color: $black;
     font-weight: 700;
     margin-left: 35px !important;
   }
@@ -117,10 +114,12 @@ button {
 }
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover {
   font-weight: 700;
   background: inherit;
-  color: #36DB99;
+  color: $primary;
 }
 .navbar-nav {
   float: right;
@@ -136,65 +135,15 @@ button {
     max-width: 75%;
   }
 }
-.home {
-  min-height: 100vh;
-}
-.arrow {
-  margin: 100px 0;
-}
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-25px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
-.intro-text {
-  padding: 125px 0 0 0;
-  h1 {
-    margin-top: 0;
-    font-size: 44px;
-  }
-  h3 {
-    line-height: 33px;
-  }
-  .contact-icons {
-    text-align: left;
-    ul li {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 5px;
-      margin: 0 5px;
-      text-align: center;
-    }
-    li:first-child {
-      margin-left: 0;
-    }
-    a {
-      font-size: 12px;
-    }
-  }
-}
 .divider {
   width: 75px;
   height: 6px;
   margin: 30px 0 25px 0;
-  background: #30DB8B; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #70F4B7, #30DB8B); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #70F4B7, #30DB8B); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #70F4B7, #30DB8B); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #70F4B7, #30DB8B); /* Standard syntax */
+  background: #30DB8B;
+  background: -webkit-linear-gradient(left top, #70F4B7, #30DB8B);
+  background: -o-linear-gradient(bottom right, #70F4B7, #30DB8B);
+  background: -moz-linear-gradient(bottom right, #70F4B7, #30DB8B);
+  background: linear-gradient(to bottom right, #70F4B7, #30DB8B);
 }
 * {
   box-sizing: border-box;

@@ -22,14 +22,10 @@
 
   <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-side.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <script src="https://use.typekit.net/rvm6uzx.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -56,9 +52,8 @@
           <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
             <ul class="nav navbar-nav">
               <li><a href="#work">Work</a></li>
-              <li><a href="#desk">Design Process</a></li>
-              <li><a href="#skills">Tools</a></li>
-              <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
+              <li><a href="#process">Design Process</a></li>
+              <li><a href="#tools">Tools</a></li>
             </ul>
           </div>
           </div>
@@ -71,11 +66,11 @@
         <section class="work" id="work">
           @@include('./templates/work-rendered.html')
         </section>
-        <section class="process" id="desk">
-          @@include('./templates/desk.html')
+        <section class="process" id="process">
+          @@include('./templates/process.html')
         </section>
-        <section class="skills" id="skills">
-          @@include('./templates/skills.html')
+        <section class="tools" id="tools">
+          @@include('./templates/tools.html')
         </section>
       </div>
   </div>

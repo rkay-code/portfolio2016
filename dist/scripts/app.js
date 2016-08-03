@@ -11,8 +11,9 @@ var Router = Backbone.Router.extend({
     '': 'index',
     'work/:id/:section': 'workScroll',
     'work/:id': 'work',
+    'home': 'index',
     'work': 'index',
-    'desk': 'index',
+    'process': 'index',
     'room': 'index',
     'contact': 'index'
   },
@@ -44,10 +45,10 @@ var Router = Backbone.Router.extend({
         $('.navbar-scroll').fadeIn(500);
       }
     });
-
+  
     $('body').scrollspy({
       target: '#my-nav',
-      offset: 40
+      offset: 50
     });
   },
 
