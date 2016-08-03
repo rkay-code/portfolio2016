@@ -81,12 +81,6 @@ gulp.task('index', function() {
     .pipe(gulp.dest('dist'));
 });
 
-// gulp.task('jsmin', function() {
-//   return gulp.src('scripts/*.js')
-//     .pipe(uglify())
-//     .pipe(gulp.dest('dist/scripts'));
-// });
-
 gulp.task('imagemin', () => {
   return gulp.src('img/*')
     .pipe(imagemin({
