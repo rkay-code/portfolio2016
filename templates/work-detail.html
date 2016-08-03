@@ -8,18 +8,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <a class="navbar-brand" href="#home">Renee Padgham</a>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
-          <li class="col-md-4">
-            <a href="#" class="col-md-4"><img src="img/gohome.png" /></a>
-          </li>
-          <li class="col-md-4">
-            <a href="#/work/<%= nextWork %>" class="col-md-4">
-              <%= nextWork%> &#8594;</a>
-          </li>
+          <li><a href="#/work/<%= nextWork %>" class="col-md-4">
+            <%= nextWork%> &#8594;</a></li>
         </ul>
       </div>
     </div>
@@ -29,10 +24,10 @@
     <section id="brief" class="row">
       <div class="detail-brief-wrapper">
         <div class="detail-brief">
-          <div class="detail-brief-img col-md-4 col-md-offset-4">
+          <div class="detail-brief-img col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
             <img src="<%= work.briefImg %>" />
           </div>
-          <div class="detail-brief-text col-md-8 col-md-offset-2">
+          <div class="detail-brief-text col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
             <h2><%= work.title %>: <%= work.tagline %></h2>
             <h3><%= work.responsibility %></h3>
           </div>
@@ -66,7 +61,7 @@
             <% if (work.design) { %>
               <li>
                 <a href="#/work/<%= work.id %>/design">
-                  <img src="img/design.png" />
+                  <img src="img/design-skills.png" />
                   <h4>Design</h4></a>
               </li>
             <% } %>
@@ -82,8 +77,9 @@
 
     <section class="detail-body container">
       <% if (work.problem) { %>
-        <div id="problem" class="col-md-10 col-md-offset-1">
+        <div id="problem" class="col-xs-10 col-xs-offset-1">
           <h2>Problem</h2>
+
           <% if (work.problem) { %>
             <p>
               <%= work.problem %>
@@ -115,16 +111,18 @@
         <% } %>
 
           <% if (work.constraints) { %>
-            <div id="constraints" class="col-md-10 col-md-offset-1">
+            <div id="constraints" class="col-xs-10 col-xs-offset-1">
               <h2>Constraints</h2>
+
               <p>
                 <%= work.constraints %>
               </p>
             </div>
             <% } %>
               <% if (work.research) { %>
-                <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
+                <div id="research" ng-if="work.research" class="col-xs-10 col-xs-offset-1">
                   <h2>Research</h2>
+
                   <% if (work.research) { %>
                     <p>
                       <%= work.research %>
@@ -147,8 +145,9 @@
                 </div>
                 <% } %>
                   <% if (work.design) { %>
-                    <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
+                    <div id="design" ng-if="work.design" class="col-xs-10 col-xs-offset-1">
                       <h2>Design</h2>
+
                       <% if (work.design) { %>
                         <p>
                           <%= work.design %>
@@ -185,8 +184,9 @@
                     </div>
                     <% } %>
                       <% if (work.retrospective) { %>
-                        <div id="lessons" class="col-md-10 col-md-offset-1">
+                        <div id="lessons" class="col-xs-10 col-xs-offset-1">
                           <h2>Future</h2>
+
                           <p>
                             <%= work.retrospective %>
                           </p>

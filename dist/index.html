@@ -22,8 +22,14 @@
 
   <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-side.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <script src="https://use.typekit.net/rvm6uzx.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -40,18 +46,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <a class="navbar-brand" href="#home">Renee Padgham</a>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="col-md-4"><a href="#/work/<%= prevWork %>">&#8592; <%= prevWork %></a></li>
-          <li class="col-md-4">
-            <a href="#" class="col-md-4"><img src="img/gohome.png" /></a>
-          </li>
-          <li class="col-md-4">
-            <a href="#/work/<%= nextWork %>" class="col-md-4">
-              <%= nextWork%> &#8594;</a>
-          </li>
+          <li><a href="#/work/<%= nextWork %>" class="col-md-4">
+            <%= nextWork%> &#8594;</a></li>
         </ul>
       </div>
     </div>
@@ -61,10 +62,10 @@
     <section id="brief" class="row">
       <div class="detail-brief-wrapper">
         <div class="detail-brief">
-          <div class="detail-brief-img col-md-4 col-md-offset-4">
+          <div class="detail-brief-img col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
             <img src="<%= work.briefImg %>" />
           </div>
-          <div class="detail-brief-text col-md-8 col-md-offset-2">
+          <div class="detail-brief-text col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
             <h2><%= work.title %>: <%= work.tagline %></h2>
             <h3><%= work.responsibility %></h3>
           </div>
@@ -98,7 +99,7 @@
             <% if (work.design) { %>
               <li>
                 <a href="#/work/<%= work.id %>/design">
-                  <img src="img/design.png" />
+                  <img src="img/design-skills.png" />
                   <h4>Design</h4></a>
               </li>
             <% } %>
@@ -114,8 +115,9 @@
 
     <section class="detail-body container">
       <% if (work.problem) { %>
-        <div id="problem" class="col-md-10 col-md-offset-1">
+        <div id="problem" class="col-xs-10 col-xs-offset-1">
           <h2>Problem</h2>
+
           <% if (work.problem) { %>
             <p>
               <%= work.problem %>
@@ -147,16 +149,18 @@
         <% } %>
 
           <% if (work.constraints) { %>
-            <div id="constraints" class="col-md-10 col-md-offset-1">
+            <div id="constraints" class="col-xs-10 col-xs-offset-1">
               <h2>Constraints</h2>
+
               <p>
                 <%= work.constraints %>
               </p>
             </div>
             <% } %>
               <% if (work.research) { %>
-                <div id="research" ng-if="work.research" class="col-md-10 col-md-offset-1">
+                <div id="research" ng-if="work.research" class="col-xs-10 col-xs-offset-1">
                   <h2>Research</h2>
+
                   <% if (work.research) { %>
                     <p>
                       <%= work.research %>
@@ -179,8 +183,9 @@
                 </div>
                 <% } %>
                   <% if (work.design) { %>
-                    <div id="design" ng-if="work.design" class="col-md-10 col-md-offset-1">
+                    <div id="design" ng-if="work.design" class="col-xs-10 col-xs-offset-1">
                       <h2>Design</h2>
+
                       <% if (work.design) { %>
                         <p>
                           <%= work.design %>
@@ -217,8 +222,9 @@
                     </div>
                     <% } %>
                       <% if (work.retrospective) { %>
-                        <div id="lessons" class="col-md-10 col-md-offset-1">
+                        <div id="lessons" class="col-xs-10 col-xs-offset-1">
                           <h2>Future</h2>
+
                           <p>
                             <%= work.retrospective %>
                           </p>
@@ -237,110 +243,140 @@
   </script>
 
   <script type="text/template" id="index-content">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="/img/name.png" /></a>
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#home">Renee Padgham</a>
+              </div>
 
-      <div class="collapse navbar-collapse" id="my-nav-buttons">
-        <ul class="nav navbar-nav">
-          <li><a href="#home"><img src="img/home-icon.png" /> Home</a></li>
-          <li><a href="#desk"><img src="img/desk-icon.png" /> Desk</a></li>
-          <li><a href="#room"><img src="img/room-icon.png" /> Room</a></li>
-          <li><a href="#mail"><img src="img/mail-icon.png" /> Mail</a></li>
-        </ul>
+
+          <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
+            <ul class="nav navbar-nav">
+              <li><a href="#work">Work</a></li>
+              <li><a href="#desk">Design Process</a></li>
+              <li><a href="#skills">Tools</a></li>
+              <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
+            </ul>
+          </div>
+          </div>
+        </nav>
+      <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+
+      <section class="home" id="home">
+
+    <div class="intro-text row">
+        <h1>Hi, I’m Renee.</h1>
+        <div class="divider"></div>
+        <h3>
+          I’m a San Francisco based product designer. I create experiences that are clean, minimalistic, and free of unnecessary complexity. I'm passionate about delightful interactions. I move pixels and prototype quickly, but empathy and data are the champions of my
+          toolset. I have strong opinions, loosely held, and I’m always excited to learn.
+          <br /><br />
+          I spend my time writing, traveling, teaching, taking pictures, and figuring out what work I can post on the internet.
+        </h3>
+        <p>
+          <br />To chat, hit me up at renee@padgham.com. I'm actively interviewing and <a href="#">my resume lives here.</a>
+        </p>
+        <div class="contact-icons">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
+            </li>
+        <li>
+          <a href="https://www.linkedin.com/in/reneepadgham" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </li>
+            <li>
+              <a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+          </div>
+        <div class="arrow bounce">
+        <a href="#work"><img src="img/arrow1.png" /></a>
       </div>
-      </div>
-    </nav>
-
-    <div class="work" id="home">
-      <div class="work-wrapper wrapper container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 header-img">
-      <img src="img/living-room.png" />
     </div>
-    <div class="intro-text col-md-10 col-md-offset-1">
-      <h1>Thanks for stopping by!</h1>
-      <p>This is where I live - well, at least, where I live on the internet...
-      In the real world, I'm a product designer and front-end developer in San Francisco.
-      I'd love to <a href="#mail">meet for coffee</a>, but in the meantime my online home can tell you a bit about <a href="#room">me</a> and <a href="#desk">my work style</a>.
-      The tour starts in the living room where I hang my latest work!</p>
-    </div>
-  </div>
 
+      </section>
+      <section class="work" id="work">
+        <div class="work-wrapper wrapper row">
+<h1>Work</h1>
+<div class="divider"></div>
   <div class="row">
     <div class="proj-brief-wrapper">
-      
-        <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
-          <a href="#/work/Gigster">
-            <img src="img/gigsterhome.png" />
-          </a>
-          <div class="brief-details">
+      <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
+        <a href="#/work/Gigster">
+          <img src="img/gigsterhome.png" />
+        </a>
+        <div class="brief-details">
             <h2>Gigster</h2>
             <p>I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.</p>
             <a href="#/work/Gigster">
-              <button class="view-proj">Case Study</button>
+              <button class="view-proj">Case Study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
             </a>
           </div>
-        </div>
-      
-        <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
-          <a href="#/work/Riskmaster">
-            <img src="img/riskmasterhome.png" />
-          </a>
-          <div class="brief-details">
+      </div>
+
+      <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
+        <a href="#/work/Riskmaster">
+          <img src="img/riskmasterhome.png" />
+        </a>
+        <div class="brief-details">
             <h2>Riskmaster</h2>
             <p>I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.</p>
             <a href="#/work/Riskmaster">
-              <button class="view-proj">Case Study</button>
+              <button class="view-proj">Case Study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
             </a>
           </div>
-        </div>
-      
-        <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
-          <a href="#/work/Coinmotion">
-            <img src="img/coinmotionhome.png" />
-          </a>
-          <div class="brief-details">
+      </div>
+
+      <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
+        <a href="#/work/Coinmotion">
+          <img src="img/coinmotionhome.png" />
+        </a>
+        <div class="brief-details">
             <h2>Coinmotion</h2>
             <p>I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.</p>
             <a href="#/work/Coinmotion">
-              <button class="view-proj">Overview</button>
+              <button class="view-proj">Overview <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
             </a>
           </div>
-        </div>
-      
-        <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
-          <a href="#/work/Gamesmith">
-            <img src="img/gamesmithhome.png" />
-          </a>
-          <div class="brief-details">
+      </div>
+
+      <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 proj-wrapper">
+        <a href="#/work/Gamesmith">
+          <img src="img/gamesmithhome.png" />
+        </a>
+        <div class="brief-details">
             <h2>Gamesmith</h2>
             <p>I led product design on a social network for the video game industry.</p>
             <a href="#/work/Gamesmith">
-              <button class="view-proj">Overview</button>
+              <button class="view-proj">Overview <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
             </a>
           </div>
-        </div>
-      
+      </div>
+
     </div>
 
     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 static-proj-wrapper">
-      <img src="img/greylock-frame.png" />
+      <img src="img/greylockhome.png" />
       <div class="brief-details">
         <h2>Greylock Partners</h2>
         <p>Coming soon!</p>
       </div>
     </div>
     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 static-proj-wrapper">
-      <img src="img/fidelity-frame.png" class="second" />
+      <img src="img/fidelityhome.png" class="second" />
       <div class="brief-details">
         <h2>Fidelity</h2>
         <p>Coming soon!</p>
@@ -349,166 +385,95 @@
   </div>
 </div>
 
-    </div>
-    <div class="desk" id="desk" data-background="#FFFD82">
-      <div class="desk-wrapper wrapper container">
+      </section>
+      <section class="process" id="desk">
+        <div class="desk-wrapper wrapper">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
-      <img src="img/desk.png" />
-    </div>
-    <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-      <h1>This is my desk.</h1>
-      <p>There are many like it, but this one is mine. It's pretty minimal, but it gets the job done.
-      </p>
+    <h1>Design Process</h1>
+    <div class="divider"></div>
+    <h3>I have strong feels about human centered design and user data.</h3>
+    <div class="design-process">
+      <div class="col-sm-6"><div class="item">
+        <h2><img src="img/empathy.png"> Empathize</h2>
+        <div class="divider thin"></div>
+        <p>I spend a lot of time trying to understand my user, through user models and observation. I ask questions and use data to re-enforce my understanding of the problem and context. I also make sure I have a solid understanding of the needs and constraints of the business.</p>
+      </div></div>
+      <div class="col-sm-6"><div class="item">
+        <h2><img src="img/ideate.png"> Ideate</h2>
+        <div class="divider thin"></div>
+        <p>Once I have the problem, scope, context, and constraints down - I begin creating the possible set of solutions. The best of these will be at the intersection of usability, feasibility, and viability. By the end, I have a lot of notes and a set of
+          low fidelity sketches to carry me forward. </p>
+      </div></div>
+
+      <div class="col-sm-6"><div class="item">
+        <h2><img src="img/create.png"> Create</h2>
+        <div class="divider thin"></div>
+        <p>I begin creating versions with heart. Using my notes and initial sketches, I go to my computer and create fleshed out (but not fully refined) versions of the solutions. Using prototyping software or code, I give the product it’s first life.</p>
+      </div></div>
+
+      <div class="col-sm-6"><div class="item">
+        <h2><img src="img/iterate.png"> Iterate</h2>
+        <div class="divider thin"></div>
+        <p>I send my ideas into the wild to see what they discover. This process involves allowing users to interact with one version, or multiple versions, of the product and seeing how it performs. This is ideally a loop, in which feedback generates new
+          versions and opportunities for discovery until we have it right.</p>
+      </div></div>
+
+      <div class="col-sm-6"><div class="item">
+        <h2><img src="img/ship.png"> Ship</h2>
+        <div class="divider thin"></div>
+        <p>I refine my solution to it’s most polished version and send it out into the real world once and for all. I enjoy working with development during this phase to make sure everything integrates seamlessly.</p>
+      </div></div>
     </div>
   </div>
-  <div class="col-md-12 design-process">
-    <div class="row">
-      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
-        <div class="header">
-          <img src="img/cap.png" />
-          <h2>Empathize</h2>
-        </div>
-        <p>
-          I start work by putting on my empathy hat. I like to envision a day in the life of my user and feel their pain points. I create personas that allow me to understand the different types of experiences that might bring a user to my product.
-        </p>
-      </div>
-      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
-        <div class="header">
-          <img src="img/research.png" />
-          <h2>Research</h2>
-        </div>
-        <p>
-          I use resources such as customer support and user interviews to build out my understanding of the user and the problem. If I have access to quantitative data, I also invite it to the party.
-        </p>
-      </div>
-      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
-        <div class="header">
-          <img src="img/brainstorm.png" />
-          <h2>Sketch</h2>
-        </div>
-        <p>
-          I then invite my oldest friends, Pencil and Paper, over. We have a tea party and get the basics together in a flow that can be shown to users and internal teams for feedback. I often invite prototyping tools or code to join.
-        </p>
 
-      </div>
+</div>
 
-      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
-        <div class="header">
-          <img src="img/polish.png" />
-          <h2>Polish</h2>
-        </div>
-        <p>
-          Before we go out, I dress up my work with my new friend Sketch - but sometimes reach out to my old friend Adobe. I also like to bring my designs to life using html, css, and javascript.
-        </p>
-
-      </div>
-      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
-        <div class="header">
-          <img src="img/test.png" />
-          <h2>Test</h2>
-        </div>
-        <p>
-          I have good ideas, but I don't always know which is best. I like to dress up my work in a few different options and get feedback. This process, called A/B testing, helps me figure out which version is best.
-        </p>
-      </div>
-      <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 item">
-        <div class="header">
-          <img src="img/ship.png" />
-          <h2>Ship</h2>
-        </div>
-        <p>
-          With that information, I create a finished version. Then, I work with development to bring it to life and ship it off.
-        </p>
-      </div>
+      </section>
+      <section class="skills" id="skills">
+        <div class="skills-wrapper wrapper">
+  <div class="row">
+    <h1>Skills</h1>
+    <div class="divider"></div>
+    <h3><i>"It's not the tools that you have faith in - tools are just tools."</i><br />
+    Still, these get me through the day to day.</h3>
+    <div class="skills-list">
+      <div class="col-sm-4"><div class="item">
+        <h2><img src="img/design.png"> Programs</h2>
+        <div class="divider thin"></div>
+        <p> Illustrator, Sketch, InDesign,
+  Photoshop, Xcode, Framer, Atomic,
+  Flinto, Craft</p>
+      </div></div>
+      <div class="col-sm-4"><div class="item">
+        <h2><img src="img/code.png"> Code</h2>
+        <div class="divider thin"></div>
+        <p>HTML - JADE, CSS - SCSS
+  - Less, JavaScript, jQuery, Git, PHP,
+  Objective-C, Swift, R, WordPress </p>
+      </div></div>
+      <div class="col-sm-4"><div class="item">
+        <h2><img src="img/specialties.png"> Specialties</h2>
+        <div class="divider thin"></div>
+        <p> Prototyping, User Research,
+  User Experience & Interface Design,
+  Web Design, Mobile Design</p>
+      </div></div>
     </div>
   </div>
 </div>
 
-    </div>
-    <div class="room" id="room" data-background="#F45B69">
-      <div class="room-wrapper wrapper container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 header-img">
-      <img src="img/room.png" />
-    </div>
-    <div class="intro-text col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-      <h1>This is where it gets personal.</h1>
-      <p>
-        I would say you'll find out all my secrets - but if you take a look around, you'll notice that everything around here is pretty minimal. That's more than an aesthetic - I've spent the past year and a half traveling (sixteen countries!) and just settled back in San Francisco.
-      </p>
-    </div>
+      </section>
+      </div>
   </div>
-
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 profile-wrap">
-      <div class="polaroid">
-        <img src="img/polaroid-me.png" class="profile-pic" />
-      </div>
-      <div class="bio">
-        <p>
-          Outside of being jet-lagged,
-          I enjoy teaching design and computer science to high schoolers through <a href="http://hacker.fund/" target="_blank">Hacker Fund</a>, taking <a href="https://www.instagram.com/reneepadgham" target="_blank">pictures</a> of all the places
-          I go, reading, and <a href="https://www.medium.com/@reneepadgham" target="_blank">writing</a>. I organize dancing and women in tech communities (message me if you want to join!). If I'm lost, you can probably find me at the closest tea room
-          or taqueria. I prefer high fives to handshakes, but hugs trump both.
-          <br><br />
-          I stumbled into design in 4th grade when I realized I could draw on a computer. Since then, I've added in a love for technology, understanding others, and software development, along with a degree in quantitative methods in economics in mathematics
-          - which makes me a <s>jack of all trades</s> <b>product designer.</b>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-    <div class="contact" id="mail">
-      <div class="contact-wrapper  container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 header-img">
-      <h1>Say hello!</h1>
-      <div class="box">
-        <span class="rod"></span>
-      </div>
-      <div>
-        <h3>renee at padgham dot com</h3>
-      </div>
-    </div>
-  </div>
-  <div class="contact-icons">
-    <ul>
-      <li>
-        <a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
-      </li>
-  <li>
-    <a href="https://www.linkedin.com/in/reneepadgham" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-  </li>
-      <li>
-        <a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </li>
-    </ul>
-    </div>
-    <div class="resume">
-      <h3>P.S. You can hire me!</h3>
-      <a href="http://reneepadgham.com/reneepadgham-resume.pdf" class="resume-link" target="_blank">Resume</a>
-    </div>
-</div>
-
-    </div>
   </script>
 
   <script>
     window.WORK = {
   "projects": [
     {
-      "id": "gigster",
+      "id": "Gigster",
       "title": "Gigster",
-      "img": "img/gigster-frame.png",
+      "img": "img/gigsterhome.png",
       "briefImg": "img/gigster.jpg",
       "responsibility": "I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.",
       "tagline": "On demand software development.",
@@ -528,9 +493,9 @@
       "type": "Case Study"
     },
     {
-      "id": "riskmaster",
+      "id": "Riskmaster",
       "title": "Riskmaster",
-      "img": "img/riskmaster-frame.png",
+      "img": "img/riskmasterhome.png",
       "briefImg": "img/riskmaster-thumb.png",
       "role": "Design | Development",
       "responsibility": "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
@@ -551,9 +516,9 @@
       "type": "Case Study"
     },
     {
-      "id": "coinmotion",
+      "id": "Coinmotion",
       "title": "Coinmotion",
-      "img": "img/coinmotion-frame.png",
+      "img": "img/coinmotionhome.png",
       "briefImg": "img/coinmotion.jpg",
       "role": "Design | Development",
       "responsibility": "I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.",
@@ -572,9 +537,9 @@
       "type": "Overview"
     },
     {
-      "id": "gamesmith",
+      "id": "Gamesmith",
       "title": "Gamesmith",
-      "img": "img/gamesmith-frame.png",
+      "img": "img/gamesmithhome.png",
       "briefImg": "img/gamesmith-carousel.jpg",
       "role": "Design",
       "responsibility": "I led product design on a social network for the video game industry.",
@@ -600,10 +565,8 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-81003140-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
   <script src="/scripts/jquery-2.1.4.min.js"></script>

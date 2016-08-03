@@ -22,8 +22,14 @@
 
   <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-side.css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <script src="https://use.typekit.net/rvm6uzx.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -34,41 +40,46 @@
   </script>
 
   <script type="text/template" id="index-content">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="/img/name.png" /></a>
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" id="my-nav">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav-buttons" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#home">Renee Padgham</a>
+              </div>
 
-      <div class="collapse navbar-collapse" id="my-nav-buttons">
-        <ul class="nav navbar-nav">
-          <li><a href="#home"><img src="img/home-icon.png" /> Home</a></li>
-          <li><a href="#desk"><img src="img/desk-icon.png" /> Desk</a></li>
-          <li><a href="#room"><img src="img/room-icon.png" /> Room</a></li>
-          <li><a href="#mail"><img src="img/mail-icon.png" /> Mail</a></li>
-        </ul>
-      </div>
-      </div>
-    </nav>
 
-    <div class="work" id="home">
-      @@include('./templates/work-rendered.html')
-    </div>
-    <div class="desk" id="desk" data-background="#FFFD82">
-      @@include('./templates/desk.html')
-    </div>
-    <div class="room" id="room" data-background="#F45B69">
-      @@include('./templates/room.html')
-    </div>
-    <div class="contact" id="mail">
-      @@include('./templates/contact.html')
-    </div>
+          <div class="collapse navbar-collapse nav-elements" id="my-nav-buttons">
+            <ul class="nav navbar-nav">
+              <li><a href="#work">Work</a></li>
+              <li><a href="#desk">Design Process</a></li>
+              <li><a href="#skills">Tools</a></li>
+              <li class="hidden-sm hidden-md hidden-lg"><a href="#mail">Mail</a></li>
+            </ul>
+          </div>
+          </div>
+        </nav>
+      <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+
+      <section class="home" id="home">
+        @@include('./templates/home.html')
+      </section>
+      <section class="work" id="work">
+        @@include('./templates/work-rendered.html')
+      </section>
+      <section class="process" id="desk">
+        @@include('./templates/desk.html')
+      </section>
+      <section class="skills" id="skills">
+        @@include('./templates/skills.html')
+      </section>
+      </div>
+  </div>
   </script>
 
   <script>
@@ -80,10 +91,8 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-81003140-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
   <script src="/scripts/jquery-2.1.4.min.js"></script>
