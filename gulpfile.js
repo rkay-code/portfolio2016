@@ -72,7 +72,7 @@ gulp.task('htmlmin', function() {
     .pipe(gulp.dest('dist/templates'));
 });
 
-gulp.task('index', function() {
+gulp.task('index', ['projects'], function() {
   return gulp.src('index.html')
     .pipe(fileinclude())
     .pipe(htmlmin({

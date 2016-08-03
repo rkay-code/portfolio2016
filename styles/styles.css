@@ -891,19 +891,11 @@ button {
 * {
   box-sizing: border-box; }
 
-@media (min-width: 768px) {
-  .header-img img {
-    margin-bottom: 20px; } }
-
-@media (min-width: 320px) {
-  .header-img img {
-    margin-bottom: 50px; }
+@media (min-width: 320px) and (max-width: 768px) {
   .design-process .item {
     height: 500px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .header-img img {
-    margin-bottom: 50px; }
   .navbar-default .navbar-brand {
     margin-left: 0 !important; }
   .design-process .item {
