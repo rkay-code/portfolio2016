@@ -824,10 +824,6 @@ button {
   float: right;
   margin-right: 35px; }
 
-.content-container {
-  transform: scale(0.9);
-  transform-origin: top; }
-
 .wrapper {
   padding: 50px 0;
   position: relative; }
@@ -841,7 +837,7 @@ button {
   min-height: 100vh; }
 
 .arrow {
-  margin: 150px 0; }
+  margin: 100px 0; }
 
 .bounce {
   -moz-animation: bounce 2s infinite;
@@ -857,7 +853,7 @@ button {
     transform: translateY(-10px); } }
 
 .intro-text {
-  padding: 150px 0 0 0; }
+  padding: 125px 0 0 0; }
   .intro-text h1 {
     margin-top: 0;
     font-size: 44px; }
