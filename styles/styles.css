@@ -22,17 +22,6 @@
   80% {
     transform: translateX(5px); } }
 
-@keyframes shrink {
-  0% {
-    color: #fff; }
-  90% {
-    background-color: #27db93;
-    width: 50px; }
-  100% {
-    color: #fff;
-    width: 50px;
-    background-color: #27db93; } }
-
 .contact {
   min-height: 100vh;
   text-align: center; }
@@ -183,6 +172,8 @@
   padding: 150px 0 0 0; }
   .intro-text h1 {
     margin-top: 0; }
+  .intro-text h3 {
+    line-height: 33px; }
   .intro-text .contact-icons {
     text-align: left; }
     .intro-text .contact-icons ul li {
@@ -288,6 +279,8 @@
   .proj-wrapper .brief-details, .static-proj-wrapper .brief-details {
     text-align: left;
     width: 90%; }
+  .proj-wrapper p, .static-proj-wrapper p {
+    padding-bottom: 30px; }
 
 .view-proj {
   background: #fff;
@@ -327,10 +320,6 @@
       width: 100%;
       text-align: left; } }
 
-.work.wrapper {
-  transform-origin: 50% 20%;
-  background: #fff; }
-
 .detail-brief-wrapper {
   text-align: center;
   margin-top: 50px; }
@@ -339,6 +328,8 @@
     margin-bottom: 40px; }
     .detail-brief-wrapper .detail-brief .detail-brief-img img {
       width: 100%; }
+  .detail-brief-wrapper .detail-brief h3 {
+    margin-top: 0; }
 
 .detail-nav {
   margin: 50px 0; }
@@ -552,7 +543,8 @@ button {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover
+.navbar-default .navbar-nav > li > a:hover {
   font-weight: 700;
   background: inherit;
   color: #27db93; }
@@ -603,7 +595,8 @@ button {
     margin-left: 0 !important; }
   .navbar-nav {
     float: none; }
-  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
     color: #061314;
     background-color: #fff; }
   .footer {
@@ -622,7 +615,7 @@ button {
     margin-left: 0 !important; }
   .navbar-nav {
     float: none; }
-  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
     color: #061314;
     background-color: #fff; }
   .design-process .item {

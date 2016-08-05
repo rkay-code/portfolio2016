@@ -43,18 +43,3 @@
     transform: translateX(5px);
   }
 }
-
-@keyframes shrink {
-  0% {
-   color: #fff;
-  }
-  90% {
-   background-color: $primary;
-   width: 50px;
-  }
-  100% {
-   color: #fff;
-   width: 50px;
-   background-color: $primary;
-  }
-}
