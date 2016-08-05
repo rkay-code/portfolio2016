@@ -7,7 +7,6 @@
   #{$property}: #{$value};
 }
 
-
 @keyframes fadeInTheMusical {
   0% {
     opacity: .2;
@@ -27,5 +26,20 @@
   }
   60% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes bounceLeft {
+  0%, 20%, 50%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(5px);
   }
 }

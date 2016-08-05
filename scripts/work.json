@@ -1,9 +1,9 @@
 {
   "projects": [
     {
-      "id": "Gigster",
+      "id": "gigster",
       "title": "Gigster",
-      "img": "img/gigsterhome.png",
+      "img": "img/gigsterhomealt.png",
       "briefImg": "img/gigster.jpg",
       "responsibility": "I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.",
       "tagline": "On demand software development.",
@@ -23,9 +23,9 @@
       "type": "Case Study"
     },
     {
-      "id": "Riskmaster",
+      "id": "riskmaster",
       "title": "Riskmaster",
-      "img": "img/riskmasterhome.png",
+      "img": "img/riskmasterhomealt.png",
       "briefImg": "img/riskmaster-thumb.png",
       "role": "Design | Development",
       "responsibility": "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
@@ -43,12 +43,13 @@
       "designImg4": "img/riskmaster-gridview.png",
       "designCaption4": "The filtered grid view.",
       "retrospective": "Having social information for the founder and multi-tier filtering would provide an even better solution to the problem. These were left out in the original development cycle due to time/data constraints.",
-      "type": "Case Study"
+      "type": "Case Study",
+      "class": "mobile"
     },
     {
-      "id": "Coinmotion",
+      "id": "coinmotion",
       "title": "Coinmotion",
-      "img": "img/coinmotionhome.png",
+      "img": "img/coinmotionhomealt.png",
       "briefImg": "img/coinmotion.jpg",
       "role": "Design | Development",
       "responsibility": "I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.",
@@ -67,9 +68,9 @@
       "type": "Overview"
     },
     {
-      "id": "Gamesmith",
+      "id": "gamesmith",
       "title": "Gamesmith",
-      "img": "img/gamesmithhome.png",
+      "img": "img/gamesmithhomealt.png",
       "briefImg": "img/gamesmith-carousel.jpg",
       "role": "Design",
       "responsibility": "I led product design on a social network for the video game industry.",

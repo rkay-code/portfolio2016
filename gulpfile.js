@@ -21,7 +21,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['**/*.html'], ['projects', 'index-live', 'images', 'javascript']);
+  gulp.watch(['**/*.html'], ['projects', 'index-live', 'javascript']);
 });
 
 gulp.task('sass', function() {
@@ -53,24 +53,15 @@ gulp.task('index-live', ['projects'], function() {
     .pipe(connect.reload());
 });
 
+
 gulp.task('javascript', function() {
   return gulp.src('scripts/*.js')
     .pipe(gulp.dest('dist/scripts'))
     .pipe(connect.reload());
 });
 
-gulp.task('images', () => {
-  return gulp.src('img/*')
-    .pipe(imagemin({
-      progressive: true,
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest('dist/img'))
-    .pipe(gulp.dest('img'))
-    .pipe(connect.reload());
-});
 
-gulp.task('default', ['connect', 'watch', 'projects', 'sass', 'sass:watch', 'index-live', 'images', 'javascript']);
+gulp.task('default', ['connect', 'watch', 'projects', 'sass', 'sass:watch', 'index-live', 'javascript']);
 
 gulp.task('cssmin', function() {
   gulp.src('styles/*.css')
@@ -110,7 +101,8 @@ gulp.task('imagemin', () => {
       progressive: true,
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('img'));
 });
 
 gulp.task('build', ['cssmin', 'htmlmin', 'imagemin', 'projects', 'index', 'jsmin']);
