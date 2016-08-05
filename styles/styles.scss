@@ -1,16 +1,14 @@
-$red: rgba(239, 111, 108, 1);
-$orange: rgba(255, 155, 113, 1);
-$teal: rgba(91, 216, 179, 1);
-$blue: rgba(34, 116, 165, 1);
-$brown: rgba(91, 75, 73, 1);
+$primary: rgba(54, 219, 153, 1);
+$black: rgba(6, 19, 20, 1);
+$grey: rgba(52, 56, 55, 1);
+
 @import 'animations';
 @import 'contact';
-@import 'desk';
-@import 'landing';
-@import 'room';
+@import 'process';
+@import 'tools';
 @import 'work';
 @import 'work-detail';
-@import 'skills';
+
 h1,
 h2,
 h3,
@@ -29,7 +27,7 @@ h6,
 }
 h1,
 .h1 {
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 700;
 }
 h2,
@@ -39,8 +37,8 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 20px;
+  line-height: 30px;
 }
 h4,
 .h4 {
@@ -199,23 +197,22 @@ button {
 * {
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
-  .header-img img {
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 320px) {
-  .header-img img {
-    margin-bottom: 50px;
-  }
+
+@media (min-width: 320px) and (max-width: 768px) {
   .design-process .item {
     height: 500px;
   }
+  .footer {
+    padding-bottom: 75px;
+    border-top: none;
+    padding-top: 10px;
+  }
 }
-@media (min-width: 320px) and (max-width: 768px) {}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .header-img img {
-    margin-bottom: 50px;
+  .footer {
+    padding-bottom: 75px;
+    border-top: none;
+    padding-top: 20px;
   }
   .navbar-default {
     .navbar-brand {

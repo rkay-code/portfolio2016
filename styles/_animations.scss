@@ -123,3 +123,33 @@
     opacity: 1;
   }
 }
+
+@keyframes bounceLeft {
+  0%, 20%, 50%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes shrink {
+  0% {
+   color: #fff;
+  }
+  90% {
+   background-color: $primary;
+   width: 50px;
+  }
+  100% {
+   color: #fff;
+   width: 50px;
+   background-color: $primary;
+  }
+}
