@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": "Gigster",
+      "id": "gigster",
       "title": "Gigster",
       "img": "img/gigsterhomealt.png",
       "briefImg": "img/gigster.jpg",
@@ -23,7 +23,7 @@
       "type": "Case Study"
     },
     {
-      "id": "Riskmaster",
+      "id": "riskmaster",
       "title": "Riskmaster",
       "img": "img/riskmasterhomealt.png",
       "briefImg": "img/riskmaster-thumb.png",
@@ -43,10 +43,11 @@
       "designImg4": "img/riskmaster-gridview.png",
       "designCaption4": "The filtered grid view.",
       "retrospective": "Having social information for the founder and multi-tier filtering would provide an even better solution to the problem. These were left out in the original development cycle due to time/data constraints.",
-      "type": "Case Study"
+      "type": "Case Study",
+      "class": "mobile"
     },
     {
-      "id": "Coinmotion",
+      "id": "coinmotion",
       "title": "Coinmotion",
       "img": "img/coinmotionhomealt.png",
       "briefImg": "img/coinmotion.jpg",
@@ -67,7 +68,7 @@
       "type": "Overview"
     },
     {
-      "id": "Gamesmith",
+      "id": "gamesmith",
       "title": "Gamesmith",
       "img": "img/gamesmithhomealt.png",
       "briefImg": "img/gamesmith-carousel.jpg",

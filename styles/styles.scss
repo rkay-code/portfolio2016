@@ -1,9 +1,10 @@
-$primary: rgba(54, 219, 153, 1);
+$primary: rgba(39, 219, 147, 1);
 $black: rgba(6, 19, 20, 1);
 $grey: rgba(52, 56, 55, 1);
 
 @import 'animations';
 @import 'contact';
+@import 'home';
 @import 'process';
 @import 'tools';
 @import 'work';
@@ -22,7 +23,7 @@ h6,
 .h5,
 .h6 {
   font-family: 'lato', sans-serif;
-  color: #232626;
+  color: $black;
   font-weight: 400;
 }
 h1,
@@ -55,20 +56,20 @@ body {
 }
 p {
   font-size: 18px;
-  color: #343A39;
+  color: $grey;
   font-family: 'lato', sans-serif;
 }
 a,
 a:hover,
 a:focus,
 a:visited {
-  color: #36DB99;
+  color: $primary;
   font-weight: 500;
   text-decoration: none;
 }
 b {
-  color: #293132;
-  font-weight: 500;
+  color: $black;
+  font-weight: 700;
 }
 a,
 button {
@@ -77,7 +78,7 @@ button {
 .navbar-default {
   background-color: #fff;
   .navbar-brand {
-    color: #232626;
+    color: $black;
     font-weight: 700;
     margin-left: 35px !important;
   }
@@ -115,84 +116,43 @@ button {
 }
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover  {
   font-weight: 700;
   background: inherit;
-  color: #36DB99;
+  color: $primary;
 }
 .navbar-nav {
   float: right;
   margin-right: 35px;
 }
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  color: inherit;
+  text-decoration: none;
+  background-color: inherit;
+  outline: 0;
+}
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 5px 0;
+    overflow: hidden;
+    background: #e5e5e5;
+    width: 100%;
+}
 .wrapper {
   padding: 50px 0;
   position: relative;
 }
-.header-img {
-  text-align: center;
-  img {
-    max-width: 75%;
-  }
-}
-.home {
-  min-height: 100vh;
-}
-.arrow {
-  margin: 150px 0;
-}
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-25px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
-.intro-text {
-  padding: 150px 0 0 0;
-  h1 {
-    margin-top: 0;
-    font-size: 44px;
-  }
-  h3 {
-    line-height: 33px;
-  }
-  .contact-icons {
-    text-align: left;
-    ul li {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 5px;
-      margin: 0 5px;
-      text-align: center;
-    }
-    li:first-child {
-      margin-left: 0;
-    }
-    a {
-      font-size: 12px;
-    }
-  }
-}
 .divider {
   width: 75px;
-  height: 6px;
+  height: 4px;
   margin: 30px 0 25px 0;
-  background: #30DB8B; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #70F4B7, #30DB8B); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #70F4B7, #30DB8B); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #70F4B7, #30DB8B); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #70F4B7, #30DB8B); /* Standard syntax */
+  background: $primary; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #70F4B7, $primary); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #70F4B7, $primary); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #70F4B7, $primary); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #70F4B7, $primary); /* Standard syntax */
 }
 * {
   box-sizing: border-box;
@@ -200,12 +160,25 @@ button {
 
 @media (min-width: 320px) and (max-width: 768px) {
   .design-process .item {
-    height: 500px;
+    min-height: 250px;
   }
+  .navbar-default .navbar-brand {
+    margin-left: 0 !important;
+  }
+  .navbar-nav {
+    float:none;
+  }
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: $black;
+    background-color: #fff;
+}
   .footer {
     padding-bottom: 75px;
     border-top: none;
     padding-top: 10px;
+  }
+  .dropdown-menu li {
+    margin: 5px 0;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -214,12 +187,20 @@ button {
     border-top: none;
     padding-top: 20px;
   }
-  .navbar-default {
-    .navbar-brand {
-      margin-left: 0 !important;
-    }
+  .navbar-default .navbar-brand {
+    margin-left: 0 !important;
   }
+  .navbar-nav {
+    float: none;
+  }
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: $black;
+    background-color: #fff;
+}
   .design-process .item {
-    height: 500px;
+    min-height: 250px;
+  }
+  .dropdown-menu li {
+    margin: 5px 0;
   }
 }

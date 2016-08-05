@@ -43,7 +43,8 @@
       "designImg4": "img/riskmaster-gridview.png",
       "designCaption4": "The filtered grid view.",
       "retrospective": "Having social information for the founder and multi-tier filtering would provide an even better solution to the problem. These were left out in the original development cycle due to time/data constraints.",
-      "type": "Case Study"
+      "type": "Case Study",
+      "class": "mobile"
     },
     {
       "id": "coinmotion",
