@@ -1,1 +1,102 @@
-var Router=Backbone.Router.extend({initialize:function(t){this.$app=t.app,this.templates=t.templates,this.currentTemplate=void 0},routes:{"":"index","work/:id/:section":"workScroll","work/:id":"work",home:"index",work:"index",process:"index",room:"index",contact:"index"},index:function(){"index"!==this.currentTemplate&&(this.currentTemplate="index",this.$app.html(this.templates.index),$("a[href*=#]:not([href=#])").on("click",function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var t=$(this.hash);if(t=t.length?t:$("[name="+this.hash.slice(1)+"]"),t.length)return $("html, body").animate({scrollTop:t.offset().top-50},1e3),!1}}),$(window).scroll(function(){$(this).scrollTop()>200&&$(".navbar-scroll").fadeIn(500)}),$("body").scrollspy({target:"#my-nav",offset:50}))},workScroll:function(t,e){if(this.currentTemplate==="work-detail-"+t){var o=$("#"+e).position();window.scrollTo(0,o.top)}else this.work(t)},work:function(t){if(this.currentTemplate!=="work-detail-"+t){this.currentTemplate="work-detail-"+t;var e=window.WORK.projects,o=_.findIndex(e,function(e){return e.id===t}),n=o<e.length-1?o+1:0,i=o>0?o-1:e.length-1,r=this.templates.work({prevWork:e[i].id,nextWork:e[n].id,work:e[o]});this.$app.html(r),window.scrollTo(0,0)}}});$(document).ready(function(){new Router({app:$("#app"),templates:{index:$("#index-content").html(),work:_.template($("#work-detail-content").html())}});Backbone.history.start()});
+var Router = Backbone.Router.extend({
+  initialize: function(options) {
+    this.$app = options.app;
+    this.templates = options.templates;
+
+    // What's currently rendered
+    this.currentTemplate = undefined;
+  },
+
+  routes: {
+    '': 'index',
+    'work/:id/:section': 'workScroll',
+    'work/:id': 'work',
+    'home': 'index',
+    'work': 'index',
+    'process': 'index',
+    'room': 'index',
+    'contact': 'index'
+  },
+
+  index: function() {
+    if (this.currentTemplate === 'index') {
+      return;
+    }
+
+    this.currentTemplate = 'index';
+
+    this.$app.html(this.templates.index);
+
+    $('a[href*=#]:not([href=#])').on('click', function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000);
+          return false;
+        }
+      }
+    });
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 200) {
+        $('.navbar-scroll').fadeIn(500);
+      }
+    });
+  
+    $('body').scrollspy({
+      target: '#my-nav',
+      offset: 50
+    });
+  },
+
+  workScroll: function(id, section) {
+    if (this.currentTemplate === 'work-detail-' + id) {
+      var position = $('#' + section).position();
+      window.scrollTo(0, position.top);
+    } else {
+      this.work(id);
+    }
+  },
+
+  work: function(id) {
+    if (this.currentTemplate === 'work-detail-' + id) {
+      return;
+    }
+
+    this.currentTemplate = 'work-detail-' + id;
+
+    var projects = window.WORK.projects;
+
+    var currentWorkIndex = _.findIndex(projects, function(w) {
+      return w.id === id
+    });
+
+    var nextWorkIndex = currentWorkIndex < (projects.length - 1) ? (currentWorkIndex + 1) : 0;
+    var prevWorkIndex = currentWorkIndex > 0 ? (currentWorkIndex - 1) : projects.length - 1;
+
+    var html = this.templates.work({
+      prevWork: projects[prevWorkIndex].id,
+      nextWork: projects[nextWorkIndex].id,
+      work: projects[currentWorkIndex]
+    });
+
+    this.$app.html(html);
+
+    window.scrollTo(0, 0);
+  }
+});
+
+$(document).ready(function() {
+  var router = new Router({
+    app: $('#app'),
+    templates: {
+      index: $('#index-content').html(),
+      work: _.template($('#work-detail-content').html())
+    }
+  });
+
+  Backbone.history.start();
+});
