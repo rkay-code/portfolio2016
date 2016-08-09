@@ -1,1 +1,99 @@
-var Router=Backbone.Router.extend({initialize:function(t){this.$app=t.app,this.templates=t.templates,this.currentTemplate=void 0},routes:{"":"index","work/:id/:section":"workScroll","work/:id":"work",home:"index",work:"index",process:"index",contact:"index",tools:"index"},index:function(){"index"!==this.currentTemplate&&(this.currentTemplate="index",this.$app.html(this.templates.index),$("body").scrollspy({target:"#my-nav",offset:50}),window.scrollTo(0,0)),location.hash&&$("html, body").animate({scrollTop:$("#"+location.hash.substring(2)).offset().top-50},1e3)},workScroll:function(t,e){this.currentTemplate==="work-detail-"+t?$("html, body").animate({scrollTop:$("#"+e).position().top},1e3):this.work(t)},work:function(t){if(this.currentTemplate!=="work-detail-"+t){this.currentTemplate="work-detail-"+t,$(".work-link").addClass("active");var e=window.WORK.projects,o=_.findIndex(e,function(e){return e.id===t}),i=o<e.length-1?o+1:0,n=o>0?o-1:e.length-1,r=this.templates.work({prevWork:e[n].id,nextWork:e[i].id,work:e[o]});this.$app.html(r),window.scrollTo(0,0)}}});$(document).ready(function(){new Router({app:$("#app"),templates:{index:$("#index-content").html(),work:_.template($("#work-detail-content").html())}});Backbone.history.start(),$(window).scroll(function(){$(this).scrollTop()>200&&$(".navbar-scroll").fadeIn(500)})});
+var Router = Backbone.Router.extend({
+  initialize: function(options) {
+    this.$app = options.app;
+    this.templates = options.templates;
+
+    // What's currently rendered
+    this.currentTemplate = undefined;
+  },
+
+  routes: {
+    '': 'index',
+    'work/:id/:section': 'workScroll',
+    'work/:id': 'work',
+    'home': 'index',
+    'work': 'index',
+    'process': 'index',
+    'contact': 'index',
+    'tools': 'index'
+  },
+
+  index: function() {
+    if (this.currentTemplate !== 'index') {
+      this.currentTemplate = 'index';
+
+      this.$app.html(this.templates.index);
+
+      $('body').scrollspy({
+        target: '#my-nav',
+        offset: 50
+      });
+
+      window.scrollTo(0, 0);
+    }
+
+    if (location.hash) {
+      $('html, body').animate({
+        scrollTop: $('#' + location.hash.substring(2)).offset().top - 50
+      }, 1000);
+    }
+  },
+
+  workScroll: function(id, section) {
+    if (this.currentTemplate === 'work-detail-' + id) {
+
+      $('html, body').animate({
+        scrollTop: $('#' + section).position().top
+      }, 1000);
+    } else {
+      this.work(id);
+    }
+  },
+
+  work: function(id) {
+    if (this.currentTemplate === 'work-detail-' + id) {
+      return;
+    }
+
+    this.currentTemplate = 'work-detail-' + id;
+
+    $('.work-link').addClass('active');
+
+    var projects = window.WORK.projects;
+    var currentWorkIndex = _.findIndex(projects, function(w) {
+      return w.id === id
+    });
+
+    var nextWorkIndex = currentWorkIndex < (projects.length - 1) ? (currentWorkIndex + 1) : 0;
+    var prevWorkIndex = currentWorkIndex > 0 ? (currentWorkIndex - 1) : projects.length - 1;
+
+    var html = this.templates.work({
+      prevWork: projects[prevWorkIndex].id,
+      nextWork: projects[nextWorkIndex].id,
+      work: projects[currentWorkIndex]
+    });
+
+    this.$app.html(html);
+
+    window.scrollTo(0, 0);
+  }
+});
+
+$(document).ready(function() {
+  var router = new Router({
+    app: $('#app'),
+    templates: {
+      index: $('#index-content').html(),
+      work: _.template($('#work-detail-content').html())
+    }
+  });
+
+  Backbone.history.start();
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 200) {
+      $('.navbar-scroll').fadeIn(500);
+    }
+  });
+
+});
