@@ -1,6 +1,11 @@
 .home {
   min-height: 100vh;
 }
+
+.home-links {
+  margin: 40px 0 50px 0;
+}
+
 .arrow {
   margin: 100px 0;
   img {
@@ -19,26 +24,5 @@
   }
   h3 {
     line-height: 33px;
-  }
-  .contact-icons {
-    text-align: left;
-    ul li {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      border-radius: 5px;
-      margin: 0 5px;
-      text-align: center;
-    }
-    li:hover {
-      transform: scale(1.05);
-      transform-origin: center;
-    }
-    li:first-child {
-      margin-left: 0;
-    }
-    a {
-      font-size: 15px;
-    }
   }
 }
