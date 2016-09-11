@@ -26,13 +26,8 @@ var Router = Backbone.Router.extend({
       window.scrollTo(0, 0);
     }
 
-    if (location.hash) {
-      $('html, body').animate({
-        scrollTop: $('#' + location.hash.substring(2)).offset().top - 50
-      }, 1000);
-    }
-
-    $('.menu').hide();
+    $('.menu__item').removeClass('menu__item--current');
+    $('.about').addClass('menu__item--current');
   },
 
   work: function() {

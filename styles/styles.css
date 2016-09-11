@@ -228,28 +228,14 @@
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, 50%); }
 
-.home {
-  min-height: 100vh; }
-
-.home-links {
-  margin: 40px 0 50px 0; }
-
-.arrow {
-  margin: 100px 0; }
-  .arrow img {
-    width: 25px; }
-
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite; }
-
 .intro-text {
   padding: 100px 0 0 0; }
   .intro-text h1 {
     margin-top: 0; }
   .intro-text h3 {
     line-height: 33px; }
+  .intro-text .contact-icons {
+    margin: 75px 0; }
 
 .design-process {
   margin-top: 60px; }
@@ -663,7 +649,7 @@ button {
             -webkit-touch-callout: none;
             -khtml-user-select: none;
             -webkit-tap-highlight-color: transparent;
-            width: 120px;
+            width: 110px;
             height: 3em;
             text-align: center;
             color: #b5b5b5;
@@ -679,7 +665,7 @@ button {
           position: absolute;
           top: 100%;
           left: 0;
-          width: 120px;
+          width: 110px;
           height: 2px;
           pointer-events: none;
           border: 1px solid #fff;
@@ -716,7 +702,7 @@ button {
         text-align: center;
         color: #fff; }
         .contact-icons ul li a i {
-          margin-top: 11px; }
+          margin-top: 10px; }
 
 .menu .menu__item:nth-child(1).menu__item--current ~ .menu__line {
   -webkit-transform: translate3d(0, 0, 0);
@@ -738,7 +724,7 @@ button {
   -webkit-transform: translate3d(400%, 0, 0);
   transform: translate3d(400%, 0, 0); }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   .design-process .item {
     min-height: 250px; }
   .footer {
@@ -758,7 +744,9 @@ button {
   .wrapper {
     padding: 0; }
   figure:hover figcaption {
-    opacity: 0 !important; } }
+    opacity: 0 !important; }
+  .intro-text {
+    padding: 20px 0 0 0; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .footer {
