@@ -1,56 +1,4 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>Renee Padgham - Product Design</title>
-  <meta name="description" content="The online home and portfolio of Renee Padgham." />
-  <meta name="author" content="Renee Padgham">
-  <!-- Social: Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@reneepadgham">
-  <meta name="twitter:creator" content="reneepadgham">
-  <meta name="twitter:title" content="Renee Padgham - Product Design">
-  <meta name="twitter:description" content="The online home and portfolio of Renee Padgham.">
-  <meta name="twitter:image:src" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg">
-  <!-- Social: Facebook / Open Graph -->
-  <meta property="og:url" content="http://www.reneepadgham.com">
-  <meta property="og:title" content="Renee Padgham - Product Design">
-  <meta property="og:image" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg" />
-  <meta property="og:description" content="The online home and portfolio of Renee Padgham.">
-  <meta property="article:author" content="https://www.facebook.com/reneepadgham">
-
-  <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
-
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <script src="https://use.typekit.net/cit2iwd.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-
-<body>
-
-<div class="menu">
-  <div class="menu-inner">
-    <nav class="nav left"><a href="#" class="brand">R <span>x</span> P</a></nav>
-    <nav class="nav right">
-      <ul class="menu__list">
-        <li class="menu__item about"><a href="#/" class="menu__link">About</a></li>
-        <li class="menu__item work"><a href="#/work" class="menu__link">Work</a></li>
-        <li class="menu__item process"><a href="#/process" class="menu__link">Process</a></li>
-        <li class="menu__item contact"><a href="#/contact" class="menu__link">Contact</a></li>
-        <li class="menu__line"></li>
-      </ul>
-    </nav>
-  </div>
-</div>
-
-  <div id="app" class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"></div>
-
-  <script type="text/template" id="work-detail-content">
-      <div class="work wrapper" id="work-wrapper">
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Renee Padgham - Product Design</title><meta name="description" content="The online home and portfolio of Renee Padgham."><meta name="author" content="Renee Padgham"><!-- Social: Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@reneepadgham"><meta name="twitter:creator" content="reneepadgham"><meta name="twitter:title" content="Renee Padgham - Product Design"><meta name="twitter:description" content="The online home and portfolio of Renee Padgham."><meta name="twitter:image:src" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg"><!-- Social: Facebook / Open Graph --><meta property="og:url" content="http://www.reneepadgham.com"><meta property="og:title" content="Renee Padgham - Product Design"><meta property="og:image" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg"><meta property="og:description" content="The online home and portfolio of Renee Padgham."><meta property="article:author" content="https://www.facebook.com/reneepadgham"><link rel="stylesheet" type="text/css" href="/styles/normalize.min.css"><link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="/styles/styles.css"><link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet"><script src="https://use.typekit.net/cit2iwd.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script></head><body><div class="menu"><div class="menu-inner"><nav class="nav left"><a href="#" class="brand">R <span>x</span> P</a></nav><nav class="nav right"><ul class="menu__list"><li class="menu__item about"><a href="#/" class="menu__link">About</a></li><li class="menu__item work"><a href="#/work" class="menu__link">Work</a></li><li class="menu__item process"><a href="#/process" class="menu__link">Process</a></li><li class="menu__item contact"><a href="#/contact" class="menu__link">Contact</a></li><li class="menu__line"></li></ul></nav></div></div><div id="app" class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"></div><script type="text/template" id="work-detail-content"><div class="work wrapper" id="work-wrapper">
     <section id="brief" class="row">
       <div class="detail-brief-wrapper">
         <div class="detail-brief">
@@ -66,163 +14,41 @@
     </section>
 
     <section class="detail-nav row hidden-s hidden-xs">
-      <ul>
-        <% if (work.problem) { %>
-          <li>
+      <ul> <% if (work.problem) { %> <li>
             <a href="#/work/<%= work.id %>/problem">
               <img src="img/problem.png" />
               <h4>Problem</h4></a>
-          </li>
-          <% } %>
-          <% if (work.constraints) { %>
-            <li>
+          </li> <% } %> <% if (work.constraints) { %> <li>
               <a href="#/work/<%= work.id %>/constraints">
                 <img src="img/constraints.png" />
                 <h4>Constraints</h4></a>
-            </li>
-            <% } %>
-            <% if (work.research) { %>
-              <li>
+            </li> <% } %> <% if (work.research) { %> <li>
                 <a href="#/work/<%= work.id %>/research">
                   <img src="img/research-detail.png" />
                   <h4>Research</h4></a>
-              </li>
-            <% } %>
-            <% if (work.design) { %>
-              <li>
+              </li> <% } %> <% if (work.design) { %> <li>
                 <a href="#/work/<%= work.id %>/design">
                   <img src="img/design-skills.png" />
                   <h4>Design</h4></a>
-              </li>
-            <% } %>
-            <% if (work.retrospective) { %>
-              <li>
+              </li> <% } %> <% if (work.retrospective) { %> <li>
                 <a href="#/work/<%= work.id %>/lessons">
                   <img src="img/retrospective.png" />
                   <h4>Future</h4></a>
-              </li>
-            <% } %>
-      </ul>
+              </li> <% } %> </ul>
     </section>
 
-    <section class="detail-body">
-      <% if (work.problem) { %>
-        <div id="problem" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-          <h1>Problem</h1>
-
-          <% if (work.problem) { %>
-            <p>
-              <%= work.problem %>
-            </p>
-            <% } %>
-              <br />
-              <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" />
-                <% } %>
-                  <% if (work.problemCaption1) { %>
-                    <p>
-                      <%= work.problemCaption1 %>
-                    </p>
-                    <% } %>
-                      <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" />
-                        <% } %>
-                          <% if (work.problemCaption2) { %>
-                            <p>
-                              <%= work.problemCaption2 %>
-                            </p>
-                            <% } %>
-                              <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" />
-                                <% } %>
-                                  <% if (work.problemCaption3) { %>
-                                    <p>
-                                      <%= work.problemCaption3 %>
-                                    </p>
-                                    <% } %>
-        </div>
-        <% } %>
-
-          <% if (work.constraints) { %>
-            <div id="constraints" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <section class="detail-body"> <% if (work.problem) { %> <div id="problem" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+          <h1>Problem</h1> <% if (work.problem) { %> <p> <%= work.problem %> </p> <% } %> <br /> <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" /> <% } %> <% if (work.problemCaption1) { %> <p> <%= work.problemCaption1 %> </p> <% } %> <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" /> <% } %> <% if (work.problemCaption2) { %> <p> <%= work.problemCaption2 %> </p> <% } %> <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" /> <% } %> <% if (work.problemCaption3) { %> <p> <%= work.problemCaption3 %> </p> <% } %> </div> <% } %> <% if (work.constraints) { %> <div id="constraints" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
               <h1>Constraints</h1>
 
-              <p>
-                <%= work.constraints %>
-              </p>
-            </div>
-            <% } %>
-              <% if (work.research) { %>
-                <div id="research" ng-if="work.research" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                  <h1>Research</h1>
-
-                  <% if (work.research) { %>
-                    <p>
-                      <%= work.research %>
-                    </p>
-                    <% } %>
-                      <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" />
-                        <% } %>
-                          <% if (work.researchCaption1) { %>
-                            <p>
-                              <%= work.researchCaption1 %>
-                            </p>
-                            <% } %>
-                              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" />
-                                <% } %>
-                                  <% if (work.researchCaption2) { %>
-                                    <p>
-                                      <%= work.researchCaption2 %>
-                                    </p>
-                                    <% } %>
-                </div>
-                <% } %>
-                  <% if (work.design) { %>
-                    <div id="design" ng-if="work.design" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                      <h1>Design</h1>
-
-                      <% if (work.design) { %>
-                        <p>
-                          <%= work.design %>
-                        </p>
-                        <% } %>
-                          <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" class="<%= work.class %>" />
-                            <% } %>
-                              <% if (work.designCaption1) { %>
-                                <p>
-                                  <%= work.designCaption1 %>
-                                </p>
-                                <% } %>
-                                  <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" class="<%= work.class %>"  />
-                                    <% } %>
-                                      <% if (work.designCaption2) { %>
-                                        <p>
-                                          <%= work.designCaption2 %>
-                                        </p>
-                                        <% } %>
-                                          <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" class="<%= work.class %>" />
-                                            <% } %>
-                                              <% if (work.designCaption3) { %>
-                                                <p>
-                                                  <%= work.designCaption3 %>
-                                                </p>
-                                                <% } %>
-                                                  <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" class="<%= work.class %>" />
-                                                    <% } %>
-                                                      <% if (work.designCaption4) { %>
-                                                        <p>
-                                                          <%= work.designCaption4 %>
-                                                        </p>
-                                                        <% } %>
-                    </div>
-                    <% } %>
-                      <% if (work.retrospective) { %>
-                        <div id="lessons" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+              <p> <%= work.constraints %> </p>
+            </div> <% } %> <% if (work.research) { %> <div id="research" ng-if="work.research" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                  <h1>Research</h1> <% if (work.research) { %> <p> <%= work.research %> </p> <% } %> <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" /> <% } %> <% if (work.researchCaption1) { %> <p> <%= work.researchCaption1 %> </p> <% } %> <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" /> <% } %> <% if (work.researchCaption2) { %> <p> <%= work.researchCaption2 %> </p> <% } %> </div> <% } %> <% if (work.design) { %> <div id="design" ng-if="work.design" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                      <h1>Design</h1> <% if (work.design) { %> <p> <%= work.design %> </p> <% } %> <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" class="<%= work.class %>" /> <% } %> <% if (work.designCaption1) { %> <p> <%= work.designCaption1 %> </p> <% } %> <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" class="<%= work.class %>"  /> <% } %> <% if (work.designCaption2) { %> <p> <%= work.designCaption2 %> </p> <% } %> <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" class="<%= work.class %>" /> <% } %> <% if (work.designCaption3) { %> <p> <%= work.designCaption3 %> </p> <% } %> <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" class="<%= work.class %>" /> <% } %> <% if (work.designCaption4) { %> <p> <%= work.designCaption4 %> </p> <% } %> </div> <% } %> <% if (work.retrospective) { %> <div id="lessons" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
                           <h1>Future</h1>
 
-                          <p>
-                            <%= work.retrospective %>
-                          </p>
-                        </div>
-                        <% } %>
-  </div>
+                          <p> <%= work.retrospective %> </p>
+                        </div> <% } %> </div>
   <section class="footer col-sm-10 col-sm-offset-1">
     <div class="col-xs-6">
       <a href="#/work/<%= prevWork %>">
@@ -247,12 +73,7 @@
     </a>
     </div>
   </section>
-</section>
-
-  </script>
-
-  <script type="text/template" id="home-content">
-    <div class="intro-text row" id="home-content">
+</section></script><script type="text/template" id="home-content"><div class="intro-text row" id="home-content">
   <h1>Hi, I'm Renee.</h1>
   <div class="divider"></div>
   <p>
@@ -285,12 +106,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       </li>
     </ul>
   </div>
-</div>
-
-  </script>
-
-  <script type="text/template" id="work-content">
-    <div class="work-wrapper wrapper">
+</div></script><script type="text/template" id="work-content"><div class="work-wrapper wrapper">
 <h1>Work</h1>
 <div class="divider"></div>
 <p>This is like adult show and tell - except I can't always show my shiniest new toys. Like many others before me, and many after to come, I have the NDA disease. I'm in recovery, but if you don't see a project type you're looking for - <a href="mailto:renee@padgham.com?Subject=Work%20example%20request" target="_top">ask me about it.</a> There's a good chance I've got something up my sleeve.</p>
@@ -377,7 +193,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     
     <li>
       <figure>
-        <img src="img/greylockhomealt.png" />
+        <img src="img/greylockhome.png" />
         <figcaption>
             <h3>Greylock Partners</h3>
             <span>Coming Soon - Currently in development!</span>
@@ -386,7 +202,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     </li>
     <li>
       <figure>
-        <img src="img/fidelityhomealt.png" />
+        <img src="img/fidelityhome.png" />
         <figcaption>
             <h3>Fidelity</h3>
             <span>Coming Soon - Currently in development!</span>
@@ -395,12 +211,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     </li>
     </ul>
   </div>
-</div>
-
-  </script>
-
-  <script type="text/template" id="process-content">
-    <div class="desk-wrapper wrapper">
+</div></script><script type="text/template" id="process-content"><div class="desk-wrapper wrapper">
   <div class="row">
     <h1>Design Process</h1>
     <div class="divider"></div>
@@ -503,12 +314,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       </div></div>
     </div>
   </div>
-</div>
-
-  </script>
-
-  <script type="text/template" id="contact-content">
-    <div class="contact-wrapper">
+</div></script><script type="text/template" id="contact-content"><div class="contact-wrapper">
   <div class="row">
       <div class="box transform">
         <span class="rod"></span>
@@ -547,12 +353,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       <!-- <button class="resume-link" href="http://reneepadgham.com/reneepadgham-resume.pdf" target="_blank"><i class="button__icon fa fa-paperclip" aria-hidden="true"></i><span>Resume</span></button> -->
       <!-- <a href="http://reneepadgham.com/reneepadgham-resume.pdf" class="resume-link" target="_blank"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</a> -->
     </div>
-</div>
-
-  </script>
-
-  <script>
-    window.WORK = {
+</div></script><script>window.WORK = {
   "projects": [
     {
       "id": "diverseui",
@@ -681,25 +482,9 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "class": "mobile"
     }
   ]
-}
-
-  </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+}</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-81003140-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-  <script src="/scripts/jquery-2.1.4.min.js"></script>
-  <script src="/scripts/bootstrap.min.js"></script>
-  <script src="/scripts/underscore-min.js"></script>
-  <script src="/scripts/backbone-min.js"></script>
-  <script src="/scripts/classie.js"></script>
-  <script src="/scripts/app.js"></script>
-</body>
-
-</html>
+  ga('send', 'pageview');</script><script src="/scripts/jquery-2.1.4.min.js"></script><script src="/scripts/bootstrap.min.js"></script><script src="/scripts/underscore-min.js"></script><script src="/scripts/backbone-min.js"></script><script src="/scripts/classie.js"></script><script src="/scripts/app.js"></script></body></html>
