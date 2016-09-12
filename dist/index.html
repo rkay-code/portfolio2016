@@ -1,4 +1,56 @@
-<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Renee Padgham - Product Design</title><meta name="description" content="The online home and portfolio of Renee Padgham."><meta name="author" content="Renee Padgham"><!-- Social: Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@reneepadgham"><meta name="twitter:creator" content="reneepadgham"><meta name="twitter:title" content="Renee Padgham - Product Design"><meta name="twitter:description" content="The online home and portfolio of Renee Padgham."><meta name="twitter:image:src" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg"><!-- Social: Facebook / Open Graph --><meta property="og:url" content="http://www.reneepadgham.com"><meta property="og:title" content="Renee Padgham - Product Design"><meta property="og:image" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg"><meta property="og:description" content="The online home and portfolio of Renee Padgham."><meta property="article:author" content="https://www.facebook.com/reneepadgham"><link rel="stylesheet" type="text/css" href="/styles/normalize.min.css"><link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="/styles/styles.css"><link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet"><script src="https://use.typekit.net/cit2iwd.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script></head><body><div class="menu"><div class="menu-inner"><nav class="nav left"><a href="#" class="brand">R <span>x</span> P</a></nav><nav class="nav right"><ul class="menu__list"><li class="menu__item about"><a href="#/" class="menu__link">About</a></li><li class="menu__item work"><a href="#/work" class="menu__link">Work</a></li><li class="menu__item process"><a href="#/process" class="menu__link">Process</a></li><li class="menu__item contact"><a href="#/contact" class="menu__link">Contact</a></li><li class="menu__line"></li></ul></nav></div></div><div id="app" class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"></div><script type="text/template" id="work-detail-content"><div class="work wrapper" id="work-wrapper">
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Renee Padgham - Product Design</title>
+  <meta name="description" content="The online home and portfolio of Renee Padgham." />
+  <meta name="author" content="Renee Padgham">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@reneepadgham">
+  <meta name="twitter:creator" content="reneepadgham">
+  <meta name="twitter:title" content="Renee Padgham - Product Design">
+  <meta name="twitter:description" content="The online home and portfolio of Renee Padgham.">
+  <meta name="twitter:image:src" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg">
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="http://www.reneepadgham.com">
+  <meta property="og:title" content="Renee Padgham - Product Design">
+  <meta property="og:image" content="http://www.reneepadgham.com/img/headshot-cropped.jpeg" />
+  <meta property="og:description" content="The online home and portfolio of Renee Padgham.">
+  <meta property="article:author" content="https://www.facebook.com/reneepadgham">
+
+  <link rel="stylesheet" type="text/css" href="/styles/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <script src="https://use.typekit.net/cit2iwd.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body>
+
+<div class="menu">
+  <div class="menu-inner">
+    <nav class="nav left"><a href="#" class="brand">R <span>x</span> P</a></nav>
+    <nav class="nav right">
+      <ul class="menu__list">
+        <li class="menu__item about"><a href="#/" class="menu__link">About</a></li>
+        <li class="menu__item work"><a href="#/work" class="menu__link">Work</a></li>
+        <li class="menu__item process"><a href="#/process" class="menu__link">Process</a></li>
+        <li class="menu__item contact"><a href="#/contact" class="menu__link">Contact</a></li>
+        <li class="menu__line"></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+  <div id="app" class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"></div>
+
+  <script type="text/template" id="work-detail-content">
+      <div class="work wrapper" id="work-wrapper">
     <section id="brief" class="row">
       <div class="detail-brief-wrapper">
         <div class="detail-brief">
@@ -14,41 +66,163 @@
     </section>
 
     <section class="detail-nav row hidden-s hidden-xs">
-      <ul> <% if (work.problem) { %> <li>
+      <ul>
+        <% if (work.problem) { %>
+          <li>
             <a href="#/work/<%= work.id %>/problem">
               <img src="img/problem.png" />
               <h4>Problem</h4></a>
-          </li> <% } %> <% if (work.constraints) { %> <li>
+          </li>
+          <% } %>
+          <% if (work.constraints) { %>
+            <li>
               <a href="#/work/<%= work.id %>/constraints">
                 <img src="img/constraints.png" />
                 <h4>Constraints</h4></a>
-            </li> <% } %> <% if (work.research) { %> <li>
+            </li>
+            <% } %>
+            <% if (work.research) { %>
+              <li>
                 <a href="#/work/<%= work.id %>/research">
                   <img src="img/research-detail.png" />
                   <h4>Research</h4></a>
-              </li> <% } %> <% if (work.design) { %> <li>
+              </li>
+            <% } %>
+            <% if (work.design) { %>
+              <li>
                 <a href="#/work/<%= work.id %>/design">
                   <img src="img/design-skills.png" />
                   <h4>Design</h4></a>
-              </li> <% } %> <% if (work.retrospective) { %> <li>
+              </li>
+            <% } %>
+            <% if (work.retrospective) { %>
+              <li>
                 <a href="#/work/<%= work.id %>/lessons">
                   <img src="img/retrospective.png" />
                   <h4>Future</h4></a>
-              </li> <% } %> </ul>
+              </li>
+            <% } %>
+      </ul>
     </section>
 
-    <section class="detail-body"> <% if (work.problem) { %> <div id="problem" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-          <h1>Problem</h1> <% if (work.problem) { %> <p> <%= work.problem %> </p> <% } %> <br /> <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" /> <% } %> <% if (work.problemCaption1) { %> <p> <%= work.problemCaption1 %> </p> <% } %> <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" /> <% } %> <% if (work.problemCaption2) { %> <p> <%= work.problemCaption2 %> </p> <% } %> <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" /> <% } %> <% if (work.problemCaption3) { %> <p> <%= work.problemCaption3 %> </p> <% } %> </div> <% } %> <% if (work.constraints) { %> <div id="constraints" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <section class="detail-body">
+      <% if (work.problem) { %>
+        <div id="problem" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+          <h1>Problem</h1>
+
+          <% if (work.problem) { %>
+            <p>
+              <%= work.problem %>
+            </p>
+            <% } %>
+              <br />
+              <% if (work.problemImg1) { %><img src="<%= work.problemImg1 %>" />
+                <% } %>
+                  <% if (work.problemCaption1) { %>
+                    <p>
+                      <%= work.problemCaption1 %>
+                    </p>
+                    <% } %>
+                      <% if (work.problemImg2) { %><img src="<%= work.problemImg2 %>" />
+                        <% } %>
+                          <% if (work.problemCaption2) { %>
+                            <p>
+                              <%= work.problemCaption2 %>
+                            </p>
+                            <% } %>
+                              <% if (work.problemImg3) { %><img src="<%= work.problemImg3 %>" />
+                                <% } %>
+                                  <% if (work.problemCaption3) { %>
+                                    <p>
+                                      <%= work.problemCaption3 %>
+                                    </p>
+                                    <% } %>
+        </div>
+        <% } %>
+
+          <% if (work.constraints) { %>
+            <div id="constraints" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
               <h1>Constraints</h1>
 
-              <p> <%= work.constraints %> </p>
-            </div> <% } %> <% if (work.research) { %> <div id="research" ng-if="work.research" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                  <h1>Research</h1> <% if (work.research) { %> <p> <%= work.research %> </p> <% } %> <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" /> <% } %> <% if (work.researchCaption1) { %> <p> <%= work.researchCaption1 %> </p> <% } %> <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" /> <% } %> <% if (work.researchCaption2) { %> <p> <%= work.researchCaption2 %> </p> <% } %> </div> <% } %> <% if (work.design) { %> <div id="design" ng-if="work.design" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                      <h1>Design</h1> <% if (work.design) { %> <p> <%= work.design %> </p> <% } %> <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" class="<%= work.class %>" /> <% } %> <% if (work.designCaption1) { %> <p> <%= work.designCaption1 %> </p> <% } %> <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" class="<%= work.class %>"  /> <% } %> <% if (work.designCaption2) { %> <p> <%= work.designCaption2 %> </p> <% } %> <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" class="<%= work.class %>" /> <% } %> <% if (work.designCaption3) { %> <p> <%= work.designCaption3 %> </p> <% } %> <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" class="<%= work.class %>" /> <% } %> <% if (work.designCaption4) { %> <p> <%= work.designCaption4 %> </p> <% } %> </div> <% } %> <% if (work.retrospective) { %> <div id="lessons" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+              <p>
+                <%= work.constraints %>
+              </p>
+            </div>
+            <% } %>
+              <% if (work.research) { %>
+                <div id="research" ng-if="work.research" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                  <h1>Research</h1>
+
+                  <% if (work.research) { %>
+                    <p>
+                      <%= work.research %>
+                    </p>
+                    <% } %>
+                      <% if (work.researchImg1) { %><img src="<%= work.researchImg1 %>" />
+                        <% } %>
+                          <% if (work.researchCaption1) { %>
+                            <p>
+                              <%= work.researchCaption1 %>
+                            </p>
+                            <% } %>
+                              <% if (work.researchImg2) { %><img src="<%= work.researchImg2 %>" />
+                                <% } %>
+                                  <% if (work.researchCaption2) { %>
+                                    <p>
+                                      <%= work.researchCaption2 %>
+                                    </p>
+                                    <% } %>
+                </div>
+                <% } %>
+                  <% if (work.design) { %>
+                    <div id="design" ng-if="work.design" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                      <h1>Design</h1>
+
+                      <% if (work.design) { %>
+                        <p>
+                          <%= work.design %>
+                        </p>
+                        <% } %>
+                          <% if (work.designImg1) { %><img src="<%= work.designImg1 %>" class="<%= work.class %>" />
+                            <% } %>
+                              <% if (work.designCaption1) { %>
+                                <p>
+                                  <%= work.designCaption1 %>
+                                </p>
+                                <% } %>
+                                  <% if (work.designImg2) { %><img src="<%= work.designImg2 %>" class="<%= work.class %>"  />
+                                    <% } %>
+                                      <% if (work.designCaption2) { %>
+                                        <p>
+                                          <%= work.designCaption2 %>
+                                        </p>
+                                        <% } %>
+                                          <% if (work.designImg3) { %><img src="<%= work.designImg3 %>" class="<%= work.class %>" />
+                                            <% } %>
+                                              <% if (work.designCaption3) { %>
+                                                <p>
+                                                  <%= work.designCaption3 %>
+                                                </p>
+                                                <% } %>
+                                                  <% if (work.designImg4) { %><img src="<%= work.designImg4 %>" class="<%= work.class %>" />
+                                                    <% } %>
+                                                      <% if (work.designCaption4) { %>
+                                                        <p>
+                                                          <%= work.designCaption4 %>
+                                                        </p>
+                                                        <% } %>
+                    </div>
+                    <% } %>
+                      <% if (work.retrospective) { %>
+                        <div id="lessons" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
                           <h1>Future</h1>
 
-                          <p> <%= work.retrospective %> </p>
-                        </div> <% } %> </div>
+                          <p>
+                            <%= work.retrospective %>
+                          </p>
+                        </div>
+                        <% } %>
+  </div>
   <section class="footer col-sm-10 col-sm-offset-1">
     <div class="col-xs-6">
       <a href="#/work/<%= prevWork %>">
@@ -73,7 +247,12 @@
     </a>
     </div>
   </section>
-</section></script><script type="text/template" id="home-content"><div class="intro-text row" id="home-content">
+</section>
+
+  </script>
+
+  <script type="text/template" id="home-content">
+    <div class="intro-text row" id="home-content">
   <h1>Hi, I'm Renee.</h1>
   <div class="divider"></div>
   <p>
@@ -81,7 +260,7 @@
 <br /><br />
 When I'm not partying with pixels, I challenge my ability to empathize by placing <a href="https://medium.com/ways-to-feel-human/i-m-traveling-the-world-collecting-feelings-bc97a363b523#.7u7x1d55k" target="_blank">poems about other people's feelings</a> on stickers around the world - I am the jet-lag master. I also write about other things like <a href="https://medium.com/human-x-creator" target="_blank">artists</a> and <a href="https://medium.com/swlh/we-should-all-be-weird-as-fuck-c751cf31d765#.ynsvvipmk" target="_blank">being weird</a>, and I edit a <a href="https://medium.com/ladies-storm-hackathons" target="_blank">women in tech publication</a>. I teach design and development at hackathons around the US through <a href="http://hacker.fund" target="_blank">Hacker Fund</a>. Sometimes, I even remember to let my friends and family know I'm alive by posting pictures on <a href="https://www.instagram.com/reneepadgham/" target="_blank">Instagram</a> (not often enough).
 <br /><br />
-    I'm currently looking for my next adventure and opportunity to learn - if you want the details, check out my resume  <a href="http://reneepadgham.com/reneepadgham-resume.pdf" target="_blank">here</a> or
+    I'm always looking for my next adventure and opportunity to learn - if you want the details, check out my resume  <a href="http://reneepadgham.com/reneepadgham-resume.pdf" target="_blank">here</a> or
     say hello, <a href="mailto:renee@padgham.com?Subject=Hello%20there!" target="_top">renee@padgham.com</a>! :)
   </p>
   <div class="contact-icons">
@@ -106,7 +285,12 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       </li>
     </ul>
   </div>
-</div></script><script type="text/template" id="work-content"><div class="work-wrapper wrapper">
+</div>
+
+  </script>
+
+  <script type="text/template" id="work-content">
+    <div class="work-wrapper wrapper">
 <h1>Work</h1>
 <div class="divider"></div>
 <p>This is like adult show and tell - except I can't always show my shiniest new toys. Like many others before me, and many after to come, I have the NDA disease. I'm in recovery, but if you don't see a project type you're looking for - <a href="mailto:renee@padgham.com?Subject=Work%20example%20request" target="_top">ask me about it.</a> There's a good chance I've got something up my sleeve.</p>
@@ -115,7 +299,20 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     
     <li>
       <figure>
-        <img src="img/gigsterhomealt.png" />
+        <img src="img/diverseuihome.png" />
+        <a href="#/work/diverseui">
+        <figcaption>
+            <h3>Diverse UI</h3>
+            <span>I lead ideation, design, and front-end development for a product to generate diverse user images for UI design.</span>
+            <a href="#/work/diverseui"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </figcaption>
+        </a>
+      </figure>
+    </li>
+    
+    <li>
+      <figure>
+        <img src="img/gigsterhome.png" />
         <a href="#/work/gigster">
         <figcaption>
             <h3>Gigster</h3>
@@ -128,7 +325,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     
     <li>
       <figure>
-        <img src="img/riskmasterhomealt.png" />
+        <img src="img/riskmasterhome.png" />
         <a href="#/work/riskmaster">
         <figcaption>
             <h3>Riskmaster</h3>
@@ -141,7 +338,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     
     <li>
       <figure>
-        <img src="img/coinmotionhomealt.png" />
+        <img src="img/coinmotionhome.png" />
         <a href="#/work/coinmotion">
         <figcaption>
             <h3>Coinmotion</h3>
@@ -154,12 +351,25 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     
     <li>
       <figure>
-        <img src="img/gamesmithhomealt.png" />
+        <img src="img/gamesmithhome.png" />
         <a href="#/work/gamesmith">
         <figcaption>
             <h3>Gamesmith</h3>
             <span>I led product design on a social network for the video game industry.</span>
             <a href="#/work/gamesmith"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </figcaption>
+        </a>
+      </figure>
+    </li>
+    
+    <li>
+      <figure>
+        <img src="img/darpdecadehome.png" />
+        <a href="#/work/darpdecade">
+        <figcaption>
+            <h3>Darpdecade</h3>
+            <span>I led design and branding on a mobile application to swap unwanted clothing items.</span>
+            <a href="#/work/darpdecade"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
         </figcaption>
         </a>
       </figure>
@@ -185,7 +395,12 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     </li>
     </ul>
   </div>
-</div></script><script type="text/template" id="process-content"><div class="desk-wrapper wrapper">
+</div>
+
+  </script>
+
+  <script type="text/template" id="process-content">
+    <div class="desk-wrapper wrapper">
   <div class="row">
     <h1>Design Process</h1>
     <div class="divider"></div>
@@ -288,7 +503,12 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       </div></div>
     </div>
   </div>
-</div></script><script type="text/template" id="contact-content"><div class="contact-wrapper">
+</div>
+
+  </script>
+
+  <script type="text/template" id="contact-content">
+    <div class="contact-wrapper">
   <div class="row">
       <div class="box transform">
         <span class="rod"></span>
@@ -327,13 +547,36 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       <!-- <button class="resume-link" href="http://reneepadgham.com/reneepadgham-resume.pdf" target="_blank"><i class="button__icon fa fa-paperclip" aria-hidden="true"></i><span>Resume</span></button> -->
       <!-- <a href="http://reneepadgham.com/reneepadgham-resume.pdf" class="resume-link" target="_blank"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</a> -->
     </div>
-</div></script><script>window.WORK = {
+</div>
+
+  </script>
+
+  <script>
+    window.WORK = {
   "projects": [
+    {
+      "id": "diverseui",
+      "title": "Diverse UI",
+      "img": "img/diverseuihome.png",
+      "briefImg": "img/diverseui.png",
+      "role": "Design | Development",
+      "responsibility": "I lead ideation, design, and front-end development for a product to generate diverse user images for UI design.",
+      "tagline": "Diverse user images for user interface design.",
+      "problem": "Designers were spending hours refreshing the photos filled in by Sketch content generator plugins or clicking through Google image search results and other UI sites to find images that represent real sets of users. Real sets of users, in this perspective, are diverse sets of users — ones from varying age, racial, and gender groups.<br><br>We see that in the real world. We expect that of our users. Yet, somehow, all the sources for filling in content only want to supply us with 25–35 year old white dudes — which is great if you’re in the game of creating products exclusively for 25–35 year old white dudes, but if you’re not, it’s really really bad.",
+      "constraints": "<b>Timeline:</b> One week for design and development.",
+      "design": "User experience, especially when used in combination with Craft for Sketch, was highly prioritized. Filtering and resize options are easily accesible on the left, but most screen real estate is given to the image grid.<br><br>Viewable at <a href='http://diverseui.com'>diverseui.com</a>.",
+      "designImg1": "img/diverseui-home.png",
+      "designCaption1": "This is the home page - most screen space was given to the phto grid with simple filter options on the left.",
+      "designImg2": "img/diverseui-submit.png",
+      "designCaption2": "The submit process requires collecting multiple fields, including the image, e-mail address, and permissions for use. I alleviated some of the friction by making each interaction minimal and playful.",
+      "retrospective": "The product was released on September 7th and since then has received some amazing feedback. This has so far resulted in: more clarity in permissions given, an amended terms of service, and an in-site faq page. Future additions will include more filtering options and potentially a Sketch plugin.",
+      "type": "Overview"
+    },
     {
       "id": "gigster",
       "title": "Gigster",
-      "img": "img/gigsterhomealt.png",
-      "briefImg": "img/gigster.jpg",
+      "img": "img/gigsterhome.png",
+      "briefImg": "img/gigster.png",
       "responsibility": "I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.",
       "tagline": "On demand software development.",
       "problem": "<b>It was difficult to visualize and find important information.</b> <br><br><b>Problem One - The Unhelpful Dashboard:</b><br>You're a project manager for many projects, in multiple locations, working with teams in different time zones - and your main window into the state of all of them is a dashboard page on your screen. Sounds a little stressful, but you know your handy dashboard has your back until… wait, this dashboard doesn't have your back at all! You stare, slack jawed staring at a listing of nothing but project names, paralyzed by the realization that you have to click into and scroll through each and every one to find out what's happening. The part of your workflow that should only take 30 minutes actually eats into hours of your day.<br><br><b>Problem Two - The Cluttered Description Page:</b><br>You're a developer trying to find the key links for the project you just started. You know they're included somewhere in the project page, but for the life of you - you can't remember where. After a lot of clicking, squinting, and scrolling around, you finally stumble upon them - but wait, where were those files…",
@@ -354,8 +597,8 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     {
       "id": "riskmaster",
       "title": "Riskmaster",
-      "img": "img/riskmasterhomealt.png",
-      "briefImg": "img/riskmaster-thumb.png",
+      "img": "img/riskmasterhome.png",
+      "briefImg": "img/riskmaster.png",
       "role": "Design | Development",
       "responsibility": "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
       "tagline": "A visual portfolio management tool.",
@@ -378,8 +621,8 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     {
       "id": "coinmotion",
       "title": "Coinmotion",
-      "img": "img/coinmotionhomealt.png",
-      "briefImg": "img/coinmotion.jpg",
+      "img": "img/coinmotionhome.png",
+      "briefImg": "img/coinmotion.png",
       "role": "Design | Development",
       "responsibility": "I led design and front-end development (html, css, javascript) of the primary wallet/dashboard screen.",
       "tagline": "Bitcoin - Easy, fast, the way it should be.",
@@ -399,8 +642,8 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     {
       "id": "gamesmith",
       "title": "Gamesmith",
-      "img": "img/gamesmithhomealt.png",
-      "briefImg": "img/gamesmith-carousel.jpg",
+      "img": "img/gamesmithhome.png",
+      "briefImg": "img/gamesmith.png",
       "role": "Design",
       "responsibility": "I led product design on a social network for the video game industry.",
       "tagline": "The network for video game professionals.",
@@ -414,11 +657,49 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "designCaption2": "Cards can be expanded into a detail view of a user's career, credibility, and connections.",
       "retrospective": "The deck nature of the layout works well in early stages, but alternate layouts that allow the same playful feel are being explored as the product scales.",
       "type": "Overview"
+    },
+    {
+      "id": "darpdecade",
+      "title": "Darpdecade",
+      "img": "img/darpdecadehome.png",
+      "briefImg": "img/darpdecade.png",
+      "role": "Design",
+      "responsibility": "I led design and branding on a mobile application to swap unwanted clothing items.",
+      "tagline": "Swap, share, and reuse clothing items.",
+      "problem": "40% of clothing is unused in European closets. Ten million tons of clothing is discarded per year. This is largely because today's consumers want a constantly changing wardrobe.",
+      "research": "I flew to the Netherlands/Germany to meet with users, engage in in-person swap events, and do usability studies",
+      "constraints": "<b>Timeline:</b> 2 weeks for app design.",
+      "design": "The primary mechanism is a swipe interface. If two users match on clothing items, they are connected by message to complete the swap.",
+      "designImg1": "img/darpdecade1.png",
+      "designCaption1": "The primary screen of the app, where a user can either swipe or click to indicate whether or not they're interested in an item. Clicking an item provides more detail.",
+      "designImg2": "img/darpdecade2.png",
+      "designCaption2": "The closet interface - where a user can see, edit, and delete items they've uploaded to swap.",
+      "designImg3": "img/darpdecade3.png",
+      "designCaption3": "The primary navigation menu for the app.",
+      "retrospective": "While the primary app mechanisms worked well, this was before I learned of the ongoing research on hamburger menus vs tab bars. A key product aspect I would change going forward would be to re-organize the information architecture to be more easily accessible from a tab bar.",
+      "type": "Case Study",
+      "class": "mobile"
     }
   ]
-}</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+}
+
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-81003140-1', 'auto');
-  ga('send', 'pageview');</script><script src="/scripts/jquery-2.1.4.min.js"></script><script src="/scripts/bootstrap.min.js"></script><script src="/scripts/underscore-min.js"></script><script src="/scripts/backbone-min.js"></script><script src="/scripts/classie.js"></script><script src="/scripts/app.js"></script></body></html>
+  ga('send', 'pageview');
+</script>
+
+  <script src="/scripts/jquery-2.1.4.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+  <script src="/scripts/underscore-min.js"></script>
+  <script src="/scripts/backbone-min.js"></script>
+  <script src="/scripts/classie.js"></script>
+  <script src="/scripts/app.js"></script>
+</body>
+
+</html>
