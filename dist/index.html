@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet"> -->
   <script src="https://use.typekit.net/cit2iwd.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
@@ -37,8 +37,8 @@
     <nav class="nav left"><a href="#" class="brand">R <span>x</span> P</a></nav>
     <nav class="nav right">
       <ul class="menu__list">
-        <li class="menu__item about"><a href="#/" class="menu__link">About</a></li>
-        <li class="menu__item work"><a href="#/work" class="menu__link">Work</a></li>
+        <li class="menu__item work"><a href="#/" class="menu__link">Work</a></li>
+        <li class="menu__item about"><a href="#/about" class="menu__link">About</a></li>
         <li class="menu__item process"><a href="#/process" class="menu__link">Process</a></li>
         <li class="menu__item contact"><a href="#/contact" class="menu__link">Contact</a></li>
         <li class="menu__line"></li>
@@ -47,7 +47,7 @@
   </div>
 </div>
 
-  <div id="app" class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"></div>
+  <div id="app" class="app"></div>
 
   <script type="text/template" id="work-detail-content">
       <div class="work wrapper" id="work-wrapper">
@@ -252,49 +252,45 @@
   </script>
 
   <script type="text/template" id="home-content">
-    <div class="intro-text row" id="home-content">
-  <h1>Hi, I'm Renee.</h1>
-  <div class="divider"></div>
-  <p>
-  I'm a San Francisco based product designer. For the past year and a half, I've been working at <a href="https://gigster.com" target="_blank">Gigster</a> designing internal tools and bringing design to their world class development service. I was the first, but now we have an amazing community of 100+ designers! Before that, I worked at <a href="http://www.draper.vc/" target="_blank">Draper Associates</a> on special projects like an internal portfolio management tool.
-<br /><br />
-When I'm not partying with pixels, I challenge my ability to empathize by placing <a href="https://medium.com/ways-to-feel-human/i-m-traveling-the-world-collecting-feelings-bc97a363b523#.7u7x1d55k" target="_blank">poems about other people's feelings</a> on stickers around the world - I am the jet-lag master. I also write about other things like <a href="https://medium.com/human-x-creator" target="_blank">artists</a> and <a href="https://medium.com/swlh/we-should-all-be-weird-as-fuck-c751cf31d765#.ynsvvipmk" target="_blank">being weird</a>, and I edit a <a href="https://medium.com/ladies-storm-hackathons" target="_blank">women in tech publication</a>. I teach design and development at hackathons around the US through <a href="http://hacker.fund" target="_blank">Hacker Fund</a>. Sometimes, I even remember to let my friends and family know I'm alive by posting pictures on <a href="https://www.instagram.com/reneepadgham/" target="_blank">Instagram</a> (not often enough).
-<br /><br />
-    I'm always looking for my next adventure and opportunity to learn - if you want the details, check out my resume  <a href="http://reneepadgham.com/reneepadgham-resume.pdf" target="_blank">here</a> or
-    say hello, <a href="mailto:renee@padgham.com?Subject=Hello%20there!" target="_top">renee@padgham.com</a>! :)
-  </p>
-  <div class="contact-icons">
-    <ul>
-      <li>
-        <a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/reneepadgham" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://dribbble.com/reneepadgham" target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </li>
-    </ul>
-  </div>
+    <div class="intro-text" id="home-content">
+    <h1>Hi, I'm Renee.</h1>
+    <div class="divider"></div>
+    <p>
+    I'm a San Francisco based product designer. For the past year and a half, I've been working at <a href="https://gigster.com" target="_blank">Gigster</a> designing internal tools and bringing design to their world class development service. I was the first, but now we have an amazing community of 100+ designers! Before that, I worked at <a href="http://www.draper.vc/" target="_blank">Draper Associates</a> on special projects like an internal portfolio management tool.
+  <br /><br />
+  When I'm not partying with pixels, I challenge my ability to empathize by placing <a href="https://medium.com/ways-to-feel-human/i-m-traveling-the-world-collecting-feelings-bc97a363b523#.7u7x1d55k" target="_blank">poems about other people's feelings</a> on stickers around the world - I am the jet-lag master. I also write about other things like <a href="https://medium.com/human-x-creator" target="_blank">artists</a> and <a href="https://medium.com/swlh/we-should-all-be-weird-as-fuck-c751cf31d765#.ynsvvipmk" target="_blank">being weird</a>, and I edit a <a href="https://medium.com/ladies-storm-hackathons" target="_blank">women in tech publication</a>. I teach design and development at hackathons around the US through <a href="http://hacker.fund" target="_blank">Hacker Fund</a>. Sometimes, I even remember to let my friends and family know I'm alive by posting pictures on <a href="https://www.instagram.com/reneepadgham/" target="_blank">Instagram</a> (not often enough).
+  <br /><br />
+      I'm always looking for my next adventure and opportunity to learn - if you want the details, check out my resume  <a href="http://reneepadgham.com/reneepadgham-resume.pdf" target="_blank">here</a> or
+      say hello, <a href="mailto:renee@padgham.com?Subject=Hello%20there!" target="_top">renee@padgham.com</a>! :)
+    </p>
+    <div class="contact-icons">
+      <ul>
+        <li>
+          <a href="https://medium.com/@reneepadgham" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/reneepadgham" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/reneepadgham" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/reneepadgham" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://dribbble.com/reneepadgham" target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/reneepadgham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
 </div>
 
   </script>
 
   <script type="text/template" id="work-content">
     <div class="work-wrapper wrapper">
-<h1>Work</h1>
-<div class="divider"></div>
-<p>This is like adult show and tell - except I can't always show my shiniest new toys. Like many others before me, and many after to come, I have the NDA disease. I'm in recovery, but if you don't see a project type you're looking for - <a href="mailto:renee@padgham.com?Subject=Work%20example%20request" target="_top">ask me about it.</a> There's a good chance I've got something up my sleeve.</p>
-  <div class="work-list">
     <ul class="grid">
     
     <li>
@@ -305,6 +301,19 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
             <h3>Diverse UI</h3>
             <span>I lead ideation, design, and front-end development for a product to generate diverse user images for UI design.</span>
             <a href="#/work/diverseui"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </figcaption>
+        </a>
+      </figure>
+    </li>
+    
+    <li>
+      <figure>
+        <img src="img/fidelityxtrachome.png" />
+        <a href="#/work/fidelity-xtrac">
+        <figcaption>
+            <h3>Fidelity - Xtrac</h3>
+            <span>I led ideation, low-fidelity, and high-fidelity design for a workflow management tool.</span>
+            <a href="#/work/fidelity-xtrac"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
         </figcaption>
         </a>
       </figure>
@@ -364,6 +373,19 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
     
     <li>
       <figure>
+        <img src="img/itripsmarthome.png" />
+        <a href="#/work/itripsmart">
+        <figcaption>
+            <h3>iTripSmart</h3>
+            <span>I led design on a web application to plan road trips and keep track of memories from the experience.</span>
+            <a href="#/work/itripsmart"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </figcaption>
+        </a>
+      </figure>
+    </li>
+    
+    <li>
+      <figure>
         <img src="img/darpdecadehome.png" />
         <a href="#/work/darpdecade">
         <figcaption>
@@ -384,15 +406,6 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
         </figcaption>
       </figure>
     </li>
-    <li>
-      <figure>
-        <img src="img/fidelityhome.png" />
-        <figcaption>
-            <h3>Fidelity</h3>
-            <span>Coming Soon - Currently in development!</span>
-        </figcaption>
-      </figure>
-    </li>
     </ul>
   </div>
 </div>
@@ -401,7 +414,6 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
 
   <script type="text/template" id="process-content">
     <div class="desk-wrapper wrapper">
-  <div class="row">
     <h1>Design Process</h1>
     <div class="divider"></div>
     <p>
@@ -456,7 +468,6 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
         </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="tools-wrapper wrapper">
@@ -562,7 +573,7 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "role": "Design | Development",
       "responsibility": "I lead ideation, design, and front-end development for a product to generate diverse user images for UI design.",
       "tagline": "Diverse user images for user interface design.",
-      "problem": "Designers were spending hours refreshing the photos filled in by Sketch content generator plugins or clicking through Google image search results and other UI sites to find images that represent real sets of users. Real sets of users, in this perspective, are diverse sets of users — ones from varying age, racial, and gender groups.<br><br>We see that in the real world. We expect that of our users. Yet, somehow, all the sources for filling in content only want to supply us with 25–35 year old white dudes — which is great if you’re in the game of creating products exclusively for 25–35 year old white dudes, but if you’re not, it’s really really bad.",
+      "problem": "Designers were spending hours refreshing the photos filled in by Sketch content generator plugins or clicking through Google image search results and other UI sites to find images that represent real sets of users. Real sets of users, in this perspective, are diverse sets of users — ones from varying age, racial, and gender groups.<br><br>We see that in the real world. We expect that of our users. Yet, somehow, all the sources for filling in content only want to supply us with 25–35 year old white dudes — which is great if you're in the game of creating products exclusively for 25–35 year old white dudes, but if you're not, it's really really bad.",
       "constraints": "<b>Timeline:</b> One week for design and development.",
       "design": "User experience, especially when used in combination with Craft for Sketch, was highly prioritized. Filtering and resize options are easily accesible on the left, but most screen real estate is given to the image grid.<br><br>Viewable at <a href='http://diverseui.com'>diverseui.com</a>.",
       "designImg1": "img/diverseui-home.png",
@@ -573,6 +584,28 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "type": "Overview"
     },
     {
+      "id": "fidelity-xtrac",
+      "title": "Fidelity - Xtrac",
+      "img": "img/fidelityxtrachome.png",
+      "briefImg": "img/fidelityxtrac.png",
+      "role": "Design",
+      "responsibility": "I led ideation, low-fidelity, and high-fidelity design for a workflow management tool.",
+      "tagline": "Workflow automation and document management.",
+      "problem": "Xtrac is used within Fidelity to track work items (WI) – think things like new account openings, account maintenance (check reorder), and account servicing (address change) related to the various financial services Fidelity offers.<br><br>The existing interface made it difficult to understand what the latest news was on Work Items, and in turn, what a user should be doing in response. It was essentially a table view of actions that had occurred alongside a timestamp and brief description of what happened.<br><br>I was tasked with creating a page where users can see what's happening with a work item as well as what's been happening with all the work in their queue.",
+      "constraints": "<b>Technical:</b> There were many technical restraints in working with a legacy system, particularly in what interactions could and could not happen.<br><b>Privacy:</b> My ability to see the current product state and see how it was naturally used was hindered by corporate privacy policies.",
+      "research": "The client was remote, and due to corporate privacy policies, screen sharing wasn't allowed - so I worked with an internal PM and UX team to understand current use patterns and problems. In the initial ideation phase, I worked to synthesize their data and insights into actionable product features.",
+      "design": "The initial proposal/idea focused on having an activity view after clicking an item in the table, in initial ideation we realized pulling out the activity feed as a standalone page would provide the most value to users.",
+      "designImg1": "img/fidelityxtracidea.png",
+      "designCaption1": "This is a low fidelity version of the vision we decided to pursue after an initial period of exploration and ideation. I kept a lefthand menu to match style patterns in other aspects of the product and we included the ability to view activity for a specific list or queue, the ability to sort activity by most recent or by work item, and the ability to sort by activity type. I placed visual emphasis on the action taken and the work item it was taken upon and added in a quick reply button to enable users to quickly take an action in response. We turned this into a clickable prototype and sent it out to users to get feedback.",
+      "designImg2": "img/fidelityxtracv1.png",
+      "designCaption2": "From the previous prototype, we got a lot of great feedback that we implemented going towards a more high fidelity design. The menu iconography wasn't clear so we switched to plain text labels. Some users were confused by the positioning of the filter options, so I created a different visual hierarchy to try to provide greater separation between items that dictated what the list was and the list itself. I also learned that being able to hide certain fields could greatly improve efficiency of some users, so I included a settings option. I then sent a new prototype out into the world.",
+      "designImg3": "img/fidelityxtracfinal.png",
+      "designCaption3": "A few key findings from the prior prototype and newfound technical freedoms evolved the design to it's current (final) form. The ability to do a quick search to find a specific item from the feed had been thought about in the beginning but was initially unfeasible. I discovered that internal engineering teams had almost completed building this as a new feature, and since our user interviews had indicated that it would provide high value, I included it in this version. With this newfound ability, having search, list options, and display settings living in different spots made the use of these features complicated and led to an incohesive experience - so I moved them to a central location as a secondary menu. I learned that the type of action taken was most indicative of whether or not a user needed to respond, so I increased the visual prominence of the action icon. I also discovered that having the response actions so far away from the action taken was slowing users down, so I moved it right below the items.",
+      "designImg4": "img/fidelityxtracfinalresponse.png",
+      "designCaption4": "A key piece of this redesign in the ability to quickly respond with a form that appears inline with the prior action. This had previously been done on a separate page (so the flow was table > item > item history > new action) which had caused a lot of friction for users and lowered productivity",
+      "type": "Case Study"
+    },
+    {
       "id": "gigster",
       "title": "Gigster",
       "img": "img/gigsterhome.png",
@@ -580,12 +613,12 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "responsibility": "I led design, prototyping, and front-end implementation for the user-facing dashboard and project page.",
       "tagline": "On demand software development.",
       "problem": "<b>It was difficult to visualize and find important information.</b> <br><br><b>Problem One - The Unhelpful Dashboard:</b><br>You're a project manager for many projects, in multiple locations, working with teams in different time zones - and your main window into the state of all of them is a dashboard page on your screen. Sounds a little stressful, but you know your handy dashboard has your back until - wait, this dashboard doesn't have your back at all! You stare, slack jawed staring at a listing of nothing but project names, paralyzed by the realization that you have to click into and scroll through each and every one to find out what's happening. The part of your workflow that should only take 30 minutes actually eats into hours of your day.<br><br><b>Problem Two - The Cluttered Description Page:</b><br>You're a developer trying to find the key links for the project you just started. You know they're included somewhere in the project page, but for the life of you - you can't remember where. After a lot of clicking, squinting, and scrolling around, you finally stumble upon them - but wait, where were those files…",
+      "constraints": "<b>Short timeline:</b> < 1 month for complete cycle of ideation, design, and production implementation.<br><b>Layout:</b> Some aspects of the original layout needed to be maintained for engineering/timeline purposes.",
       "research": "At this point, the platform was still fairly early stage and the individual most connected with users was the CTO. I worked with him to find out the largest problems up to this point and what the product needed to be able to do going forward. Since I was part of the network, I was also available to collect qualitative information and do user testing with project managers and developers on the platform.",
       "researchImg1": "img/gigster-01.png",
       "researchCaption1": "We knew we needed to visualize key project information, but had to test what the most pertinent information was.",
       "researchImg2": "img/gigster-03.png",
       "researchCaption2": "An alternative explored layout.",
-      "constraints": "<b>Short timeline:</b> < 1 month for complete cycle of ideation, design, and production implementation.<br><b>Layout:</b> Some aspects of the original layout needed to be maintained for engineering/timeline purposes.",
       "design": "I created a visual interface using a progress bar for timeliness and an emoticon face for customer satisfaction. They have potential states of good (green), be careful (orange), and this is going south quickly (red) to notify users when action is necessary. We also modularized the gig details page, locking key info to the top for easy access.",
       "designImg1": "img/gigster-dash.png",
       "designCaption1": "I created a visual dashboard based on key information states.",
@@ -603,8 +636,8 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "responsibility": "I led design and development (objective-c) on an app that organizes and manages information on portfolio investments.",
       "tagline": "A visual portfolio management tool.",
       "problem": "<b>It was difficult to filter, recall, and find important details for portfolio investments.</b><br><br>Tim Draper, of Draper Associates, has been investing in companies for a long time. Often, at events or in meetings, he would find himself struggling to remember key details about a company, but he could always remember some key filter. In these moments, he didn't have his laptop to search through the database of his investments, and even if he did - it wouldn't be much help. The antiquated system all the data was stored in made it difficult to quickly visualize and skim through companies based on things like company type, the fund invested through, or the founder's name. He needed to have his investments in his pocket in an easy to browse interface.",
-      "research": "I worked with Tim to find out how he would use the existing system and the key information he usually needed. In addition, I spoke to his assistant and key staff members who would also be using the application to find out their issues, and any requests they commonly received from Tim for information.<br><br>Originally, Tim wanted a swipable card interface, but I had usability concerns. We tested a few layouts and came to the conclusion that the card layout in combination with more sorted grid options covered all expected use cases.",
       "constraints": "<b>Short timeline:</b> 1 month for complete cycle of ideation, design, and beta build.<br><b>Data and Formats:</b> The data I could display, and how it could be pulled from the database, had limited to no flexibility based on the services the customer used.",
+      "research": "I worked with Tim to find out how he would use the existing system and the key information he usually needed. In addition, I spoke to his assistant and key staff members who would also be using the application to find out their issues, and any requests they commonly received from Tim for information.<br><br>Originally, Tim wanted a swipable card interface, but I had usability concerns. We tested a few layouts and came to the conclusion that the card layout in combination with more sorted grid options covered all expected use cases.",
       "design": "We decided to make a no frills interface - clean, simple, and easily readable. There were two primary use cases we designed for: 1.) the ability to swipe through all investments in a card-like interface, and 2.) the ability to quickly skim through companies by category or fund.",
       "designImg1": "img/riskmaster-homegrid.png",
       "designCaption1": "The home screen - clicking view all takes the user to the card inteface, the square buttons direct to filtered grid layouts.",
@@ -633,8 +666,8 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "problemCaption2": "The original send screen.",
       "problemImg3": "img/coinmotion-oldsummary.png",
       "problemCaption3": "The original account summary screen.",
-      "research": "The company was part of the Boost accelerator, and through another company in the class we had access to the largest active Q&A forum of bitcoin users. We used this to discover common questions and complaints about existing wallet sites, to ask how users are currently utilizing their wallets, and to ask what an ideal use flow would be.",
       "constraints": "<b>Timeline:</b> 3 weeks for design and development.",
+      "research": "The company was part of the Boost accelerator, and through another company in the class we had access to the largest active Q&A forum of bitcoin users. We used this to discover common questions and complaints about existing wallet sites, to ask how users are currently utilizing their wallets, and to ask what an ideal use flow would be.",
       "designImg1": "img/coinmotion-new.png",
       "design": "I took the many possible actions/views on the primary wallet interface and consolidated them into a single screen view. This was done by giving send money (one of the highest use cases) a permanent home at the top and moving less common transactional flows into modals. I also added in light gamification of the registration system to increase the amount of information provided.<br><br>Not pictured: I modified the UI of other screens within the site to match the new elements.",
       "type": "Overview"
@@ -648,14 +681,33 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "responsibility": "I led product design on a social network for the video game industry.",
       "tagline": "The network for video game professionals.",
       "problem": "<b>There isn't a site for video game professionals to showcase their work and find jobs.</b>",
-      "research": "The CEO is actively involved in the video game space and had done extensive user interviews before coming to me with the project - most project decisions were based on that data.",
       "constraints": "<b>Timeline:</b> 3 weeks for design.",
+      "research": "The CEO is actively involved in the video game space and had done extensive user interviews before coming to me with the project - most project decisions were based on that data.",
       "design": "We wanted to combine the clean feel of a networking site with the modern playfulness of a game. The primary mechanism is a deck of cards containing other professionals in your network. Each user has a card which lists their accomplishments, and users can validate or invalidate other user's accomplishments. I created a color palette based on video game imagery, and I combined clean typography with modern iconography to give the content heavy product a lighter feel.",
       "designImg1": "img/gamesmith-carousel.png",
       "designCaption1": "A user's network is represented by a deck of cards, giving a more playful, physical feel.",
       "designImg2": "img/gamesmith-card.png",
       "designCaption2": "Cards can be expanded into a detail view of a user's career, credibility, and connections.",
       "retrospective": "The deck nature of the layout works well in early stages, but alternate layouts that allow the same playful feel are being explored as the product scales.",
+      "type": "Overview"
+    },
+    {
+      "id": "itripsmart",
+      "title": "iTripSmart",
+      "img": "img/itripsmarthome.png",
+      "briefImg": "img/itripsmart.png",
+      "role": "Design",
+      "responsibility": "I led design on a web application to plan road trips and keep track of memories from the experience.",
+      "tagline": "Intelligent personalized trip planning.",
+      "problem": "There's not an easy way to plan road trips that are tailored to your interests.",
+      "constraints": "<b>Timeline:</b> 3 weeks for design.",
+      "design": "We wanted to create a single page experience for road trip planning. We did this by implementing a navigation pane on the left side and an information pane on the right side. Within these users can select their interest preferences, view information on potential stops, and add or remove stops. All trip information is saved in their profile, along with pictures from their trip, to create a visual record of their adventures.",
+      "designImg1": "img/itripsmarthow.png",
+      "designCaption1": "The landing page of the site, with the 'how it works' dialogue open.",
+      "designImg2": "img/itripsmartitinerary.png",
+      "designCaption2": "The trip building interface, with a navigation pane on the left side and an information pane on the right side.",
+      "designImg3": "img/itripsmartprofile.png",
+      "designCaption3": "The profile screen of the application, where upcoming and prior trips are stored. From here, a user can view the itinerary, add photos from the trip, or share.",
       "type": "Overview"
     },
     {
@@ -667,8 +719,8 @@ When I'm not partying with pixels, I challenge my ability to empathize by placin
       "responsibility": "I led design and branding on a mobile application to swap unwanted clothing items.",
       "tagline": "Swap, share, and reuse clothing items.",
       "problem": "40% of clothing is unused in European closets. Ten million tons of clothing is discarded per year. This is largely because today's consumers want a constantly changing wardrobe.",
+      "constraints": "<b>Timeline:</b> 2 weeks for research and initial app design.",
       "research": "I flew to the Netherlands/Germany to meet with users, engage in in-person swap events, and do usability studies",
-      "constraints": "<b>Timeline:</b> 2 weeks for app design.",
       "design": "The primary mechanism is a swipe interface. If two users match on clothing items, they are connected by message to complete the swap.",
       "designImg1": "img/darpdecade1.png",
       "designCaption1": "The primary screen of the app, where a user can either swipe or click to indicate whether or not they're interested in an item. Clicking an item provides more detail.",

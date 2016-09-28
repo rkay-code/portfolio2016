@@ -8,20 +8,20 @@ var Router = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'home',
+    '': 'work',
     'work/:id/:section': 'workScroll',
     'work/:id': 'detail',
-    'home': 'home',
+    'about': 'about',
     'work': 'work',
     'process': 'process',
     'contact': 'contact',
   },
 
-  home: function() {
-    if (this.currentTemplate !== 'home') {
-      this.currentTemplate = 'home';
+  about: function() {
+    if (this.currentTemplate !== 'about') {
+      this.currentTemplate = 'about';
 
-      this.$app.html(this.templates.home);
+      this.$app.html(this.templates.about);
 
       window.scrollTo(0, 0);
     }
@@ -111,7 +111,7 @@ $(document).ready(function() {
   var router = new Router({
     app: $('#app'),
     templates: {
-      home: $('#home-content').html(),
+      about: $('#home-content').html(),
       work: _.template($('#work-content').html()),
       detail: _.template($('#work-detail-content').html()),
       process: _.template($('#process-content').html()),
