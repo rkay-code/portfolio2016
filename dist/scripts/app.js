@@ -8,66 +8,62 @@ var Router = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'index',
+    '': 'work',
     'work/:id/:section': 'workScroll',
-    'work/:id': 'work',
-    'home': 'index',
-    'work': 'index',
-    'process': 'index',
-    'contact': 'index',
-    'tools': 'index'
+    'work/:id': 'detail',
+    'about': 'about',
+    'work': 'work',
+    'process': 'process',
+    'contact': 'contact',
   },
 
-  index: function() {
-    if (this.currentTemplate !== 'index') {
-      this.currentTemplate = 'index';
+  about: function() {
+    if (this.currentTemplate !== 'about') {
+      this.currentTemplate = 'about';
 
-      this.$app.html(this.templates.index);
-
-      $('body').scrollspy({
-        target: '#my-nav',
-        offset: 50
-      });
+      this.$app.html(this.templates.about);
 
       window.scrollTo(0, 0);
-
-      // $('#work').scrollex({
-      //   top: '10%',
-      //   bottom: '10%',
-      //   enter: function() {
-      //     $('.work-link').addClass('active');
-      //   },
-      //   leave: function() {
-      //     $('.work-link').removeClass('active');
-      //   }
-      // });
-      // $('#process').scrollex({
-      //   top: '10%',
-      //   bottom: '10%',
-      //   enter: function() {
-      //     $('.process-link').addClass('active');
-      //   },
-      //   leave: function() {
-      //     $('.process-link').removeClass('active');
-      //   }
-      // });
-      // $('#tools').scrollex({
-      //   top: '20%',
-      //   bottom: '10%',
-      //   enter: function() {
-      //     $('.tools-link').addClass('active');
-      //   },
-      //   leave: function() {
-      //     $('.tools-link').removeClass('active');
-      //   }
-      // });
     }
 
-    if (location.hash) {
-      $('html, body').animate({
-        scrollTop: $('#' + location.hash.substring(2)).offset().top - 50
-      }, 1000);
+    $('.menu__item').removeClass('menu__item--current');
+    $('.about').addClass('menu__item--current');
+  },
+
+  work: function() {
+    if (this.currentTemplate !== 'work') {
+      this.currentTemplate = 'work';
+
+      this.$app.html(this.templates.work);
     }
+
+    $('.menu__item').removeClass('menu__item--current');
+    $('.work').addClass('menu__item--current');
+    $('.menu').show();
+  },
+
+  process: function() {
+    if (this.currentTemplate !== 'process') {
+      this.currentTemplate = 'process';
+
+      this.$app.html(this.templates.process);
+    }
+
+    $('.menu__item').removeClass('menu__item--current');
+    $('.process').addClass('menu__item--current');
+    $('.menu').show();
+  },
+
+  contact: function() {
+    if (this.currentTemplate !== 'contact') {
+      this.currentTemplate = 'contact';
+
+      this.$app.html(this.templates.contact);
+    }
+
+    $('.menu__item').removeClass('menu__item--current');
+    $('.contact').addClass('menu__item--current');
+    $('.menu').show();
   },
 
   workScroll: function(id, section) {
@@ -81,14 +77,12 @@ var Router = Backbone.Router.extend({
     }
   },
 
-  work: function(id) {
+  detail: function(id) {
     if (this.currentTemplate === 'work-detail-' + id) {
       return;
     }
 
     this.currentTemplate = 'work-detail-' + id;
-
-    $('.work-link').addClass('active');
 
     var projects = window.WORK.projects;
     var currentWorkIndex = _.findIndex(projects, function(w) {
@@ -98,13 +92,16 @@ var Router = Backbone.Router.extend({
     var nextWorkIndex = currentWorkIndex < (projects.length - 1) ? (currentWorkIndex + 1) : 0;
     var prevWorkIndex = currentWorkIndex > 0 ? (currentWorkIndex - 1) : projects.length - 1;
 
-    var html = this.templates.work({
+    var html = this.templates.detail({
       prevWork: projects[prevWorkIndex].id,
       nextWork: projects[nextWorkIndex].id,
       work: projects[currentWorkIndex]
     });
 
     this.$app.html(html);
+
+    $('.menu__item').removeClass('menu__item--current');
+    $('.work').addClass('menu__item--current');
 
     window.scrollTo(0, 0);
   }
@@ -114,17 +111,32 @@ $(document).ready(function() {
   var router = new Router({
     app: $('#app'),
     templates: {
-      index: $('#index-content').html(),
-      work: _.template($('#work-detail-content').html())
+      about: $('#home-content').html(),
+      work: _.template($('#work-content').html()),
+      detail: _.template($('#work-detail-content').html()),
+      process: _.template($('#process-content').html()),
+      contact: _.template($('#contact-content').html()),
     }
   });
 
   Backbone.history.start();
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 200) {
-      $('.navbar-scroll').fadeIn(500);
-    }
+  [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+    var menuItems = menu.querySelectorAll('.menu__link'),
+      setCurrent = function(ev) {
+
+        var item = ev.target.parentNode;
+
+        if (classie.has(item, 'menu__item--current')) {
+          return false;
+        }
+        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+        classie.add(item, 'menu__item--current');
+      };
+
+    [].slice.call(menuItems).forEach(function(el) {
+      el.addEventListener('click', setCurrent);
+    });
   });
 
 });

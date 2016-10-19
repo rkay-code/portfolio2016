@@ -1,10 +1,5 @@
-.work.wrapper {
-  transform-origin: 50% 20%;
-  background: #fff;
-}
 .detail-brief-wrapper {
   text-align: center;
-  margin-top: 50px;
   .detail-brief {
     .detail-brief-img {
       margin-top: 40px;
@@ -12,6 +7,9 @@
       img {
         width: 100%;
       }
+    }
+    h3 {
+      margin-top: 0;
     }
   }
 }
@@ -61,10 +59,9 @@
       padding: 0;
       margin-bottom: 25px;
     }
-    h2 {
-      color: $primary;
-      font-weight: 700;
-      margin-bottom: 30px;
+    h1 {
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
     img {
       padding: 0;
@@ -80,15 +77,11 @@
     }
     p {
       padding-left: 0;
-      margin-top: -20px;
     }
     b {
       font-size: 1.1em;
     }
   }
-  // div:first-child {
-  //   padding-top: 0;
-  // }
   div:last-child {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -98,8 +91,15 @@
   padding-bottom: 50px;
   border-top: 1px solid #eee;
   padding-top: 50px;
+  margin-top: 50px;
   div:last-child {
     text-align: right;
+  }
+  a {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
   }
 }
 .nav-arrow {
@@ -111,6 +111,7 @@
     display: inherit;
     border-radius: 50%;
     margin: 0 15px;
+    color: $primary;
   }
 }
 .footer div a:hover {
