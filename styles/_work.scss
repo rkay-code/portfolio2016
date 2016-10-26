@@ -1,7 +1,3 @@
-.container {
-  overflow: visible;
-}
-
 .work.wrapper {
   @include prefix(animation-name, fadeInTheMusical, webkit moz ms o);
   @include prefix(animation-duration, 1.2s, webkit moz ms o);
@@ -12,76 +8,85 @@
   overflow-x: visible !important;
 }
 
-.proj-wrapper, .static-proj-wrapper {
-  margin-top: 75px;
-  margin-bottom: 75px;
-  text-align: left;
-  img {
-    width: 90%;
-    transform: rotate(0deg);
-    transform-origin: center top;
-    transition: all 200ms ease-in-out;
-  }
-  img:hover {
-    transform: rotate(5deg);
-    transform-origin: center top;
-    transition: all 200ms ease-in-out;
-  }
-  h3 {
+.grid {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0 0 0;
+  width: 100%;
+  li {
+    display: inline-block;
+    width: 33%;
     margin: 0;
-  }
-  .brief-details {
-    padding-top: 40px;
+    padding: 1%;
     text-align: left;
-    width: 90%;
-    height: 200px;
+    position: relative;
+    figure {
+      margin: 0;
+    	position: relative;
+      img {
+        max-width: 100%;
+      	display: block;
+      	position: relative;
+      }
+      figcaption {
+        position: absolute;
+      	top: 0;
+      	left: 0;
+      	padding: 20px;
+      	background: #FCFAF9;
+      	color: $grey;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        h3 {
+          margin: 70px 0 0 0;
+        	padding: 0;
+        	color: $black;
+        }
+        span {
+        	display: block;
+        }
+        i {
+          padding-top: 20px;
+          background: transparent;
+          color: $grey;
+          border: none;
+          display: block;
+          font-size: 24px;
+          animation: bounceLeft 1250ms infinite;
+        }
+      }
+    &:hover, .cs-hover {
+      figcaption {
+        opacity: 1;
+      	-webkit-transform: translate(15px, 15px);
+      	-moz-transform: translate(15px, 15px);
+      	-ms-transform: translate(15px, 15px);
+      	transform: translate(15px, 15px);
+        cursor: pointer;
+      }
+    }
+    }
   }
-  .second:hover {
-      transform: rotate(-5deg);
-      transform-origin: center top;
-      transition: all 200ms ease-in-out;
-  }
-}
-.proj-wrapper:nth-of-type(2n) {
-  img:hover {
-    transform: rotate(-5deg);
-    transform-origin: center top;
-    transition: all 200ms ease-in-out;
-  }
-}
-.view-proj {
-  background: #5BC0BE;
-  border: none;
-  color: #fff;
-  padding: 12px 25px 10px;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-top: 15px;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .proj-wrapper {
-    text-align: left;
-    img {
-    width: 100%;
-  }
-  .brief-details {
-    width: 100%;
-    text-align: left;
-  }
-}
+
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .proj-wrapper {
-    text-align: left;
-    img {
-    width: 100%;
+  .grid {
+    li {
+      width: 100%;
+      display: block;
+          margin: 15px 0;
+    }
   }
-  .brief-details {
-    width: 100%;
-    text-align: left;
-  }
-}
+
 }

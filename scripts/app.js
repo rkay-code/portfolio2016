@@ -8,120 +8,76 @@ var Router = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'index',
+    '': 'work',
     'work/:id/:section': 'workScroll',
-    'work/:id': 'work',
-    'work': 'index',
-    'desk': 'index',
-    'room': 'index',
-    'contact': 'index'
+    'work/:id': 'detail',
+    'about': 'about',
+    'work': 'work',
+    'process': 'process',
+    'contact': 'contact',
   },
 
-  index: function() {
-    if (this.currentTemplate === 'index') {
-      return;
+  about: function() {
+    if (this.currentTemplate !== 'about') {
+      this.currentTemplate = 'about';
+
+      this.$app.html(this.templates.about);
+
+      window.scrollTo(0, 0);
     }
 
-    this.currentTemplate = 'index';
+    $('.menu__item').removeClass('menu__item--current');
+    $('.about').addClass('menu__item--current');
+  },
 
-    this.$app.html(this.templates.index);
+  work: function() {
+    if (this.currentTemplate !== 'work') {
+      this.currentTemplate = 'work';
 
-    $('a[href*=#]:not([href=#])').on('click', function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top - 50
-          }, 1000);
-          return false;
-        }
-      }
-    });
+      this.$app.html(this.templates.work);
+    }
 
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 200) {
-        $('.navbar-scroll').fadeIn(500);
-      }
-    });
+    $('.menu__item').removeClass('menu__item--current');
+    $('.work').addClass('menu__item--current');
+    $('.menu').show();
+  },
 
-    $('#home').scrollex({
-      top: '10%',
-      bottom: '20%',
-      enter: function() {
-        $('body').css('background-color', '#FFF');
-      },
-      leave: function() {
-      }
-    });
+  process: function() {
+    if (this.currentTemplate !== 'process') {
+      this.currentTemplate = 'process';
 
+      this.$app.html(this.templates.process);
+    }
 
-    $('#desk').scrollex({
-      top: '10%',
-      bottom: '30%',
-      enter: function() {
-        $('body').css('background-color', '#FCF6E8');
-        $('.desk-wrapper').css('opacity', '1');
-      },
-      leave: function() {
-      }
-    });
+    $('.menu__item').removeClass('menu__item--current');
+    $('.process').addClass('menu__item--current');
+    $('.menu').show();
+  },
 
-    $('#room').scrollex({
-      top: '10%',
-      bottom: '30%',
-      enter: function() {
-        $('body').css('background-color', '#FFE1D6');
-        $('.room-wrapper').css('opacity', '1');
+  contact: function() {
+    if (this.currentTemplate !== 'contact') {
+      this.currentTemplate = 'contact';
 
-      },
-      leave: function() {
-        $('.room-wrapper').css('opacity', '.3');
-      }
-    });
+      this.$app.html(this.templates.contact);
+    }
 
-    $('#mail').scrollex({
-      top: '5%',
-      bottom: '30%',
-      enter: function() {
-        $('body').css('background-color', '#FCF9F2');
-        $('.rod').addClass('transform');
-        $('.contact-wrapper').css('opacity', '1');
-
-      },
-      leave: function() {
-        $('.rod').removeClass('transform');
-      }
-    });
-
-    $('#work-wrapper').scrollex({
-      top: '10%',
-      bottom: '30%',
-      enter: function() {
-        $('body').css('background-color', '#fff');
-
-      },
-      leave: function() {
-      }
-    });
-
-
-    $('body').scrollspy({
-      target: '#my-nav',
-      offset: 50
-    });
+    $('.menu__item').removeClass('menu__item--current');
+    $('.contact').addClass('menu__item--current');
+    $('.menu').show();
   },
 
   workScroll: function(id, section) {
     if (this.currentTemplate === 'work-detail-' + id) {
-      var position = $('#' + section).position();
-      window.scrollTo(0, position.top);
+
+      $('html, body').animate({
+        scrollTop: $('#' + section).position().top
+      }, 1000);
     } else {
       this.work(id);
     }
   },
 
-  work: function(id) {
+  detail: function(id) {
     if (this.currentTemplate === 'work-detail-' + id) {
       return;
     }
@@ -129,7 +85,6 @@ var Router = Backbone.Router.extend({
     this.currentTemplate = 'work-detail-' + id;
 
     var projects = window.WORK.projects;
-
     var currentWorkIndex = _.findIndex(projects, function(w) {
       return w.id === id
     });
@@ -137,13 +92,16 @@ var Router = Backbone.Router.extend({
     var nextWorkIndex = currentWorkIndex < (projects.length - 1) ? (currentWorkIndex + 1) : 0;
     var prevWorkIndex = currentWorkIndex > 0 ? (currentWorkIndex - 1) : projects.length - 1;
 
-    var html = this.templates.work({
+    var html = this.templates.detail({
       prevWork: projects[prevWorkIndex].id,
       nextWork: projects[nextWorkIndex].id,
       work: projects[currentWorkIndex]
     });
 
     this.$app.html(html);
+
+    $('.menu__item').removeClass('menu__item--current');
+    $('.work').addClass('menu__item--current');
 
     window.scrollTo(0, 0);
   }
@@ -153,10 +111,32 @@ $(document).ready(function() {
   var router = new Router({
     app: $('#app'),
     templates: {
-      index: $('#index-content').html(),
-      work: _.template($('#work-detail-content').html())
+      about: $('#home-content').html(),
+      work: _.template($('#work-content').html()),
+      detail: _.template($('#work-detail-content').html()),
+      process: _.template($('#process-content').html()),
+      contact: _.template($('#contact-content').html()),
     }
   });
 
   Backbone.history.start();
+
+  [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+    var menuItems = menu.querySelectorAll('.menu__link'),
+      setCurrent = function(ev) {
+
+        var item = ev.target.parentNode;
+
+        if (classie.has(item, 'menu__item--current')) {
+          return false;
+        }
+        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+        classie.add(item, 'menu__item--current');
+      };
+
+    [].slice.call(menuItems).forEach(function(el) {
+      el.addEventListener('click', setCurrent);
+    });
+  });
+
 });

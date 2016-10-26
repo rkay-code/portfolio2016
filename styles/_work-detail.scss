@@ -1,10 +1,5 @@
-.work.wrapper {
-  transform-origin: 50% 20%;
-  background: #fff;
-}
 .detail-brief-wrapper {
   text-align: center;
-  margin-top: 50px;
   .detail-brief {
     .detail-brief-img {
       margin-top: 40px;
@@ -12,6 +7,9 @@
       img {
         width: 100%;
       }
+    }
+    h3 {
+      margin-top: 0;
     }
   }
 }
@@ -57,10 +55,13 @@
   margin: 75px auto 0;
   div {
     padding: 40px 0 0;
-    h2 {
-      color: #5BC0BE;
-      font-weight: 400;
-      margin-bottom: 30px;
+    .divider {
+      padding: 0;
+      margin-bottom: 25px;
+    }
+    h1 {
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
     img {
       padding: 0;
@@ -71,69 +72,69 @@
       margin-bottom: 50px;
       max-width: 100%;
     }
+    .mobile {
+      width: 250px;
+    }
     p {
       padding-left: 0;
-      margin-top: -20px;
     }
     b {
       font-size: 1.1em;
     }
-  }
-  div:first-child {
-    padding-top: 0;
   }
   div:last-child {
     padding-bottom: 0;
     margin-bottom: 0;
   }
 }
-.work-nav {
-  .navbar-nav {
-    width: 100%;
-    li a {
-      text-transform: uppercase;
-      color: #424C55 !important;
-      letter-spacing: 1px;
-      text-align: left;
-      font-weight: 500 !important;
-      width: 100%;
-    }
-    li img {
-      height: 20px;
-    }
-    li a:hover {
-      text-decoration: none;
-      cursor: pointer;
-    }
-    li:nth-child(2) a {
-      text-align: center;
-      margin: auto;
-    }
-    li:last-child a {
-      text-align: right;
-      float: right;
+.footer {
+  padding-bottom: 50px;
+  border-top: 1px solid #eee;
+  padding-top: 50px;
+  margin-top: 50px;
+  div:last-child {
+    text-align: right;
+  }
+  a {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
     }
   }
 }
-.mobile-nav {
-  a {
-    text-transform: uppercase;
-    color: #424C55;
-    letter-spacing: 1px;
-    text-align: left;
-    font-weight: 500;
-    padding: 10px 20px;
-border: 1px solid #424C55;
+.nav-arrow {
+  display: inline-block;
+  vertical-align: top;
+  i {
+    padding: 11px;
+    border: 1px solid $primary;
+    display: inherit;
+    border-radius: 50%;
+    margin: 0 15px;
+    color: $primary;
   }
-  a:first-child {
-        float: left;
+}
+.footer div a:hover {
+  i {
+    background: $primary;
+    color: #fff;
+    transition: background 150ms ease-in-out;
   }
-  a:last-child {
-    text-align: right;
-    float: right;
+}
+.prev-work {
+  display: inline-block;
+  margin-top: 0;
+  padding: 0;
+  h4 {
+    font-size: 14px;
+    margin: 0;
   }
-  a:hover {
-    color: #424C55;
+  p {
+    margin-top: 0;
+    color: $primary;
+  }
+  .right {
+    float: left;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

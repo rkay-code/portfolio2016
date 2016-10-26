@@ -4,7 +4,6 @@ var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var jpegtran = require('imagemin-jpegtran');
-var jsonmin = require('gulp-jsonmin');
 var pngquant = require('imagemin-pngquant');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -22,7 +21,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['**/*.html'], ['projects', 'index-live']);
+  gulp.watch(['**/*.html'], ['projects', 'index-live', 'javascript']);
 });
 
 gulp.task('sass', function() {
@@ -54,7 +53,15 @@ gulp.task('index-live', ['projects'], function() {
     .pipe(connect.reload());
 });
 
-gulp.task('default', ['connect', 'watch', 'projects', 'sass', 'sass:watch', 'index-live']);
+
+gulp.task('javascript', function() {
+  return gulp.src('scripts/*.js')
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe(connect.reload());
+});
+
+
+gulp.task('default', ['connect', 'watch', 'projects', 'sass', 'sass:watch', 'index-live', 'javascript']);
 
 gulp.task('cssmin', function() {
   gulp.src('styles/*.css')
@@ -73,7 +80,7 @@ gulp.task('htmlmin', function() {
     .pipe(gulp.dest('dist/templates'));
 });
 
-gulp.task('index', function() {
+gulp.task('index', ['projects'], function() {
   return gulp.src('index.html')
     .pipe(fileinclude())
     .pipe(htmlmin({
@@ -82,16 +89,10 @@ gulp.task('index', function() {
     .pipe(gulp.dest('dist'));
 });
 
-// gulp.task('jsmin', function() {
-//   return gulp.src('scripts/*.js')
-//     .pipe(uglify())
-//     .pipe(gulp.dest('dist/scripts'));
-// });
-
-gulp.task('jsonmin', function () {
-    gulp.src('data/*.json')
-        .pipe(jsonmin())
-        .pipe(gulp.dest('dist/data'));
+gulp.task('jsmin', function() {
+  return gulp.src('scripts/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/scripts'));
 });
 
 gulp.task('imagemin', () => {
@@ -100,7 +101,8 @@ gulp.task('imagemin', () => {
       progressive: true,
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('img'));
 });
 
-gulp.task('build', ['cssmin', 'htmlmin', 'imagemin', 'projects', 'index', 'jsonmin']);
+gulp.task('build', ['cssmin', 'htmlmin', 'imagemin', 'projects', 'index', 'jsmin']);
